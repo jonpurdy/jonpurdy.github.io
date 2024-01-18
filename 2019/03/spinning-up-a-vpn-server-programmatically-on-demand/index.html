@@ -178,7 +178,7 @@ ID          Name                   Created at              Regions
         <span class="n">dns_record</span> <span class="o">=</span> <span class="n">cf</span><span class="o">.</span><span class="n">zones</span><span class="o">.</span><span class="n">dns_records</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">zone_id</span><span class="p">,</span> <span class="n">dns_record_id</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">dns_record</span><span class="p">)</span>
 </code></pre></div>
 
-<h1>&lt;/end></h1>
+<h1>&lt;/end&gt;</h1>
 <p>Of course, this is a pretty basic implementation that simply spins up a droplet and updates a DNS record. One could easily extend this to accept command line arguments and allow you to select which snapshot to create a VPS from. I use this to choose between an OpenVPN server running on UDP/1194, or another on TCP/443 to evade firewall blocking.</p>
 <p>One could also write an argument to delete the droplet once you're done with it by passing the droplet ID back in and running a <code>DELETE</code>.</p>
 <h1>Python script on repl.it</h1>

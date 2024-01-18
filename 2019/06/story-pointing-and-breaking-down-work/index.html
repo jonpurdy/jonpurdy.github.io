@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/">
+    <link rel="stylesheet" type="text/css" href="/theme/css/normalize.css">
+    <!-- ##
+  -->
+
+
+
+<!-- 
+  Enable this for newcss
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="/theme/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" type="text/css" href="/theme/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/hatena-bookmark-icon.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jon Purdy">
+    <meta name="description" content="Posts and writings by Jon Purdy">
+<meta name="keywords" content="">
+    <title>
+        Jon Purdy
+&ndash; Story Pointing and Breaking Down Work    </title>
+
+
+</head>
+
+<body>
+    <main>
+
+<!--         <div class="headerbannerjon">
+          Looking for a Technical PM? 🔍 I am available! Please <a href="mailto:getintouch@jonpurdy.com">get in touch</a>. 📧
+        </div> -->
+        
+        <header>
+            <div class="site-name">
+                <a href="/">
+                    <!-- Jon Purdy -->
+                    <img class="logo" src="/theme/images/logo.svg" alt="Jon Purdy">
+                </a>
+            </div>
+
+
+            <!-- Added by Jon to display pages and other links at the top of each page -->
+            <div class="headermenu">
+                    <a class="headerlink" href="/about/">About</i></a>
+                    <a class="headerlink" href="/pm-framework/">P*M Framework</i></a>
+                    <a class="headerlink" href="/remote-work/">Remote Work</i></a>
+                    <a class="headerlink" href="/projects/">Projects</i></a>
+                <!-- <a class="headerlink" href="/photography" title="Photography"> Photography</i></a> -->
+                <a class="headerlink" href="/archives.html"> Archive</i> </a>
+            </div>
+            <!-- end added by Jon -->
+        </header>
+<article>
+  <div class="article__title">
+    <h1><a href="/2019/06/story-pointing-and-breaking-down-work/">Story Pointing and Breaking Down Work</a></h1>
+  </div>
+  <div class="article__meta">
+    <p class="article__meta__post-date">2019-06-06</p>
+    </p>
+  </div>
+  <div class="article__text">
+    <p><img src="/images/20190606-points.png" width="100%" /></p>
+<p>We recently wrapped up the initial MVP of <a href="https://getenzyme.dev">Enzyme</a>, our Polkadot wallet, and I wanted to share some insights about the development process from the perspective of a Project Manager. My first anniversary at BlockX Labs is coming up in a couple of weeks and it's been amazing to see the progress the team has made. I've managed three major projects during the past year and Enzyme has been the smoothest. This is partially due to us just being more efficient and better at our jobs, but there was one thing we did during sprint Planning that really made a big difference: breaking stories down.</p>
+<p><img style="padding-left: 30px; padding-bottom: 30px" src="/images/20190606-enzyme.png" width="300" align="right"/></p>
+<p>For those who aren't yet familiar, Agile is a software development methodology that is about building working software quickly and iterating from there, rather than architecting the entire software first and building it at the end. Scrum is a framework within the Agile methodology based on sprints (time-boxed units, usually two weeks) that contain User Stories (user-centric end-to-end descriptions of a feature). The number of user stories in a sprint is based on the sum of the difficulty value (points) of all the stories in the sprint relative to the number of points completed in the previous sprints (or estimated for sprint 1). So if the development team had completed 20 points worth of user stories the previous sprint, they'd accept around the same number of points for this upcoming sprint.</p>
+<p>Before the start of the project and before each sprint, User Stories are written by the Product Owner and based on customer and/or user requirements. During sprint planning before a sprint starts, it's up to the development team to ask questions, get additional details, and clarify what the user story is about so that they can implement it without ambiguity. If a User Story is ambiguous, estimating it's difficulty is much more difficult and makes sprint planning less accurate. If each story ends up being 1/2 as difficult or twice as difficult as expected, the development team can be anywhere running out of work half way through the sprint to only completing half the accepted user stories. If this inaccuracy occurs regularly, projects can end up taking significantly longer than expected.</p>
+<p>So we've established that it's incredibly important to get small estimates as accurate as possible in order to keep major milestones accurate. The way that we became adept at story point estimation during Enzyme was done two ways:</p>
+<ol>
+<li>Split user stories into multiple stories</li>
+<li>If a user story can't be broken down further, create sub-tasks for the individual components of the user story</li>
+</ol>
+<h1>Split user stories into multiple stories</h1>
+<p>Much like the Ma Bell monopoly needing to be split up in the US in the 1980's, user stories can be split up as well. Reducing the scope of user stories makes them more focused, easier to estimate, and faster to implement.</p>
+<p>One can split them based on a few different patterns, such as the steps in a workflow, variations on input data, going from simple to complex, and more. </p>
+<h3>Example: Workflow Steps</h3>
+<ul>
+<li>As a content manager, I can publish a news story to the corporate website.</li>
+</ul>
+<p>This can be split into:</p>
+<ul>
+<li>…I can publish a news story directly to the corporate website.</li>
+<li>…I can publish a news story with editor review.</li>
+<li>…I can publish a news story from the staging site to production.</li>
+</ul>
+<p>I got this example from Richard Lawrence's agileforall.com. Have a look at the rest at <a href="https://agileforall.com/patterns-for-splitting-user-stories/?highlight=user%20stories">agileforall.com</a>.</p>
+<h1>Create sub-tasks for individual components</h1>
+<p><img src="/images/20190606-breakitdown.jpg" width="200" align="right"/></p>
+<p>If a story can't be further split, break it down into sub-tasks for the individual components of the story.</p>
+<p>The benefit of this is twofold: </p>
+<ol>
+<li>Developers can help plan out the work involved and self-assign parts of the story.</li>
+<li>As a result of understanding what's involved, their estimates are more accurate. This was the main benefit for us at BlockX.</li>
+</ol>
+<h3>Example: As a user, I can authenticate with a username and password</h3>
+<p>Sub-tasks:</p>
+<ul>
+<li>Front-end: what should it look like?</li>
+<li>Backend: how should it present itself to the frontend, and how should it interact with the database layer?</li>
+<li>Database: do tables need to be created? What are the required columns and data types?</li>
+</ul>
+<p>For all of these sub-tasks, what dependencies need to be available before even starting them? (In Jira, they can be linked to other issues using the "blocked by" type.)</p>
+<p>It's okay for developers to plan out how each sub-task will be executed, even if it ends up needing to be changed. The whole point of this is to get them thinking about implementation. </p>
+<h1>&lt;/end></h1>
+<p>Once the sub-tasks are discussed and thought about, doing relative estimation will be much more accurate because developers will have thought of both implementation and some edge cases during the discussion. The basic currency unit of Scrum (story points) is solidified, making every step in the hierarchy more accurate.</p>
+<p>It may seem like an unnecessary step, but in my experience it's worked well!</p>
+  </div>
+
+</article>
+    </main>
+
+
+    <!--    <footer>
+      <div class="author__logo">
+          <img src="/theme/images/logo-icon.svg" alt="logo">
+      </div>
+      <section class="author">
+        <div class="author__name">
+          <a href="/pages/about.html">Jon Purdy</a>
+          <p></p>
+        </div>
+        <div class="author__link">
+          <ul>
+            <li><a href="/about/" title="About"><i class="fab fa-link"></i></a></li>
+            <li><a href="/pm-framework/" title="P*M Framework"><i class="fab fa-link"></i></a></li>
+            <li><a href="/remote-work/" title="Remote Work"><i class="fab fa-link"></i></a></li>
+            <li><a href="/projects/" title="Projects"><i class="fab fa-link"></i></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="ending-message">
+        <p>&copy; Jon Purdy. </p>
+      </div>
+    </footer> -->
+</body>
+
+</html>

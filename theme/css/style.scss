@@ -1,0 +1,497 @@
+$black:  #000000;
+$white:  #FFFFFF;
+$light-grey:  #e6e6e6;
+$med-grey:  #999999;
+$dark-grey:  #404040;
+$dark-red: 	#8B0000;
+$sans: -apple-system, 
+       BlinkMacSystemFont, 
+       "Segoe UI", 
+       Roboto, 
+       Oxygen-Sans, 
+       Ubuntu, 
+       Cantarell, 
+       "Helvetica Neue", 
+       sans-serif;
+$serif: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+$mono: "SFMono-Regular",
+       Consolas,
+       "Liberation Mono",
+       Menlo,
+       monospace;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $light-grey;
+  color: $dark-grey;
+  font-family: $sans;
+  font-size: 18px;
+}
+
+header {
+  .site-name {
+    font-size: 34px;
+  }
+  .headermenu {
+    margin-top: 40px;
+    font-size: 16px;
+    font-family: $sans;
+    text-transform: uppercase;
+  }
+  .headerlink {
+    margin-right: 15px;
+  }
+}
+
+
+a {
+  color: $dark-grey;
+  text-decoration: none;
+  transition: 0.15ms;
+}
+
+/*a:hover {
+  opacity: 0.6;
+}*/
+
+hr {
+  color: #d5d5d5;
+  background-color: #d5d5d5;
+  height: 1px;
+  border: none;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+@mixin border-radius($radius: 5px){
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+img {
+/*  display: block;
+  max-width: 900px;*/
+  max-height: 2000px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.full-width {
+  width: 100vw;
+  
+  /* works down to IE9 and Android 4.4 */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  /* alternative one liner: */
+  //margin: 0 calc(-50vw + 50%);
+  
+  // https://stackoverflow.com/questions/33606565/is-it-possible-to-calculate-the-viewport-width-vw-without-scrollbar/34884924#34884924
+  // does not work on MacOS (leaves space)
+  // width: calc(100vw - (100vw - 100%));
+
+}
+
+
+iframe {
+  border: 0px;
+  .slide_image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+div.google-slide {
+  position: relative;
+  overflow: hidden;
+  margin: 15px 0 20px 0;
+  padding-bottom: 50%;
+  padding-top: 65px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $dark-grey;
+}
+
+dd {
+  margin-left: 0;
+}
+
+.article__text iframe,
+.twitter-tweet,
+.hss-center-position
+twitterwidget {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination {
+  margin: auto 10%;
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    padding: 0;
+
+    li {
+      display: inline;
+      float: left;
+      .pagination__page--current {
+        background-color: #212121;
+        color: $white;
+      }
+      :hover:not(.active) {
+        background-color: #ddd;
+      }
+
+      a {
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .pagination__prev--none,
+      .pagination__next--none {
+        display: none;
+      }
+    }
+  }
+}
+
+.social-tools {
+  margin-bottom: 2rem;
+}
+
+.social-tools__title {
+  display: block;
+  font-size: 13px;
+  color: $med-grey;
+  margin-top: 3rem;
+}
+
+.social-tools__buttons {
+  font-size: 26px;
+  a {
+    color: $med-grey;
+    margin: 0.4rem;
+  }
+  a:hover {
+    color: $dark-grey;
+  }
+}
+
+.adsense {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+iframe.embedly-card {
+  box-shadow: 5px 2.5px 2.5px 2.5px rgba(0,0,0,.4);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 640px) {
+  main {
+    width: 100%;
+    top: 0;
+    left: 25%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    article {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .article__meta {
+        display: flex;
+        p {
+          margin-right: 1em;
+          .article__meta__post-date {
+            width: 20em
+          }
+        }
+      }
+    }
+
+    header {
+      border-top: 0;
+    }
+  }
+
+  footer {
+    section.author {
+      .autohr__name {
+        margin-left: auto;
+      }
+      .author__link {
+        margin-right: auto;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px){
+  article {
+    img {
+      height : auto;
+      width  : 100%;
+    }
+  }
+}
+
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+
+  header {
+    padding: 40px;
+/*    border-top: $light-grey 1px solid;
+    border-bottom: $light-grey 1px solid;*/
+    text-align: center;
+
+    p {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  article {
+    padding: 0px 20px; /* used to be 25px 20px before 2020-06-22 */
+
+    .article__title {
+      h1 {
+        margin-bottom: 8px;
+      }
+    }
+
+    .article__text {
+      line-height: 2rem;
+      a {
+        text-decoration: underline;
+      }
+
+      h1 {
+        display: block;
+        border-bottom: $light-grey 1px solid;
+        padding-bottom: 7px;
+        margin-top: 2em;
+        margin-bottom: 1.5rem;
+        font-size: 1.8em;
+        padding-bottom: 0.5em;
+      }
+
+      h2 {
+        border-bottom: $light-grey 1px solid;
+        margin-top: 2.375rem;
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+      }
+
+      h3, h4, h5, h6 {
+        margin-top: 2.375rem;
+        margin-bottom: 1.375em;
+      }
+
+      code {
+        padding: 0.2em 0;
+        color: $dark-grey;
+        font-family: $mono;
+        background: $light-grey;
+        border-radius: 3px;
+      }
+
+      pre {
+        margin: 22px 2px 22px 2px;
+        padding: 9.5px;
+        font-family: $mono;
+        line-height: 1.45;
+        overflow-x: auto;
+        border-style: none;
+        border-radius: 4px;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 0.5em;
+      }
+
+      blockquote {
+        display: block;
+        margin: 22px 2px 22px 2px;
+        padding: 1em 2em 1em 4em;
+        color: #9E9E9E;
+        font-style: italic;
+        position: relative;
+      }
+      blockquote:before {
+        content: '"';
+        font-size: 600%;
+        font-style: bold;
+        line-height: 1em;
+        left: 0;
+        top: 0;
+        position: absolute;
+        color: #9E9E9E;
+      }
+
+      table.footnote {
+          margin-top: 0;
+      }
+
+      div.footnote {
+        font-size: 13.5px;
+        margin-top: 5em;
+        line-height: 1.1em;
+      }
+    }
+
+    .gist {
+      line-height: .875em;
+    }
+
+    .article__meta {
+      font-size: 16px;
+      color: $med-grey;
+      /*color: $dark-grey;*/
+      margin-bottom: 2rem;
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+footer {
+  /*border-top: $light-grey 1px solid;*/
+  width: 100%;
+  margin: 0 auto;
+
+  .author__logo {
+    width: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    max-width: 72px;
+
+    img {
+      width: 72px;
+      border-radius: 10px;
+    }
+  }
+
+  section.author {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 1.5em auto;
+
+    ul {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      li {
+        display: inline;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.2em;
+      }
+    }
+
+    i.fa {
+      font-size: 30px;
+    }
+
+    .author__name {
+      font-style: italic;
+      text-align: center;
+      max-width: 420px;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .author__link {
+      text-align: left;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+      ul {
+        padding-left: 0;
+        text-align: center;
+      }
+
+    }
+  }
+
+  .ending-message {
+    /*border-top: $light-grey 1px solid;*/
+    padding: 0 40px 0 40px;
+    color: $med-grey;
+    font-size: 10px;
+  }
+}
+
+dd {
+  padding-bottom: 30px;
+}
+
+/* added for 2020-06-02 email aliasing post */
+table {
+  margin: 0px;
+  padding: 0px;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #bbb !important;
+}
+th {
+  text-align: left;
+  vertical-align: middle;
+}
+td {
+  text-align: left;
+  vertical-align: top;
+}
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+/* added 2020-07-07 for hiring banner */
+.headerbannerjon {
+  padding: 10px;
+  background-color: #ddd;
+  font-family: $sans;
+  text-align: center;
+  a {
+    text-decoration: underline !important;
+  }
+}

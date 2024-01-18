@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/">
+    <link rel="stylesheet" type="text/css" href="/theme/css/normalize.css">
+    <!-- ##
+  -->
+
+
+
+<!-- 
+  Enable this for newcss
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="/theme/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" type="text/css" href="/theme/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/hatena-bookmark-icon.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jon Purdy">
+    <meta name="description" content="Posts and writings by Jon Purdy">
+<meta name="keywords" content="">
+    <title>
+        Jon Purdy
+&ndash; Why and How to build Metamask for your own Blockchain    </title>
+
+
+</head>
+
+<body>
+    <main>
+
+<!--         <div class="headerbannerjon">
+          Looking for a Technical PM? 🔍 I am available! Please <a href="mailto:getintouch@jonpurdy.com">get in touch</a>. 📧
+        </div> -->
+        
+        <header>
+            <div class="site-name">
+                <a href="/">
+                    <!-- Jon Purdy -->
+                    <img class="logo" src="/theme/images/logo.svg" alt="Jon Purdy">
+                </a>
+            </div>
+
+
+            <!-- Added by Jon to display pages and other links at the top of each page -->
+            <div class="headermenu">
+                    <a class="headerlink" href="/about/">About</i></a>
+                    <a class="headerlink" href="/pm-framework/">P*M Framework</i></a>
+                    <a class="headerlink" href="/remote-work/">Remote Work</i></a>
+                    <a class="headerlink" href="/projects/">Projects</i></a>
+                <!-- <a class="headerlink" href="/photography" title="Photography"> Photography</i></a> -->
+                <a class="headerlink" href="/archives.html"> Archive</i> </a>
+            </div>
+            <!-- end added by Jon -->
+        </header>
+<article>
+  <div class="article__title">
+    <h1><a href="/2019/02/why-and-how-to-build-metamask-for-your-own-blockchain/">Why and How to build Metamask for your own Blockchain</a></h1>
+  </div>
+  <div class="article__meta">
+    <p class="article__meta__post-date">2019-02-05</p>
+    </p>
+  </div>
+  <div class="article__text">
+    <p>If you built your own blockchain or forked an existing one, one of your top priorities should be to make it easy for users and developers to interact with. MetaMask enabled Ethereum users and developers to easily use ETH and ERC-20 tokens, and use DApps without needing to use command-line tools or run their own node (thanks to Infura).</p>
+<p><img style="padding-left: 30px" src="/images/20190205-aiwa.png" width="300" align="right"/></p>
+<p>Aion realized this early on, which is why they had BlockX Labs build AIWA, a wallet and DApp interaction tool for Aion, for them. As Project Manager for AIWA, I’d like to go over the process that we undertook when building “MetaMask for Aion”; specifically, both the inspiration as well as the differentiation. I’ve written this for product people and executives so I’ve kept the jargon quite light.</p>
+<h1>Why do you need a wallet?</h1>
+<p>Firstly, you need to justify why your blockchain needs its version of MetaMask. As mentioned above, you want developers and users to interact with it. They need to read and write data and possibly send and receive cryptocurrency, If your blockchain is like Ethereum and Aion, you’ve got a distributed app ecosystem that needs to interact with it.</p>
+<p>Without a wallet, it’s a lot more difficult for both developers and users to use your blockchain, so reduce the friction and provide them with tool(s) to make it easier.</p>
+<h1>What do you love about MetaMask?</h1>
+<p>Since you’ve got a reason to build a MetaMask-like tool, think about what you love about MetaMask and decide whether you want or need those features. At BlockX Labs, we like that MetaMask is honest with how it maps Ethereum’s features to its UI. MetaMask doesn’t hide or abstract away complexity but exposes it to the user. For example, it shows the raw gas price (in GWei) rather than abstracting it away by converting it to USD.</p>
+<p>It also differentiates between seed-generated and imported wallets, so that the user can know which wallets are recoverable from the seed phrase. We also love that MetaMask doesn’t keep the user inside MetaMask; it provides links to Etherscan for viewing more transaction details and embeds the ability to use Coinbase and ShapeShift for acquiring Ether. It supports third-party services and doesn’t try to hold the user captive by doing everything itself.</p>
+<h1>Forget about MetaMask!</h1>
+<p>Once you’ve found the features that you love about MetaMask, it’s time to forget about it. Here at BlockX Labs, we use Agile with Scrum. I recommend writing user stories to figure out what user and developers will do with your tool and build your UI around that.</p>
+<p>In our case, some of the basic features like the receive screen and how the DApp popped up ended up working pretty similarly to MetaMask. But by focusing on our user stories and not trying to clone MetaMask, we came up with a unique hierarchical interface that is modeled around the Token &lt; Wallet &lt; Vault metaphor.</p>
+<p>As a result, we came up with the idea of a Vault to contain both seed-generated wallets and imported wallets in a single exported file. This makes it super easy for users to backup all of their wallets regardless of whether they’re seed-generated or imported from private keys. Of course, we also built the option to export individually using the standard wallet format as well.</p>
+<p><img src="/images/20190205-vault.png" width=100% /></p>
+<h1>&lt;/end></h1>
+<p>Although it’s heavily influenced from my experience building AIWA, hopefully this article has given a decent overview of building something like MetaMask for your own blockchain. I didn’t mention some things that aren’t part of the core product but help make it easier to use (like Infura, and NodeSmith in our case). But perhaps a follow-up article could address the ecosystem partners that would be useful.</p>
+  </div>
+
+</article>
+    </main>
+
+
+    <!--    <footer>
+      <div class="author__logo">
+          <img src="/theme/images/logo-icon.svg" alt="logo">
+      </div>
+      <section class="author">
+        <div class="author__name">
+          <a href="/pages/about.html">Jon Purdy</a>
+          <p></p>
+        </div>
+        <div class="author__link">
+          <ul>
+            <li><a href="/about/" title="About"><i class="fab fa-link"></i></a></li>
+            <li><a href="/pm-framework/" title="P*M Framework"><i class="fab fa-link"></i></a></li>
+            <li><a href="/remote-work/" title="Remote Work"><i class="fab fa-link"></i></a></li>
+            <li><a href="/projects/" title="Projects"><i class="fab fa-link"></i></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="ending-message">
+        <p>&copy; Jon Purdy. </p>
+      </div>
+    </footer> -->
+</body>
+
+</html>

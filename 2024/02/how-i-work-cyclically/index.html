@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="https://jonpurdy.com/theme/css/style.less">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://jonpurdy.com/">
+    <link rel="stylesheet" type="text/css" href="https://jonpurdy.com/theme/css/normalize.css">
+    <!-- ##
+  -->
+
+
+
+<!-- 
+  Enable this for newcss
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="https://jonpurdy.com/theme/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://jonpurdy.com/theme/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" type="text/css" href="https://jonpurdy.com/theme/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://jonpurdy.com/theme/css/hatena-bookmark-icon.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jon Purdy">
+    <meta name="description" content="Posts and writings by Jon Purdy">
+    <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Atom" />
+<meta name="keywords" content="">
+    <title>
+        Jon Purdy
+&ndash; How I Work Cyclically    </title>
+
+
+</head>
+
+<body>
+    <main>
+
+<!--         <div class="headerbannerjon">
+          Looking for a Technical PM? 🔍 I am available! Please <a href="mailto:getintouch@jonpurdy.com">get in touch</a>. 📧
+        </div> -->
+        
+        <header>
+            <div class="site-name">
+                <a href="/">
+                    <!-- Jon Purdy -->
+                    <img class="logo" src="https://jonpurdy.com/theme/images/logo.svg" alt="Jon Purdy">
+                </a>
+            </div>
+
+
+            <!-- Added by Jon to display pages and other links at the top of each page -->
+            <div class="headermenu">
+                    <a class="headerlink" href="https://jonpurdy.com/about/">About</i></a>
+                    <a class="headerlink" href="https://jonpurdy.com/pm-framework/">P*M Framework</i></a>
+                    <a class="headerlink" href="https://jonpurdy.com/remote-work/">Remote Work</i></a>
+                    <a class="headerlink" href="https://jonpurdy.com/projects/">Projects</i></a>
+                <!-- <a class="headerlink" href="https://jonpurdy.com/photography" title="Photography"> Photography</i></a> -->
+                <a class="headerlink" href="https://jonpurdy.com/archives.html"> Archive</i> </a>
+            </div>
+            <!-- end added by Jon -->
+        </header>
+<article>
+  <div class="article__title">
+    <h1><a href="https://jonpurdy.com/2024/02/how-i-work-cyclically/">How I Work Cyclically</a></h1>
+  </div>
+  <div class="article__meta">
+    <p class="article__meta__post-date">2024-02-20</p>
+    </p>
+  </div>
+  <div class="article__text">
+    <p><img src="/images/20240220-how-i-work-cyclically/header.jpg" alt="SF Ocean Beach boardwalk" width="100%" /></p>
+<p>I want to use my brain for working on big picture and detailed work, not for planning on what to work on. The world operates on cycles: breathing every 3-10 seconds, work/play/sleep every 24 hours, quarterly/annual financials every 3 or 12 months.</p>
+<p><em>My strategy: use what's essentially a recurring to-do list.</em></p>
+<h3>For each cycle:</h3>
+<ul>
+<li>List the task(s) that need to get done</li>
+</ul>
+<h3>For each task:</h3>
+<ul>
+<li>Details about how to complete the task, including links to previous task output, where to gather details, etc.</li>
+<li>A checklist of subtasks or steps for completion</li>
+<li>Prerequisite tasks (ie. what tasks need to be done to feed input into the current task)</li>
+<li>The last date the task was done</li>
+</ul>
+<p><img src="/images/20240220-how-i-work-cyclically/inputs.png" alt="inputs" width="100%" /></p>
+<p>As an Infrastructure TPM, this is what my list generally looks like:</p>
+<h3>Daily</h3>
+<ul>
+<li>Check and follow up on email</li>
+<li>Check and follow up on Slack</li>
+<li>Check incidents channel to see if anything bad happened</li>
+</ul>
+<h3>Weekly</h3>
+<ul>
+<li>One-line status update on each program initiative on "initiatives tracker", and setting green/yellow/red status</li>
+<li>Looking for changes to infrastructure</li>
+<li>People allocations: verify team members worked on what they committed do, update this for the next week</li>
+</ul>
+<h3>Bi-weekly</h3>
+<ul>
+<li>Update program sponsors using inputs from initiative tracker, 2-3 bullet points on highlights/things to watch out for (and send the link to the full tracker)</li>
+<li>vVerify transactions for all Infrastructure spending</li>
+<li>Do program retrospective and planning session</li>
+<li>Evaluate new ideas/opportunities using Evaluation Framework</li>
+</ul>
+<h3>Monthly</h3>
+<ul>
+<li>Pull stats (monthly revenue and expenses) via Python script </li>
+<li>Write Infrastructure Newsletter (targeting wide company audience) using inputs from Python script and biweekly updates</li>
+<li>Update exec audience with specific requested stats</li>
+</ul>
+<h3>Quarterly</h3>
+<ul>
+<li>Quarterly OKRs: review current, set new ones</li>
+</ul>
+<h3>Yearly</h3>
+<ul>
+<li>Annual program objectives: review current, set new ones</li>
+</ul>
+<p>At the start of a new period (weekly, for example), I know that I have 3 things to do that are due at the end of that week. So as long as I get them done at some point that week, I'm doing well and can relax. If it's Friday and I still need to accomplish tasks on my weekly list, I know I need to crunch to get them done (or at least catch up on them the next week).</p>
+<p>Sometimes, the end of periods collides (ie. the end of the month could also be the end of the week). This is generally not a problem since I am not working to 100% capacity※, so I can easily spread my work out over the course of each time period.</p>
+<p>※ - It's important to have some slack in one's schedule. From "This is Lean": "the closer we get to one hundred percent utilization, the longer the throughput time.”, "The paradox is that a greater focus on utilizing resources efficiently tends to increase the amount of work there is to do."</p>
+  </div>
+
+</article>
+    </main>
+
+
+    <!--    <footer>
+      <div class="author__logo">
+          <img src="https://jonpurdy.com/theme/images/logo-icon.svg" alt="logo">
+      </div>
+      <section class="author">
+        <div class="author__name">
+          <a href="https://jonpurdy.com/pages/about.html">Jon Purdy</a>
+          <p></p>
+        </div>
+        <div class="author__link">
+          <ul>
+            <li><a href="https://jonpurdy.com/about/" title="About"><i class="fab fa-link"></i></a></li>
+            <li><a href="https://jonpurdy.com/pm-framework/" title="P*M Framework"><i class="fab fa-link"></i></a></li>
+            <li><a href="https://jonpurdy.com/remote-work/" title="Remote Work"><i class="fab fa-link"></i></a></li>
+            <li><a href="https://jonpurdy.com/projects/" title="Projects"><i class="fab fa-link"></i></a></li>
+            <li>
+              <a href="https://jonpurdy.com/feeds/all.atom.xml" target="_blank" title="Feed">
+                <i class="fas fa-rss-square"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="ending-message">
+        <p>&copy; Jon Purdy. </p>
+      </div>
+    </footer> -->
+</body>
+
+</html>

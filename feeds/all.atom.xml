@@ -16,7 +16,7 @@
 &lt;li&gt;The last date the task was done&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src="/images/20240220-how-i-work-cyclically/inputs.png" alt="inputs" width="100%" /&gt;&lt;/p&gt;
-&lt;p&gt;As an Infrastructure TPM, this is what my list generally looks like:&lt;/p&gt;
+&lt;p&gt;As an Infrastructure TPM at &lt;a href="https://chainsafe.io"&gt;ChainSafe&lt;/a&gt;, this is what my list generally looks like:&lt;/p&gt;
 &lt;h3&gt;Daily&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Check and follow up on email&lt;/li&gt;
@@ -32,7 +32,7 @@
 &lt;h3&gt;Bi-weekly&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update program sponsors using inputs from initiative tracker, 2-3 bullet points on highlights/things to watch out for (and send the link to the full tracker)&lt;/li&gt;
-&lt;li&gt;vVerify transactions for all Infrastructure spending&lt;/li&gt;
+&lt;li&gt;Verify transactions for all Infrastructure spending&lt;/li&gt;
 &lt;li&gt;Do program retrospective and planning session&lt;/li&gt;
 &lt;li&gt;Evaluate new ideas/opportunities using Evaluation Framework&lt;/li&gt;
 &lt;/ul&gt;
@@ -51,8 +51,10 @@
 &lt;li&gt;Annual program objectives: review current, set new ones&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;At the start of a new period (weekly, for example), I know that I have 3 things to do that are due at the end of that week. So as long as I get them done at some point that week, I'm doing well and can relax. If it's Friday and I still need to accomplish tasks on my weekly list, I know I need to crunch to get them done (or at least catch up on them the next week).&lt;/p&gt;
-&lt;p&gt;Sometimes, the end of periods collides (ie. the end of the month could also be the end of the week). This is generally not a problem since I am not working to 100% capacity※, so I can easily spread my work out over the course of each time period.&lt;/p&gt;
-&lt;p&gt;※ - It's important to have some slack in one's schedule. From "This is Lean": "the closer we get to one hundred percent utilization, the longer the throughput time.”, "The paradox is that a greater focus on utilizing resources efficiently tends to increase the amount of work there is to do."&lt;/p&gt;</content><category term="Development"></category></entry><entry><title>Agile and Scrum FAQ</title><link href="https://jonpurdy.com/2021/02/agile-and-scrum-faq/" rel="alternate"></link><published>2021-02-01T00:00:00-05:00</published><updated>2021-02-01T00:00:00-05:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2021-02-01:/2021/02/agile-and-scrum-faq/</id><summary type="html">&lt;p&gt;&lt;img src="/images/20210201-agile-faq/header.jpg" alt="Joshua Tree overlook" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes, the end of periods collides (ie. the end of the month could also be the end of the week). This is generally not a problem since I am not working to 100% capacity&lt;a href="#fn1"&gt;※&lt;/a&gt;, so I can easily spread my work out over the course of each time period.&lt;/p&gt;
+&lt;p&gt;&lt;fn id=fn1&gt;&lt;i&gt;※ - It's important to have some slack in one's schedule. From "This is Lean":&lt;br /&gt;
+‣ &lt;em&gt;the closer we get to one hundred percent utilization, the longer the throughput time.&lt;/em&gt;&lt;br /&gt;
+‣ &lt;em&gt;The paradox is that a greater focus on utilizing resources efficiently tends to increase the amount of work there is to do.&lt;/em&gt;&lt;/fn&gt;&lt;/p&gt;</content><category term="Development"></category></entry><entry><title>Agile and Scrum FAQ</title><link href="https://jonpurdy.com/2021/02/agile-and-scrum-faq/" rel="alternate"></link><published>2021-02-01T00:00:00-05:00</published><updated>2021-02-01T00:00:00-05:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2021-02-01:/2021/02/agile-and-scrum-faq/</id><summary type="html">&lt;p&gt;&lt;img src="/images/20210201-agile-faq/header.jpg" alt="Joshua Tree overlook" width="100%" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;What's the difference between using hours versus using story points to estimate?&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;Time estimates are used to estimate how long it will take to complete a task or project. They are typically expressed in hours or days and are used to help plan and manage the project timeline.&lt;/p&gt;
 &lt;p&gt;Story points …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="/images/20210201-agile-faq/header.jpg" alt="Joshua Tree overlook" width="100%" /&gt;&lt;/p&gt;

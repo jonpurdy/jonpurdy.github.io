@@ -222,7 +222,8 @@ main article .article__text h2 {
 }
 main article .article__text h3, main article .article__text h4, main article .article__text h5, main article .article__text h6 {
   margin-top: 2.375rem;
-  margin-bottom: 1.375em;
+  /* margin-bottom: 1.375em; jon changed */
+  margin-bottom: 0em;
 }
 main article .article__text code {
   padding: 0.2em 0;
@@ -244,17 +245,18 @@ main article .article__text ul {
   padding-left: 20px;
 }
 main article .article__text li {
-  margin-bottom: 0.5em;
+  /* margin-bottom: 0.5em; jon changed */
+  margin-bottom: 0em;
 }
 main article .article__text blockquote {
   display: block;
   margin: 22px 2px 22px 2px;
-  padding: 1em 2em 1em 4em;
+  padding: 1em 2em 1em 2em;
   color: #9E9E9E;
   font-style: italic;
   position: relative;
 }
-main article .article__text blockquote:before {
+/*main article .article__text blockquote:before {
   content: '"';
   font-size: 600%;
   font-style: bold;
@@ -263,7 +265,7 @@ main article .article__text blockquote:before {
   top: 0;
   position: absolute;
   color: #9E9E9E;
-}
+}*/
 main article .article__text table.footnote {
   margin-top: 0;
 }

@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jon Purdy</title><link href="https://jonpurdy.com/" rel="alternate"/><link href="https://jonpurdy.com/feeds/all.atom.xml" rel="self"/><id>https://jonpurdy.com/</id><updated>2024-02-20T00:00:00-05:00</updated><entry><title>How I Work Cyclically</title><link href="https://jonpurdy.com/2024/02/how-i-work-cyclically/" rel="alternate"/><published>2024-02-20T00:00:00-05:00</published><updated>2024-02-20T00:00:00-05:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2024-02-20:/2024/02/how-i-work-cyclically/</id><summary type="html">&lt;!-- &lt;img src="/images/20240220-how-i-work-cyclically/header.jpg" alt="SF Ocean Beach boardwalk" width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20240220-how-i-work-cyclically/header.jpg" data-dither="/images/20240220-how-i-work-cyclically/header-dither.png"&gt;
+  &lt;img src="/images/20240220-how-i-work-cyclically/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I want to use my brain for working on big picture and detailed work, not for planning on what to work on. The world operates on cycles: breathing every 3-10 seconds, work/play/sleep every 24 hours, quarterly/annual financials every 3 or 12 months.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;My strategy: use what's essentially …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;!-- &lt;img src="/images/20240220-how-i-work-cyclically/header.jpg" alt="SF Ocean Beach boardwalk" width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20240220-how-i-work-cyclically/header.jpg" data-dither="/images/20240220-how-i-work-cyclically/header-dither.png"&gt;
+  &lt;img src="/images/20240220-how-i-work-cyclically/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I want to use my brain for working on big picture and detailed work, not for planning on what to work on. The world operates on cycles: breathing every 3-10 seconds, work/play/sleep every 24 hours, quarterly/annual financials every 3 or 12 months.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;My strategy: use what's essentially a recurring to-do list.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;For each cycle:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;List the task(s) that need to get done&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;For each task:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Details about how to complete the task, including links to previous task output, where to gather details, etc.&lt;/li&gt;
+&lt;li&gt;A checklist of subtasks or steps for completion&lt;/li&gt;
+&lt;li&gt;Prerequisite tasks (ie. what tasks need to be done to feed input into the current task)&lt;/li&gt;
+&lt;li&gt;The last date the task was done&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="/images/20240220-how-i-work-cyclically/inputs.png" alt="inputs" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;As an Infrastructure TPM at &lt;a href="https://chainsafe.io"&gt;ChainSafe&lt;/a&gt;, this is what my list generally looks like:&lt;/p&gt;
+&lt;h3&gt;Daily&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Check and follow up on email&lt;/li&gt;
+&lt;li&gt;Check and follow up on Slack&lt;/li&gt;
+&lt;li&gt;Check incidents channel to see if anything bad happened&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Weekly&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;One-line status update on each program initiative on "initiatives tracker", and setting green/yellow/red status&lt;/li&gt;
+&lt;li&gt;Looking for changes to infrastructure&lt;/li&gt;
+&lt;li&gt;People allocations: verify team members worked on what they committed do, update this for the next week&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Bi-weekly&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update program sponsors using inputs from initiative tracker, 2-3 bullet points on highlights/things to watch out for (and send the link to the full tracker)&lt;/li&gt;
+&lt;li&gt;Verify transactions for all Infrastructure spending&lt;/li&gt;
+&lt;li&gt;Do program retrospective and planning session&lt;/li&gt;
+&lt;li&gt;Evaluate new ideas/opportunities using Evaluation Framework&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Monthly&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Pull stats (monthly revenue and expenses) via Python script &lt;/li&gt;
+&lt;li&gt;Write Infrastructure Newsletter (targeting wide company audience) using inputs from Python script and biweekly updates&lt;/li&gt;
+&lt;li&gt;Update exec audience with specific requested stats&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Quarterly&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Quarterly OKRs: review current, set new ones&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Yearly&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Annual program objectives: review current, set new ones&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At the start of a new period (weekly, for example), I know that I have 3 things to do that are due at the end of that week. So as long as I get them done at some point that week, I'm doing well and can relax. If it's Friday and I still need to accomplish tasks on my weekly list, I know I need to crunch to get them done (or at least catch up on them the next week).&lt;/p&gt;
+&lt;p&gt;Sometimes, the end of periods collides (ie. the end of the month could also be the end of the week). This is generally not a problem since I am not working to 100% capacity&lt;a href="#fn1"&gt;※&lt;/a&gt;, so I can easily spread my work out over the course of each time period.&lt;/p&gt;
+&lt;p&gt;&lt;fn id=fn1&gt;&lt;i&gt;※ - It's important to have some slack in one's schedule. From "This is Lean":&lt;br /&gt;
+‣ &lt;em&gt;the closer we get to one hundred percent utilization, the longer the throughput time.&lt;/em&gt;&lt;br /&gt;
+‣ &lt;em&gt;The paradox is that a greater focus on utilizing resources efficiently tends to increase the amount of work there is to do.&lt;/em&gt;&lt;/fn&gt;&lt;/p&gt;</content><category term="Development"/></entry><entry><title>Agile and Scrum FAQ</title><link href="https://jonpurdy.com/2021/02/agile-and-scrum-faq/" rel="alternate"/><published>2021-02-01T00:00:00-05:00</published><updated>2021-02-01T00:00:00-05:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2021-02-01:/2021/02/agile-and-scrum-faq/</id><summary type="html">&lt;!-- &lt;img src="/images/20210201-agile-faq/header.jpg" alt="Joshua Tree overlook" width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20210201-agile-faq/header.jpg" data-dither="/images/20210201-agile-faq/header-dither.png"&gt;
+  &lt;img src="/images/20210201-agile-faq/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;b&gt;What's the difference between using hours versus using story points to estimate?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Time estimates are used to estimate how long it will take to complete a task or project. They are typically expressed in hours or days and are used to help plan and manage the project timeline.&lt;/p&gt;
+&lt;p&gt;Story points …&lt;/p&gt;</summary><content type="html">&lt;!-- &lt;img src="/images/20210201-agile-faq/header.jpg" alt="Joshua Tree overlook" width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20210201-agile-faq/header.jpg" data-dither="/images/20210201-agile-faq/header-dither.png"&gt;
+  &lt;img src="/images/20210201-agile-faq/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;b&gt;What's the difference between using hours versus using story points to estimate?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Time estimates are used to estimate how long it will take to complete a task or project. They are typically expressed in hours or days and are used to help plan and manage the project timeline.&lt;/p&gt;
+&lt;p&gt;Story points are used to estimate the relative complexity of tasks or stories. They are  expressed in a numerical scale and are used to prioritize tasks and help allocate resources. &lt;/p&gt;
+&lt;p&gt;&lt;i&gt;"How many hours is a point?"&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;There isn't a formula to calculate this as it is overprecise and misleading. Instead, calculating team velocity can be used to provide stakeholders with an understanding of how long a 3-point backlog item will take. &lt;/p&gt;
+&lt;p&gt;&lt;b&gt;What's the difference between "Definition of Done" and "Acceptance Criteria"?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Both&lt;/i&gt;:&lt;br&gt;
+- A set of criteria that must be met before a product, feature, or user story is considered complete.&lt;br&gt;
+- The criteria should be measurable and verifiable.&lt;br&gt;
+- The criteria should be agreed upon by the development team, the product owner, and other stakeholders.  &lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Definition of Done&lt;/i&gt;: applies generally to all work items (all User Stories)&lt;br&gt;
+Examples:&lt;br&gt;
+- Verified by QA&lt;br&gt;
+- Unit Tests written and passing&lt;br&gt;
+- All iteration bugs are fixed before closing  &lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Acceptance Criteria&lt;/i&gt;: applies to each specific work item (each User Story)&lt;br&gt;
+Examples:&lt;br&gt;
+- User can do a particular action&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Differences between Scrum and Kanban?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Two main differences:&lt;br&gt;
+- Scrum is iterative, while Kanban is continuous.&lt;br&gt;
+- Scrum focuses on sprints and time-boxed iterations, while Kanban focuses on visualizing workflows and limiting work in progress.  &lt;/p&gt;
+&lt;p&gt;From what I've seen typically, Scrum is used for software projects where features are being built and delivered in increments, whereas Kanban is used for ongoing maintenance, less-defined projects, and infrastructure※. &lt;/p&gt;
+&lt;p&gt;※ - Infrascrum can also be used for infrastructure projects, which is like a hybrid between the two.&lt;/p&gt;</content><category term="Development"/></entry><entry><title>How to plan, estimate, and build an MVP with Scrum</title><link href="https://jonpurdy.com/2020/09/how-to-plan-estimate-and-build-an-mvp-with-scrum/" rel="alternate"/><published>2020-09-30T00:00:00-04:00</published><updated>2020-09-30T00:00:00-04:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2020-09-30:/2020/09/how-to-plan-estimate-and-build-an-mvp-with-scrum/</id><summary type="html">&lt;!-- &lt;img src="/images/20200930-mvp/header.jpg" alt="Lightning over SF" width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20200930-mvp/header.jpg" data-dither="/images/20200930-mvp/header-dither.png"&gt;
+  &lt;img src="/images/20200930-mvp/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I now have two pages in my PM*Framework.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/pm-framework/how-to-quickly-plan-and-estimate-an-mvp"&gt;How to Plan and Estimate an MVP&lt;/a&gt;: Explains how to figure out what you want to build, break it down into User Stories, and estimate with reasonable accuracy how long it will take to build.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/pm-framework/how-to-build-an-mvp-with-scrum"&gt;How to build an MVP with …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;!-- &lt;img src="/images/20200930-mvp/header.jpg" alt="Lightning over SF" width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20200930-mvp/header.jpg" data-dither="/images/20200930-mvp/header-dither.png"&gt;
+  &lt;img src="/images/20200930-mvp/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I now have two pages in my PM*Framework.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/pm-framework/how-to-quickly-plan-and-estimate-an-mvp"&gt;How to Plan and Estimate an MVP&lt;/a&gt;: Explains how to figure out what you want to build, break it down into User Stories, and estimate with reasonable accuracy how long it will take to build.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/pm-framework/how-to-build-an-mvp-with-scrum"&gt;How to build an MVP with Scrum&lt;/a&gt;: Goes through the steps of building an MVP with Scrum, including Sprint Planning, Sprint Review and Retrospective, adjusting estimates, and how to support development teams during each Sprint.&lt;/p&gt;
+&lt;p&gt;I have the PM*Framework as a separate topic at the top rather than pages as blog posts since they are intended to be continuously updated with additional learning and information. Please have a look and let me know if you have any feedback or suggestions! I'm on Twitter &lt;a href="https://twitter.com/jonpurdy"&gt;@jonpurdy&lt;/a&gt;.&lt;/p&gt;</content><category term="Productivity"/></entry><entry><title>How to enable 5GHz on your wifi router</title><link href="https://jonpurdy.com/2020/06/how-to-enable-5ghz-on-your-wifi-router/" rel="alternate"/><published>2020-06-10T00:00:00-04:00</published><updated>2020-06-10T00:00:00-04:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2020-06-10:/2020/06/how-to-enable-5ghz-on-your-wifi-router/</id><summary type="html">&lt;figure class="img-toggle" data-orig="/images/20200610-5ghz/header.jpg" data-dither="/images/20200610-5ghz/header-dither.png"&gt;
+  &lt;img src="/images/20200610-5ghz/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I mentioned in my videoconferencing guide that 5 GHz bands on wifi are vastly better than 2.4 GHz bands. Here's a list of common routers and where the setting is located.&lt;/p&gt;
+&lt;h4&gt;Asus&lt;/h4&gt;
+&lt;p&gt;Left pane: General → Network Map
+Under System Status, choose 2.4GHz or 5GHz tab and enter "Network …&lt;/p&gt;</summary><content type="html">&lt;figure class="img-toggle" data-orig="/images/20200610-5ghz/header.jpg" data-dither="/images/20200610-5ghz/header-dither.png"&gt;
+  &lt;img src="/images/20200610-5ghz/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I mentioned in my videoconferencing guide that 5 GHz bands on wifi are vastly better than 2.4 GHz bands. Here's a list of common routers and where the setting is located.&lt;/p&gt;
+&lt;h4&gt;Asus&lt;/h4&gt;
+&lt;p&gt;Left pane: General → Network Map
+Under System Status, choose 2.4GHz or 5GHz tab and enter "Network Name (SSID)"&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/pm/wifi-settings/asus-1.png" alt="Diagram" width="45%" /&gt;&lt;/p&gt;
+&lt;h4&gt;D-Link&lt;/h4&gt;
+&lt;p&gt;Settings → Wireless
+Rename either 2.4 GHz or 5 GHz SSID&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/pm/wifi-settings/d-link-1.png" alt="dlink" width="45%" /&gt;
+&lt;img src="/images/pm/wifi-settings/d-link-2a.png" alt="dlink" width="45%" /&gt;
+&lt;img src="/images/pm/wifi-settings/d-link-2b.png" alt="dlink" width="45%" /&gt;&lt;/p&gt;
+&lt;h4&gt;Eero&lt;/h4&gt;
+&lt;p&gt;Can't do separate SSIDs! 
+Not recommended.&lt;/p&gt;
+&lt;h4&gt;Linksys&lt;/h4&gt;
+&lt;p&gt;Wireless tab →  select Manual → Basic Wireless Settings → 5 GHz Wireless Settings&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/pm/wifi-settings/linksys-1.png" alt="linksys" width="45%" /&gt;
+&lt;img src="/images/pm/wifi-settings/linksys-2.png" alt="linksys" width="45%" /&gt;&lt;/p&gt;
+&lt;h4&gt;Linksys Velop (mesh)&lt;/h4&gt;
+&lt;p&gt;Router Settings → Wi-Fi Settings → Show more
+This will display both 2.4 and 5 GHz options&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/pm/wifi-settings/linksys-velop-1.png" alt="linksys-velop" width="45%" /&gt;
+&lt;img src="/images/pm/wifi-settings/linksys-velop-2.png" alt="linksys-velop" width="45%" /&gt;&lt;/p&gt;
+&lt;h4&gt;TP-Link (Blue GUI)&lt;/h4&gt;
+&lt;p&gt;Wireless → Wireless Settings → Advanced
+Top right: click either 2.4GHz or 5GHz and change SSID name&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/pm/wifi-settings/tp-link-blue-1.jpg" alt="tp-link-blue" width="45%" /&gt;
+&lt;img src="/images/pm/wifi-settings/tp-link-blue-2.jpg" alt="tp-link-blue" width="45%" /&gt;&lt;/p&gt;
+&lt;h4&gt;TP-Link (Green GUI)&lt;/h4&gt;
+&lt;p&gt;Dual Band Selection → Ensure "Concurrently with 2.4 GHz and 5 GHz" is selected
+On left bar, go into either "Wireless 2.4GHz" or "Wireless 5GHz" and change SSID name&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/pm/wifi-settings/tp-link-green-1.jpg" alt="tp-link-green" width="45%" /&gt;
+&lt;img src="/images/pm/wifi-settings/tp-link-green-2.jpg" alt="tp-link-green" width="45%" /&gt;&lt;/p&gt;
+&lt;h4&gt;TP-Link (Turquoise GUI)&lt;/h4&gt;
+&lt;p&gt;Advanced → Wireless → Wireless Settings
+Top right: click either 2.4GHz or 5GHz and change SSID name&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/pm/wifi-settings/tp-link-turq-1.jpg" alt="tp-link-turq" width="45%" /&gt;
+&lt;img src="/images/pm/wifi-settings/tp-link-turq-2.jpg" alt="tp-link-turq" width="45%" /&gt;&lt;/p&gt;
+&lt;h4&gt;Ubiquiti Unifi&lt;/h4&gt;
+&lt;p&gt;Click Devices → choose Access Point(s) → Config (gear icon)
+RADIOS → ensure Radio 5G is enabled
+WLANS → click pencil icon to override SSID name
+(I override my 2.4 GHz network since I consider 5 GHz my main SSID)&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/pm/wifi-settings/ubiquiti-1.png" alt="ubiquiti" width="45%" /&gt;
+&lt;img src="/images/pm/wifi-settings/ubiquiti-2.png" alt="ubiquiti" width="45%" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;For more content like this, follow me on &lt;a href="https://twitter.com/jonpurdy/"&gt;Twitter&lt;/a&gt; or add this blog to your RSS feed.&lt;/em&gt;&lt;/p&gt;</content><category term="Productivity"/></entry><entry><title>Using email aliasing to detect hacks and protect your privacy</title><link href="https://jonpurdy.com/2020/06/using-email-aliasing-to-detect-hacks-and-protect-your-privacy/" rel="alternate"/><published>2020-06-02T00:00:00-04:00</published><updated>2020-06-02T00:00:00-04:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2020-06-02:/2020/06/using-email-aliasing-to-detect-hacks-and-protect-your-privacy/</id><summary type="html">&lt;!-- &lt;img src="/images/20200602-email-aliasing/header.jpg" alt="Dog videoconferencing." width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20200602-email-aliasing/header.jpg" data-dither="/images/20200602-email-aliasing/header-dither.png"&gt;
+  &lt;img src="/images/20200602-email-aliasing/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I've maintained very strict control over email for over a decade. When I purchased jonpurdy.com in 2006, I did so with the intent of having a lifelong domain and email address. But the longer one uses an email address, the more spam and unwanted email tends to collect.&lt;/p&gt;
+&lt;h2&gt;Plus-aliasing …&lt;/h2&gt;</summary><content type="html">&lt;!-- &lt;img src="/images/20200602-email-aliasing/header.jpg" alt="Dog videoconferencing." width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20200602-email-aliasing/header.jpg" data-dither="/images/20200602-email-aliasing/header-dither.png"&gt;
+  &lt;img src="/images/20200602-email-aliasing/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I've maintained very strict control over email for over a decade. When I purchased jonpurdy.com in 2006, I did so with the intent of having a lifelong domain and email address. But the longer one uses an email address, the more spam and unwanted email tends to collect.&lt;/p&gt;
+&lt;h2&gt;Plus-aliasing&lt;/h2&gt;
+&lt;p&gt;A couple of years afterwards, I heard about plus-aliasing. This is when you take &lt;code&gt;account@example.com&lt;/code&gt; and add a plus and string after the username, such as &lt;code&gt;account+service@example.com&lt;/code&gt;. This email address is  different than &lt;code&gt;account@example.com&lt;/code&gt;, but providers such as GMail treat it the same. This allows for easier filtering of incoming emails. Instead of trying to filter by incoming address or domain and trying to catch all the possible combinations, you filter by that alias. &lt;/p&gt;
+&lt;p&gt;You can completely avoid email from hitting your inbox by creating a filter for &lt;code&gt;account+service@example.com&lt;/code&gt; that puts it into a Service folder. Here's a sample of mine:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200602-email-aliasing/folders.png" alt="My email folders" width="20%" /&gt;&lt;/p&gt;
+&lt;p&gt;But there's a disadvantage of plus-aliasing: it's possible to derive your actual email address by removing the plus symbol and everything after it. If someone really wanted to get your address from &lt;code&gt;account+service@example.com&lt;/code&gt;, they could remove &lt;code&gt;+service&lt;/code&gt; from the address.&lt;/p&gt;
+&lt;h2&gt;Domain-based aliasing&lt;/h2&gt;
+&lt;p&gt;There is where owning your own domain comes in. Since I control my domain, instead of using &lt;code&gt;account+service@mydomain.com&lt;/code&gt;,  I started creating email aliases, like &lt;code&gt;service@mydomain.com&lt;/code&gt;. This has all the benefits of plus-aliasing, but there's no way for services to derive my main email address from that. If services want to reach me, they must use the specific unique address they are provided with.&lt;/p&gt;
+&lt;p&gt;If you unsubscribe from a service's mailing list, and they still email you months or years down the road (because you didn't unsubscribe from THAT PARTICULAR list), you can simply delete the alias! (With plus-aliasing, you can set up rules to delete any incoming mail to that address, which is a bit more complicated.)&lt;/p&gt;
+&lt;p&gt;You can also determine if a company has shared your email address with other companies or services. If you start receiving emails from Company2 at your &lt;code&gt;Company1@mydomain.com&lt;/code&gt; alias, it's clear that Company1 shared your email with Company2. As an example, I made a donation via &lt;a href="https://www.akaraisin.com"&gt;Aka Raisin&lt;/a&gt;, a non-profit fundraising platform, once back in 2017. For the next few months, my &lt;code&gt;akaraisin@mydomain.com&lt;/code&gt; started getting emails from various hospitals and charities. It was clear that my unique address was shared with other organizations. Deleting the alias solved the problem (and there was no need to set up incoming rules like with plus-aliasing).&lt;/p&gt;
+&lt;p&gt;There's another benefit to creating aliases: you know when a company has leaked your email address or has been hacked. Back in 2013, I started getting a bunch of of random spam email to &lt;code&gt;adobe@mydomain.com&lt;/code&gt;. Sure enough, a few days later Adobe announced that &lt;a href="https://theblog.adobe.com/important-customer-security-announcement/"&gt;they'd been hacked&lt;/a&gt; and 2.8 million addresses were compromised (it ended up being &lt;a href="https://www.bbc.com/news/technology-24740873"&gt;&lt;strike&gt;38 million&lt;/strike&gt;&lt;/a&gt; &lt;a href="https://www.theverge.com/2013/11/7/5078560/over-150-million-breached-records-from-adobe-hack-surface-online"&gt;150 million&lt;/a&gt; in the end). If I didn't have an alias for them, I'd still be receiving spam to my primary email address to this day (see the Mailroute incoming log for my domain): &lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200602-email-aliasing/hacked-adobe.png" alt="Adobe hacked" width="70%" /&gt;&lt;/p&gt;
+&lt;p&gt;When a company gets hacked, it's easy to prevent spammers from getting into your inbox. Simply delete the alias!  Then create a new alias for that service, change your email address on your account, and you're set! Until they get hacked again, like &lt;a href="https://www.bloomberg.com/news/articles/2019-10-25/adobe-exposed-data-of-more-than-7-million-software-users"&gt;Adobe in 2019&lt;/a&gt;... then just delete the alias, create a new one, and move on. (That address still gets attempted spam as well...)&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200602-email-aliasing/hacked-adobeid.png" alt="Adobe hacked again" width="70%" /&gt;&lt;/p&gt;
+&lt;p&gt;An interesting situation occurred in 2012. I started getting spam to my &lt;code&gt;dropbox@mydomain.com&lt;/code&gt; alias. A couple of weeks later, Dropbox announced a security incident that caused &lt;a href="https://blog.dropbox.com/topics/company/security-update-new-features"&gt;credentials to be leaked&lt;/a&gt;. I had already changed my account email after the first spam email just to be safe. It came to light in 2016 that they buried the extent of the attack and &lt;a href="https://www.vice.com/en_us/article/nz74qb/hackers-stole-over-60-million-dropbox-accounts"&gt;68 million accounts had been compromised&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200602-email-aliasing/hacked-dropbox.png" alt="Dropbox hacked" width="70%" /&gt;&lt;/p&gt;
+&lt;p&gt;(With plus-aliasing, you know when the address has been hacked, but hackers can easily derive your primary email address and send spam or phishing emails to that.)&lt;/p&gt;
+&lt;p&gt;There's another benefit of domain-based email aliasing: ability to respond via that email address. If I needed to get in touch with Adobe but didn't trust them with my primary email (why would I after two hacks?), I could easily send an email from adobe@mydomain.com to them.&lt;/p&gt;
+&lt;h2&gt;Disposable email services&lt;/h2&gt;
+&lt;p&gt;I love the control that email aliasing gives me but this setup isn't simple. Most non-technical people I've spoken to about this are very interested in what it is and how it's done, but lose interest once I explain how to set it up. Even for technical people, it's work to create the alias, ensure it works, and create folders and rules for filtering. In my case, it's worth it to use with those companies and services that I use on a regular basis.&lt;/p&gt;
+&lt;p&gt;But if I just want to try a product out or get access to a free service: I head over to Mailinator.com, generate a random email address, and use that.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200602-email-aliasing/mailinator.png" alt="Mailinator" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;But this has problems too: a lot of services don't like disposable email and don't let you register with them. Even though Mailinator has dozens or hundreds of alternate domains (so &lt;code&gt;example@mailinator.com&lt;/code&gt; works the same as &lt;code&gt;example@mailinator2.com&lt;/code&gt; and &lt;code&gt;example@thisisnotmyrealemail.com&lt;/code&gt;), people make &lt;a href="https://gist.github.com/nocturnalgeek/1b8fa44283314544c487"&gt;lists that contain those domains&lt;/a&gt; so site admins can block them from being used. It's unfortunate that forum spammers and WordPress comment spammers use these free services to generate accounts since legitimate users who don't want to provide their email address end up getting blocked as well.&lt;/p&gt;
+&lt;p&gt;Mailinator has a way around these block lists though: buy your own throwaway domain and &lt;a href="https://mailinator.blogspot.com/2008/01/your-own-private-mailinator.html"&gt;point the MX records (mail server records) to Mailinator&lt;/a&gt;! You get the benefits of Mailinator but don't get blocked by sites that block the list of Mailinator domains. I have done this and it works really well, but it's non-zero work to buy a domain for this, and I certainly wouldn't expect non-technical users to do this. (There are also a small subset of sites that check in realtime to see if each domain points to Mailinator's servers. But those are rare from what I've seen.)&lt;/p&gt;
+&lt;p&gt;Of course, Mailinator isn't necessarily a great tool to use if you actually need to preserve emails. Since it's anonymous and anyone can use any account, emails are deleted after a certain time. So it's great for trials that you probably won't pay for, or to get access to an article that is sent out via email only, but not great for long-term paid subscriptions services.&lt;/p&gt;
+&lt;p&gt;It's also not private by design; anyone can see the emails sent to any account. I generate long random addresses (20 characters random strings) to avoid collisions to get around this.&lt;/p&gt;
+&lt;h2&gt;Hide My Email for Sign in with Apple&lt;/h2&gt;
+&lt;p&gt;I don't use this myself, but I thought I'd mention it because of how easy it is to use for the very limited use cases.&lt;/p&gt;
+&lt;p&gt;As described &lt;a href="https://support.apple.com/en-us/HT210425"&gt;here&lt;/a&gt;, when you sign up for a new service, Apple generates a unique ID (&lt;code&gt;dpdcnf87nu@privaterelay.appleid.com&lt;/code&gt;) and forwards those emails to your actual Apple ID (&lt;code&gt;j.appleseed@icloud.com&lt;/code&gt;). The service you use only knows about the unique alias, so if they get hacked or send unwanted email, you can just delete the alias and Apple will stop forwarding emails to your actual address.&lt;/p&gt;
+&lt;p&gt;However, this is extremely limited: this only works on websites that are associated with an iOS app, and it's for Apple devices only. Less than 5% of all of the products and services I use are an iOS app or associated website.&lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;After drafting this post, I created a list of my requirements and whether each technique solves each of them. I didn't add &lt;em&gt;Mailinator&lt;/em&gt; or the &lt;em&gt;Sign in with Apple&lt;/em&gt; to the comparison because they can't be used as stand-alone solutions to my email handling problem.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Requirement&lt;/th&gt;
+&lt;th&gt;Primary email&lt;/th&gt;
+&lt;th&gt;Plus-aliasing&lt;/th&gt;
+&lt;th&gt;Domain-based aliasing&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Filter incoming email based on the service that sent it&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Easily stop receiving emails from services if they don't respect my unsubscribe requests&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;not easy&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Detect when a service has shared my email with another company or service&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Detect when a service has been hacked&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Prevent hackers with stolen customer email lists from deriving my primary email&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;Easy to implement and use&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;no&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For those of you who control your email flow in a similiar manner, are there any tools or services that I am missing? Are there any requirements or features that I'm missing out on?&lt;/p&gt;
+&lt;p&gt;If this sort of content is interesting to you, feel free to follow me on Twitter: &lt;a href="https://twitter.com/jonpurdy"&gt;@jonpurdy&lt;/a&gt;.&lt;/p&gt;</content><category term="Productivity"/></entry><entry><title>How to improve your Zoom/Skype teleconferencing game</title><link href="https://jonpurdy.com/2020/03/how-to-improve-your-zoomskype-teleconferencing-game/" rel="alternate"/><published>2020-03-18T00:00:00-04:00</published><updated>2020-03-18T00:00:00-04:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2020-03-18:/2020/03/how-to-improve-your-zoomskype-teleconferencing-game/</id><summary type="html">&lt;!-- &lt;img src="/images/20200318-videoconference/header.jpg" alt="Dog videoconferencing." width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20200318-videoconference/header.jpg" data-dither="/images/20200318-videoconference/header-dither.png"&gt;
+  &lt;img src="/images/20200318-videoconference/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Teleconferencing seems like an easy thing to get right, especially with webcams and good noise-canceling microphones being built into most laptops these days. If the environment is quiet and and lighting is good, it can be fine. But I've participated in a lot of meetings where I could hear myself …&lt;/p&gt;</summary><content type="html">&lt;!-- &lt;img src="/images/20200318-videoconference/header.jpg" alt="Dog videoconferencing." width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20200318-videoconference/header.jpg" data-dither="/images/20200318-videoconference/header-dither.png"&gt;
+  &lt;img src="/images/20200318-videoconference/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Teleconferencing seems like an easy thing to get right, especially with webcams and good noise-canceling microphones being built into most laptops these days. If the environment is quiet and and lighting is good, it can be fine. But I've participated in a lot of meetings where I could hear myself out of the participant's speakers, the video was choppy, or the background noises made it difficult to hear participant's voices properly.&lt;/p&gt;
+&lt;p&gt;I figured with all of society working remotely for the foreseeable future, I would publish my suggestions on how to videoconference more effectively.&lt;/p&gt;
+&lt;h1&gt;How to avoid blurry/pixelated video and choppy audio&lt;/h1&gt;
+&lt;p&gt;Your internet connection needs to be stable and relatively fast for this to work. &lt;/p&gt;
+&lt;p&gt;There are two components to your connection:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The path from your computer to your router (local)&lt;/li&gt;
+&lt;li&gt;The path from your router to the destination server, either direct to the participant or to the Google/Zoom server (remote)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;Aside from the suggestions below, there are more technical ways of optimizing your connection, such as tunnelling through a VPN to avoid packet prioritization or forcibly route around known-bad routes. But these will be saved for another day.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;1. Local setup&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Optimizations&lt;/strong&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use a wired ethernet connection&lt;br&gt;
+OR  &lt;/li&gt;
+&lt;li&gt;Use 802.11ac router or AP  &lt;/li&gt;
+&lt;li&gt;Use 5GHz bands (as opposed to 2.4GHz) for less interference (since they don't go as far at equal power levels)  &lt;ul&gt;
+&lt;li&gt;If you can, use 80MHz channel width (as opposed to 40MHz or 20MHz) for the fastest speeds  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If on a someone else's network and there are multiple names (such as &lt;em&gt;Cafe&lt;/em&gt; and &lt;em&gt;Cafe5&lt;/em&gt;), use &lt;em&gt;Cafe5&lt;/em&gt; since it's likely the 5GHz option  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On Mac, if you Option-click the Airport icon in your menu bar, you can view the technical details about how you're connected to verify you're set up correctly.  &lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200318-videoconference/airport.png" alt="Airport menu" width="40%" /&gt;&lt;/p&gt;
+&lt;h3&gt;2. Remote setup&lt;/h3&gt;
+&lt;p&gt;The remote path goes from your router and ISP to the destination. There's not much you can do once your packets leave your ISP, but you can optimize your connection by choosing a good package from your ISP.&lt;/p&gt;
+&lt;p&gt;Have you ever been in the situation where you could see and hear the other person clearly, but they complained about dropouts and blurred video on your side? Or vice-versa? This could be due to an asymmetry between your connections. One person could have a fast enough connection and another could have a slow connection. Complicating this is that many people don't have symmetric upload/download speeds.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200318-videoconference/updown.png" alt="Upload/download speed diagram" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;In the example on the left, both Alice and Bob have fast enough upload and download speeds, so they can both receive and transmit clear audio and video. But in the example on the right, Bob cheaped out and got an internet connection with a slow upload speed. As a result, he's able to see and hear Alice perfectly, but Alice receives choppy audio and video from Bob.&lt;/p&gt;
+&lt;p&gt;And with Bob being Bob, he will probably blame Alice since he "can see her perfectly". &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Optimizations&lt;/strong&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get a connection with at least 20 Mbps download and upload speeds (to allow for other non-videoconference traffic to get through and not affect your call)  &lt;ul&gt;
+&lt;li&gt;Ideally, 100 Mbps symmetric (100 Mbps up/100 Mbps down) is a minimum bar in an urban area; with this you should have zero issues even when sharing the connection with others  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Get fibre-to-the-home (FTTH) if available, or fibre-to-the-node/neighbourhood (FTTN) as an alternative; avoid straight DSL or Cable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;How to have crystal-clear, easy-to-understand audio&lt;/h1&gt;
+&lt;p&gt;The easiest and simplest way to get vastly superior audio: &lt;strong&gt;use headphones, with a microphone near your mouth&lt;/strong&gt;. With headphones, the the audio is playing directly in your ear, so the mic won't pick up the other person's voice playing out of speakers. The best noise cancellation in the world combined with the most expensive microphone is WORSE than just putting a microphone near your mouth!&lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://en.wikipedia.org/wiki/Inverse-square_law"&gt;inverse-square law&lt;/a&gt; applies to sound: if you double the distance from a microphone or speaker, sound volume drops by around 75% since sound travels in 3D space:  &lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200318-videoconference/Inverse_square_law.png" alt="Inverse square law" width="60%" /&gt;&lt;/p&gt;
+&lt;p&gt;If you can't use a headset with a mic, try to &lt;strong&gt;get as close to the microphone as you can&lt;/strong&gt;. Use earbuds anyway even if they don't have a mic just to prevent the other person's voice from being played out of your speakers and picked up by your mic.&lt;/p&gt;
+&lt;p&gt;If a mic is a metre away and an air conditioner is 10 metres away, but ten times louder than your voice, you'd get interference and noise cancelling would have to work very hard.&lt;/p&gt;
+&lt;p&gt;To simulate the massive difference this makes, here's an example recording of my voice at each specified distance, plus white noise (to simulate an air conditioner or refrigerator) being generated two metres away:  &lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200318-videoconference/loudness-1.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;Of course, only the voice audio gets louder since my voice is moving closer to the mic, but the noise source is fixed.&lt;/p&gt;
+&lt;p&gt;For each clip, let's &lt;em&gt;normalize&lt;/em&gt; the volume levels on each clip. This brings the loudest sounds up to 100%, and the quieter sounds up a bit as well:  &lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200318-videoconference/loudness-normalized.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;Zoomed in, each clip shows the background noise on the left and the voice waveform on the right. As you can see, the background noise is much thicker. In order to bring the voice audio up to 100%, the background noise got louder as well:  &lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200318-videoconference/loudness-zoomed.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;Let's look at the signal-to-noise ratio. You want a high ratio between signal (in this case, my voice) and noise (in this case, the simulated air conditioner). The green line is the peak voice signal, and the red line is the peak noise signal. The pink rectangle represents a unit of noise, and the black rectangles show the number of times louder the voice is compared to the noise. &lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200318-videoconference/loudness-snr.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;For the 1 metre microphone distance distance, you get less than 3:1 ratio. From 50 cm, you get 7:1. And from 2 cm, you get 20:1; almost a three-fold improvement!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Optimizations&lt;/strong&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use headphones with a built-in mic&lt;/li&gt;
+&lt;li&gt;If that's not available, use your non-mic earbuds instead of speakers and try to get close to the mic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;How to look better than everyone else&lt;/h1&gt;
+&lt;p&gt;Audio is more important than video. Choppy and blurry video can be tolerated as long as the audio is clear, not laggy, and doesn't cut out. But once you've got your internet connection and audio setup sorted, spend some time and get your video quality right.&lt;/p&gt;
+&lt;p&gt;There are already a lot of great tutorials on lighting, like &lt;a href="https://www.diyphotography.net/look-good-webcam-vlog/"&gt;this&lt;/a&gt;. So I'll keep my recommendations short:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get an external webcam (I recommend the Logitech c920).  &lt;ul&gt;
+&lt;li&gt;You might be thinking that built-in webcams are pretty great these days since the iPhone's front-facing camera works so well. Unfortunately, MacBook webcams are pretty bad compared to that, especially in low light.  &lt;/li&gt;
+&lt;li&gt;Notice the image noise as well as lack of detail in the shadows on Brinquitos' snout in the MacBook Pro image.  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="/images/20200318-videoconference/webcams.jpg" alt="Webcam comparison" width="100%" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mount the external webcam on a small desktop tripod. This allows you to move or type on your laptop while in a videoconference and not have the movements or vibrations transmitted to the webcam, causing subtle vibrations in your image.  &lt;/li&gt;
+&lt;li&gt;Ensure your face is lighter than the background.  Either sit near a window, or use an auxiliary light. If you need to use a desk lamp, bounce it off of a white sheet of paper so that the light isn't harsh on your face.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Dec 2020 Update&lt;/strong&gt;:  After this article was published, I found a tool that helped optimize the image from the C920. The main issue is that it has a blue cast (white balance too cool) by default.&lt;/p&gt;
+&lt;p&gt;I found &lt;a href="https://duckduckgo.com/?q=webcam+settings+mac+app+store&amp;amp;t=osx"&gt;Webcam Settings&lt;/a&gt; worked incredibly well to fix this. Some of the settings it can correct:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;white balance&lt;/li&gt;
+&lt;li&gt;manual or autofocus&lt;/li&gt;
+&lt;li&gt;zoom (digital)&lt;/li&gt;
+&lt;li&gt;exposure&lt;/li&gt;
+&lt;li&gt;image brightness/contrast (digital)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the example below, warm sunlight was streaming in and the camera made it much too blue. I corrected white balance to show what it actually looked like, as well as bumped the brightness slightly to show my face better.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200318-videoconference/webcam-2.jpg" alt="Webcam comparison" width="100%" /&gt;&lt;/p&gt;
+&lt;h1&gt;&amp;lt;/end&amp;gt;&lt;/h1&gt;
+&lt;p&gt;You need to optimize just a few things to make videoconferencing better! This makes you easier to see and hear so that you can get your point across faster and more easily.  &lt;/p&gt;
+&lt;h1&gt;Addendum&lt;/h1&gt;
+&lt;p&gt;Although I used both Zoom and Skype in the title of this article because they are the most popular tools, I don't actually recommend using them.&lt;/p&gt;
+&lt;p&gt;Skype went from an excellent piece of software a decade ago and changed into a visual abomination that is vastly more difficult to use and far buggier than before. Zoom has had numerous issues with privacy: &lt;a href="https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5"&gt;installing secret web servers on Macs&lt;/a&gt;, &lt;a href="https://news.ycombinator.com/item?id=22703000"&gt;embedding FaceBook tracking&lt;/a&gt;, and now &lt;a href="https://twitter.com/c1truz_/status/1244737672930824193"&gt;using the preflight script in a Mac package to install the entire app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strike&gt;I highly recommend the use of &lt;a href="https://meet.jit.si"&gt;Jitsi Meet&lt;/a&gt;. It runs in-browser or on an iOS or Android app, doesn't require an account, and the tech is based on WebRTC and is totally open source. It is funded by a videoconferencing company that makes money from enterprise-level features and support, and their customers are companies and users, not advertisers.&lt;/strike&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dec 2020 Update&lt;/strong&gt;: Since I published in March, Zoom has fixed numerous privacy and security issues with their Mac app. Jitsi seems to have had more trouble scaling than Zoom and I find the call quality and reliability isn't as good as other options.&lt;/p&gt;</content><category term="Development"/></entry><entry><title>Using Homebridge to connect non-HomeKit devices to the Apple ecosystem</title><link href="https://jonpurdy.com/2020/01/using-homebridge-to-connect-non-homekit-devices-to-the-apple-ecosystem/" rel="alternate"/><published>2020-01-31T00:00:00-05:00</published><updated>2020-01-31T00:00:00-05:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2020-01-31:/2020/01/using-homebridge-to-connect-non-homekit-devices-to-the-apple-ecosystem/</id><summary type="html">&lt;!-- &lt;img src="/images/20200131-homebridge/header.jpg" alt="Screenshot of neighbourhood from Google Maps." width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20200131-homebridge/header.jpg" data-dither="/images/20200131-homebridge/header-dither.png"&gt;
+  &lt;img src="/images/20200131-homebridge/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;My wife and I are staying with my folks for a couple of weeks before we move to SF. My father mentioned that it'd be nice if he could get his non-HomeKit power outlet switches working with HomeKit somehow, despite not being supported.&lt;/p&gt;
+&lt;p&gt;I figured there was a way to …&lt;/p&gt;</summary><content type="html">&lt;!-- &lt;img src="/images/20200131-homebridge/header.jpg" alt="Screenshot of neighbourhood from Google Maps." width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20200131-homebridge/header.jpg" data-dither="/images/20200131-homebridge/header-dither.png"&gt;
+  &lt;img src="/images/20200131-homebridge/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;My wife and I are staying with my folks for a couple of weeks before we move to SF. My father mentioned that it'd be nice if he could get his non-HomeKit power outlet switches working with HomeKit somehow, despite not being supported.&lt;/p&gt;
+&lt;p&gt;I figured there was a way to do this since both of them have local HTTP APIs that one can access programmatically. I didn't expect it'd be so easy. Within a few minutes, I had &lt;a href="https://github.com/nfarina/homebridge"&gt;Homebridge&lt;/a&gt; up and running on a Linux VM controlling a &lt;a href="https://www.ui.com/mfi/mpower/"&gt;Ubiquiti mPower mini outlet&lt;/a&gt;, confirming that it could be done.&lt;/p&gt;
+&lt;p&gt;My father preferred to use a spare Raspberry Pi. Below are the steps to get his setup working (two mPower outlets, one &lt;a href="https://www.kasasmart.com/us/products/smart-plugs/kasa-smart-wifi-plug-hs100"&gt;TP-LINK (Kasa) HS100&lt;/a&gt;, and a &lt;a href="https://www.chamberlain.com"&gt;Chamberlain&lt;/a&gt; garage door) so that it can be easily repeated if necessary. Feel free to skip the steps for devices that you don't have.&lt;/p&gt;
+&lt;h1&gt;Prerequisites&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi with raspbian-jessie installed&lt;/li&gt;
+&lt;li&gt;Ubiquiti mPower mini and/or TP-LINK HS100 (for exact instructions)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Initial Setup&lt;/h1&gt;
+&lt;p&gt;I generally followed the instructions on the &lt;a href="https://github.com/nfarina/homebridge"&gt;Homebridge GitHub repo&lt;/a&gt;. Supplemented with &lt;a href="https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi"&gt;how to install Homebridge on a Pi&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;1. Install NodeJS&lt;/h3&gt;
+&lt;p&gt;First, install NodeJS. The easiest way to install it on more modern Pis is &lt;a href="https://github.com/nodesource/distributions/blob/master/README.md#debinstall"&gt;here&lt;/a&gt;. Unfortunately, the spare Pi I used was an old Pi 1, which means I needed to get an older version of node (v11 was the latest I could find) that works with ARMv6 chips.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget&lt;span class="w"&gt; &lt;/span&gt;https://nodejs.org/dist/latest-v11.x/node-v11.15.0-linux-armv6l.tar.xz
+tar&lt;span class="w"&gt; &lt;/span&gt;xJvf&lt;span class="w"&gt; &lt;/span&gt;node-v11.15.0-linux-armv6l.tar.xz
+mkdir&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;/opt/node
+mv&lt;span class="w"&gt; &lt;/span&gt;node-v11.15.0-linux-armv6l/*&lt;span class="w"&gt; &lt;/span&gt;/opt/node/
+update-alternatives&lt;span class="w"&gt; &lt;/span&gt;--install&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/bin/node&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;node&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/opt/node/bin/node&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+update-alternatives&lt;span class="w"&gt; &lt;/span&gt;--install&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/bin/npm&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;npm&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/opt/node/bin/npm&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;2. Install Avahi&lt;/h3&gt;
+&lt;p&gt;Next, install the packages so that Avahi/Bonjour work (required by HAP-NodeJS):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;libavahi-compat-libdnssd-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;3. Install Homebridge&lt;/h3&gt;
+&lt;p&gt;Finally, install Homebridge and create a blank config file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;npm&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;-g&lt;span class="w"&gt; &lt;/span&gt;homebridge
+touch&lt;span class="w"&gt; &lt;/span&gt;~/.homebridge/config.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;4. Set up Homebridge config file&lt;/h3&gt;
+&lt;p&gt;Pretty simple. Just copy and paste this into &lt;code&gt;~/.homebridge/config.json&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I recommend changing the name, username (looks like a MAC address, but it's not), and pin fields. But leave the rest default.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;bridge&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;HomePi&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;01:23:45:67:89:AB&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;port&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;51826&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;pin&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;987-65-432&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;description&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Simple config file.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;ports&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;start&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;52100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;end&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;52150&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;comment&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;This section is used to control the range of ports that separate accessory (like camera or television) should be bind to.&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;5. Run it&lt;/h3&gt;
+&lt;p&gt;To verify that it works, run it and ensure you see the QR code and setup PIN (debug logging turned on:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;DEBUG=* /opt/node/bin/homebridge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img style="padding-left: 30px" src="/images/20200131-homebridge/qr.png" width="250" align="right"/&gt;&lt;/p&gt;
+&lt;h3&gt;6. Add to Home&lt;/h3&gt;
+&lt;p&gt;Homebridge now needs to be added to the Home app on iOS. Go to Add Accessory, then scan the QR code that shows up on the Pi's screen.&lt;/p&gt;
+&lt;p&gt;Once this is done, any devices that are configured through Homebridge will show up automatically under the Home app.&lt;/p&gt;
+&lt;h1&gt;Ubiquiti mPower mini outlet&lt;/h1&gt;
+&lt;p&gt;I used the &lt;a href="https://github.com/wr/homebridge-mpower"&gt;Homebridge mPower&lt;/a&gt; plugin.&lt;/p&gt;
+&lt;p&gt;Install the plugin:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;npm&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;-g&lt;span class="w"&gt; &lt;/span&gt;homebridge-mpower
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Add the mPower platform and outlets to the Homebridge configuration (&lt;code&gt;~/.homebridge/config.json&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;quot;platforms&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;platform&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mPower&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mPower&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;outlets&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;MFi 8b1038&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ubnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ubnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;192.168.1.101&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;MFi 885B5F&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ubnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ubnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;192.168.1.102&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If it fails, verify that your config validates with &lt;a href="https://jsonlint.com"&gt;JSONLint&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Note that the id for both outlets is &lt;code&gt;1&lt;/code&gt;; mPower mini must always be set to &lt;code&gt;1&lt;/code&gt;. See the &lt;a href="https://github.com/wr/homebridge-mpower"&gt;repo&lt;/a&gt; for more info.&lt;/p&gt;
+&lt;p&gt;You should see your mPower outlets appear in the Home app automatically:
+&lt;img src="/images/20200131-homebridge/1-mpower.png" alt="mPower" width="50%" /&gt;&lt;/p&gt;
+&lt;h1&gt;TP-LINK SmartHome&lt;/h1&gt;
+&lt;p&gt;I used the &lt;a href="https://github.com/plasticrake/homebridge-tplink-smarthome"&gt;Homebridge TP-LINK Smarthome plugin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Install the Homebridge plugin:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;npm&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;-g&lt;span class="w"&gt; &lt;/span&gt;homebridge-tplink-smarthome
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Add the platform to the Homebridge configuration (&lt;code&gt;~/.homebridge/config.json&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;platform&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;TplinkSmarthome&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;TplinkSmarthome&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once you restart Homebridge, the HS-100 should show up in the Home app shortly after that.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200131-homebridge/2-tplink.png" alt="TP-LINK" width="50%" /&gt;&lt;/p&gt;
+&lt;h1&gt;Chamberlain Garage Door&lt;/h1&gt;
+&lt;p&gt;I used the &lt;a href="https://github.com/caseywebdev/homebridge-chamberlain/"&gt;Homebridge Chamberlain plugin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Install the Homebridge plugin:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;npm&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;-g&lt;span class="w"&gt; &lt;/span&gt;homebridge-chamberlain
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The setup and config for this is a bit different. Rather than adding it in the &lt;code&gt;platforms&lt;/code&gt;, it's added in the &lt;code&gt;accessories&lt;/code&gt; section, which needs to be created.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;accessories&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;accessory&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Chamberlain&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Garage Door&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;your_chamberlain_cloud_email@whatever.com&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;your_password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;deviceId&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;your_device_id&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Restart homebridge. If restarts without any issue, you should be good to go.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20200131-homebridge/3-garage.png" alt="Garage" width="50%" /&gt;&lt;/p&gt;
+&lt;p&gt;If you see:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Error: Multiple controllable devices found: CG0800000111, CG06A1000111, GW0100000111
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Try setting the device ID in the config to each of the devices in the list and seeing which one actually opens the garage door in the Home app, or just fails with an error. For me, the first device ID (CG0800000111) worked but the other two didn't.&lt;/p&gt;
+&lt;h1&gt;Persistency&lt;/h1&gt;
+&lt;p&gt;To make Homebridge persistent (start up on startup/reboot) using pm2:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;npm&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;-g&lt;span class="w"&gt; &lt;/span&gt;pm2
+/opt/node/bin/pm2&lt;span class="w"&gt; &lt;/span&gt;startup
+/opt/node/bin/pm2&lt;span class="w"&gt; &lt;/span&gt;start&lt;span class="w"&gt; &lt;/span&gt;/opt/node/bin/homebridge
+/opt/node/bin/pm2&lt;span class="w"&gt; &lt;/span&gt;save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To verify that it's running:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;/opt/node/bin/pm2&lt;span class="w"&gt; &lt;/span&gt;status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You should see something like this:
+&lt;img src="/images/20200131-homebridge/pm2-status.png" alt="pm2 status" width="100%" /&gt;&lt;/p&gt;
+&lt;h1&gt;Addendum&lt;/h1&gt;
+&lt;h3&gt;Command Reference&lt;/h3&gt;
+&lt;p&gt;Run homebridge in terminal:&lt;br&gt;
+&lt;code&gt;/opt/node/bin/homebridge&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Run homebridge in terminal with debug-level logging:&lt;br&gt;
+&lt;code&gt;DEBUG=* /opt/node/bin/homebridge&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Start homebridge daemon:&lt;br&gt;
+&lt;code&gt;/opt/node/bin/pm2 start /opt/node/bin/homebridge&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Stop homebridge daemon:&lt;br&gt;
+&lt;code&gt;/opt/node/bin/pm2 stop /opt/node/bin/homebridge&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;config.json&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;bridge&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;HomePi&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;01:23:45:67:89:AB&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;port&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;51826&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;pin&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;987-65-432&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;description&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Simple config file.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;ports&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;start&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;52100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;end&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;52150&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;comment&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;This section is used to control the range of ports that separate accessory (like camera or television) should be bind to.&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;accessories&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;accessory&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Chamberlain&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Garage Door&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;your_chamberlain_cloud_email@whatever.com&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;your_password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;deviceId&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;your_device_id&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;platforms&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;platform&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mPower&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mPower&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;outlets&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;MFi 8b1038&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ubnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ubnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;192.168.1.101&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;MFi 885B5F&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ubnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ubnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;192.168.1.102&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;platform&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;TplinkSmarthome&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;TplinkSmarthome&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Development"/></entry><entry><title>Job Qualification Matching and Lexical Analysis</title><link href="https://jonpurdy.com/2019/11/job-qualification-matching-and-lexical-analysis/" rel="alternate"/><published>2019-11-28T00:00:00-05:00</published><updated>2019-11-28T00:00:00-05:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2019-11-28:/2019/11/job-qualification-matching-and-lexical-analysis/</id><summary type="html">&lt;!-- &lt;img src="/images/20191128-lexical/header.jpg" alt="This is the most Apple corporate-related image I have from when I visited in 2018." width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20191128-lexical/header.jpg" data-dither="/images/20191128-lexical/header-dither.png"&gt;
+  &lt;img src="/images/20191128-lexical/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;h1&gt;Goal&lt;/h1&gt;
+&lt;p&gt;I read an article on &lt;a href="news.ycombinator.com"&gt;HN&lt;/a&gt; about FAANG companies. As some of the top places to work, I wondered if my qualifications matched up with roles there. Since I've been a Mac user since 1992 and an Apple ][ user since I was a baby, I figured I'd  grab a …&lt;/p&gt;</summary><content type="html">&lt;!-- &lt;img src="/images/20191128-lexical/header.jpg" alt="This is the most Apple corporate-related image I have from when I visited in 2018." width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20191128-lexical/header.jpg" data-dither="/images/20191128-lexical/header-dither.png"&gt;
+  &lt;img src="/images/20191128-lexical/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;h1&gt;Goal&lt;/h1&gt;
+&lt;p&gt;I read an article on &lt;a href="news.ycombinator.com"&gt;HN&lt;/a&gt; about FAANG companies. As some of the top places to work, I wondered if my qualifications matched up with roles there. Since I've been a Mac user since 1992 and an Apple ][ user since I was a baby, I figured I'd  grab a bunch of roles from Apple's career site and figure out which ones would be the best match for my skillset.&lt;/p&gt;
+&lt;h1&gt;Prerequisites&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Know a bit of Python  &lt;/li&gt;
+&lt;li&gt;Sign up for Apple's career site  &lt;/li&gt;
+&lt;li&gt;Favourite a bunch of roles you're interested in&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Get the roles&lt;/h1&gt;
+&lt;p&gt;Since the focus of this article is on lexical analysis, I'll just quickly go through how I got the role qualifications.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The URL for getting your roles is &lt;code&gt;https://jobs.apple.com/app/api/v1/js/talent/YOUR_TALENT_ID/roles&lt;/code&gt;. I grabbed this from the Chrome inspector when on the main job site.&lt;/li&gt;
+&lt;li&gt;The URLs for each role isn't sent in the JSON, but we know the structure: &lt;code&gt;https://jobs.apple.com/en-us/details/POSITION_ID/POSTING_TITLE&lt;/code&gt;.  Just need to change the spaces to dashes in the &lt;code&gt;postingTitle&lt;/code&gt; with a simple &lt;code&gt;string.replace(" ", "-")&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://jobs.apple.com/app/api/v1/js/talent/YOUR_TALENT_ID/roles&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cookies&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;cookies&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# where we store the URLs for each role we&amp;#39;re interested in&lt;/span&gt;
+&lt;span class="n"&gt;role_urls&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;https://jobs.apple.com/en-us/details/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;positionID&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;postingTitle&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;role_urls&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Once we've got a list of role URLs, we iterate over each and get the detailed role and parse out the title (&lt;code&gt;jdPostingTitle&lt;/code&gt;), summary (&lt;code&gt;jd-job-summary&lt;/code&gt;), and qualifications (&lt;code&gt;jd-key-qualifications&lt;/code&gt;). The nice thing about this detailed view is that Apple follows the &lt;a href="https://schema.org/JobPosting"&gt;jobPosting&lt;/a&gt; schema from &lt;a href="https://schema.org"&gt;schema.org&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Qualifications come in as an HTML unordered list, which is easily converted to a Python list thanks to &lt;a href="https://www.crummy.com/software/BeautifulSoup/"&gt;Beautiful Soup&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I created a &lt;code&gt;Role&lt;/code&gt; class that simply contains those three attributes, which I instantiate in the last line.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# First, get the page itself&lt;/span&gt;
+&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# print(r.text)&lt;/span&gt;
+
+&lt;span class="n"&gt;soup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BS&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;html.parser&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;jdPostingTitle&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;summary_raw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;jd-job-summary&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;span&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;summary_raw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;summary&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;span&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# no need for loop&lt;/span&gt;
+
+&lt;span class="c1"&gt;# more difficult&lt;/span&gt;
+&lt;span class="c1"&gt;# need to parse each item in the list and extract the text&lt;/span&gt;
+&lt;span class="c1"&gt;# then add to a qualifications list&lt;/span&gt;
+&lt;span class="n"&gt;qualifications_raw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;jd-key-qualifications&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;qualifications&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ul&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;qualifications_raw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;li&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;ul&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;li&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;li&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="c1"&gt;#print(text.contents[0])&lt;/span&gt;
+            &lt;span class="n"&gt;qualifications&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+
+&lt;span class="n"&gt;role&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Role&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;summary&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;qualifications&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;qualifications&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To print these:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;TITLE: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;role&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;QUALIFICATIONS:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;role&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qualifications&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Which would look like this (truncated for legibility):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;TITLE: Program Manager
+
+QUALIFICATIONS:
+Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels.
+
+Strong background in system implementation project management using proven software development techniques.
+
+Excellent presentation, product demonstration, and writing skills.
+
+Ability to clearly communicate/position the specifics of the product vision to the market.
+
+Motivated, collaborative, dynamic, creative and results-oriented.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;Lexical Analysis&lt;/h1&gt;
+&lt;p&gt;&lt;img src="/images/20191128-lexical/lexical.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;My plan was to take each qualification from each job posting and compare them to the qualifications of every other job posting I pulled. I wanted to see which qualifications were unique for each role and which were overlapping with other roles.&lt;/p&gt;
+&lt;p&gt;Now I am a total newbie to lexical analysis and had no clue how to compare two sentences. I ran across a couple of algorithms for this: &lt;a href="https://en.wikipedia.org/wiki/Levenshtein_distance"&gt;Levenshtein Distance&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/Jaccard_index"&gt;Jaccard Index&lt;/a&gt;. They're both used to measure similarity of two strings or sets but completely differ in their respective algorithms. I wasn't sure which one to go with so I implemented both (using &lt;a href="https://pypi.org/project/Distance/"&gt;Distance&lt;/a&gt; library) out of curiousity. (&lt;code&gt;l&lt;/code&gt; = Levenshtein, &lt;code&gt;j&lt;/code&gt; = Jaccard.) (Thanks to &lt;a href="https://python.gotrained.com/nltk-edit-distance-jaccard-distance/#Jaccard_Distance_Python_NLTK"&gt;this tutorial&lt;/a&gt;.)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;compare_two_sentences&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+    &lt;span class="n"&gt;s1_filt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;filter_stopwords&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;s2_filt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;filter_stopwords&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;distance&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;levenshtein&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s1_filt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s2_filt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nltk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jaccard_distance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s1_filt&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s2_filt&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For both Levenshtein and Jaccard, numbers closer to 0 mean the two sentences are more closely related. I also filtered out the most common words (stopwords) to increase the percentage of keywords in each comparison.&lt;/p&gt;
+&lt;p&gt;The idea was to produce a result like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;s1: Ability to participate in and facilitate requirements brainstorming sessions.
+s2: A keen ability to filter and distill substantial information for the right audience.
+
+levenshtein: 53
+jaccard: 0.20833333333333334
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, I iterated through each qualification in each role and compared them with all qualifications in every other role:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;role&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;roles&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;comparison&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;roles&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;role&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;comparison&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;pass&lt;/span&gt; &lt;span class="c1"&gt;# no point in matching if they&amp;#39;re the exact same role&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;qx&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;role&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qualifications&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;qy&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;comparison&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qualifications&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;compare_two_sentences&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;qx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;qy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;Results&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Sentence 1&lt;/strong&gt;: &lt;em&gt;You have working understanding of project management tools and methodologies.&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Sentence 2&lt;/strong&gt;: &lt;em&gt;Solid experience in both product management and product marketing. Education apps experience helpful.&lt;/em&gt; &lt;br&gt;
+&lt;strong&gt;Levenshtein&lt;/strong&gt;: 64, &lt;strong&gt;Jaccard&lt;/strong&gt;: 0.269    &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sentence 1&lt;/strong&gt;: &lt;em&gt;A keen ability to filter and distill substantial information for the right audience.&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Sentence 2&lt;/strong&gt;: &lt;em&gt;Ability to participate in and facilitate requirements brainstorming sessions.&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Levenshtein&lt;/strong&gt;: 53, &lt;strong&gt;Jaccard&lt;/strong&gt;: 0.208  &lt;/p&gt;
+&lt;p&gt;Okay, I guess this is getting closer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sentence 1&lt;/strong&gt;: &lt;em&gt;A keen ability to filter and distill substantial information for the right audience.&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Sentence 2&lt;/strong&gt;: &lt;em&gt;Ability to filter and distill meaningful information for the right audience&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Levenshtein&lt;/strong&gt;: 18, &lt;strong&gt;Jaccard&lt;/strong&gt;: 0.0909 👍&lt;/p&gt;
+&lt;p&gt;Here we go! Two qualifications from different job postings that are not exactly the same, but incredibly similar.&lt;/p&gt;
+&lt;p&gt;Rather than looking through the entire 2500-line output, I set the comparisons to only print if the Levenshtein score was below 30 and Jaccard was below 0.15.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sentence 1&lt;/strong&gt;: &lt;em&gt;Ability to communicate thoughtfully, leveraging problem-solving skills and a learning mindset to build long-term relationships&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Sentence 2&lt;/strong&gt;: &lt;em&gt;Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels.&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Levenshtein&lt;/strong&gt;: 122, &lt;strong&gt;Jaccard&lt;/strong&gt;: 0.142&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sentence 1&lt;/strong&gt;: &lt;em&gt;Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Sentence 2&lt;/strong&gt;: &lt;em&gt;Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels.&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Levenshtein&lt;/strong&gt;: 2, &lt;strong&gt;Jaccard&lt;/strong&gt;: 0.037 👍&lt;/p&gt;
+&lt;p&gt;So it appears that anything with a Levenshtein distance &lt;strong&gt;&amp;lt; 20&lt;/strong&gt; or a Jaccard distance &lt;strong&gt;&amp;lt; 0.1&lt;/strong&gt; is similar enough to be the same qualification. With that in mind, let's graph it.&lt;/p&gt;
+&lt;h1&gt;Graphing&lt;/h1&gt;
+&lt;p&gt;I figured this would be pretty simple to plug into library that can spit out a nice-looking network graph. However, it's not quite so simple.&lt;/p&gt;
+&lt;p&gt;To create the graph, I used &lt;a href="https://networkx.github.io"&gt;NetworkX&lt;/a&gt;, a Python module specifically for creating graphs.  But NetworkX doesn't draw the graph, it only creates connections between nodes and edges and provides coordinates for everything. To draw it, I needed to use another library. I started off following the NetworkX docs and using &lt;a href="https://matplotlib.org/"&gt;Matplotlib&lt;/a&gt;, was simple and allowed me to generate simple graphs quickly.&lt;/p&gt;
+&lt;p&gt;A simple graph with two nodes (A, B) connected by an edge (A-B) can be created like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;G&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Graph&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;B&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_edge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;B&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;with_labels&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;matplotlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pyplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So, I represented roles and qualifications by nodes, and the connection by edges. So a each role would have a few qualifications connected to it:
+&lt;img src="/images/20191128-lexical/3.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;Now, if qualifications from &lt;em&gt;different&lt;/em&gt; roles were exactly the same or similar (had a Jaccard distance &amp;lt; 0.1), I'd want to link them together:
+&lt;img src="/images/20191128-lexical/4.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;To do the actual comparison:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;qx&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;role&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qualifications&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;qy&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;comparison&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qualifications&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;compare_two_sentences&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;qx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;qy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mf"&gt;0.15&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;  
+            &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_edge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;role&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;qy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;qx&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_edge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;role&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;qx&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, you may be wondering why I'm adding nodes as I did the comparison instead of generating all nodes (roles, qualifications) and edges (role𝑥←→qualification𝑦) first, then comparing and linking the similar qualification nodes. The issue was that if two or more qualifications from different nodes were &lt;em&gt;exactly&lt;/em&gt; the same, &lt;em&gt;and&lt;/em&gt; there were similar qualifications found, I'd only be able to add edges to the first one in the node list unless I also added unique IDs to the nodes. I implemented this the way I did out of laziness since I wanted to see results quickly:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20191128-lexical/matplotlib.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;So, it's clear that some of the qualifications are similar between roles. But the graph was pretty ugly (especially since I had to truncate the qualifications to make them fit). I tried a bit more with Matplotlib but eventually implemented &lt;a href="https://plot.ly/python/network-graphs/"&gt;Plot.ly&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20191128-lexical/5.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;As expected, similar qualifications are linked together and it's easy to see the overlap between roles. Here's a sample of a triangle of roles with overlapping qualifications. Mousing over each node reveals the full qualification:
+&lt;img src="/images/20191128-lexical/6.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;Some roles have even more overlap of qualifications. This is a bit more difficult to read since I haven't figured out a way to group the nodes, or to prevent lines from crossing each other (using this type of graph):&lt;/p&gt;
+&lt;div class="full-width"&gt;&lt;img src="/images/20191128-lexical/7.png" width="100%" /&gt;&lt;/div&gt;
+
+&lt;h1&gt;Result&lt;/h1&gt;
+&lt;p&gt;Of course, improving legibility and making it easier to understand connections can still be worked on. But it's easy to see that some roles have more overlap than others. At the same time, some qualifications say so much that they might as well be describing every role, like this: &lt;em&gt;"Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels"&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Still, it's useful to see if some roles more heavily overlap with others. One could apply to groups of similar roles without modifying their resume and/or cover letter, increasing application efficiency. &lt;/p&gt;
+&lt;p&gt;Here's the full Plot.ly output if interested (select groups to zoom in and inspect, mouseover a node to view full role or description):&lt;/p&gt;
+&lt;div class="full-width"&gt;&lt;iframe src="/static/20191128-lexical/plot.html" width="100%" height="800"&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1&gt;Next Steps&lt;/h1&gt;
+&lt;p&gt;There are more important things one can do that improve their chances at landing a role. However, this was still an interesting learning experience.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add additional careers sites from different companies to see how qualifications differ between similar or exact match job descriptions &lt;/li&gt;
+&lt;li&gt;Instead of using relatively simple Levenshtein and Jaccard distance, use TensorFlow Hub and use the &lt;a href="https://tfhub.dev/google/universal-sentence-encoder-large/4"&gt;Universal Sentence Encoder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Try different ways of displaying the data (3D layout, different graph types, etc.)&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Development"/></entry><entry><title>Muji 35L + Aer Commuter Bag</title><link href="https://jonpurdy.com/2019/10/muji-35l-aer-commuter-bag/" rel="alternate"/><published>2019-10-23T00:00:00-04:00</published><updated>2019-10-23T00:00:00-04:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2019-10-23:/2019/10/muji-35l-aer-commuter-bag/</id><summary type="html">&lt;!-- &lt;img src="/images/20191023-luggage/header.jpg" width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20191023-luggage/header.jpg" data-dither="/images/20191023-luggage/header-dither.png"&gt;
+  &lt;img src="/images/20191023-luggage/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I've been meaning to write a review of this luggage setup for years now. But there are enough reviews of both the Muji 35L and the Aer Commuter bag, that I'll just summarize from my perspective.&lt;/p&gt;
+&lt;p&gt;I purchased the Muji on a whim during a trip to Tokyo in 2017 …&lt;/p&gt;</summary><content type="html">&lt;!-- &lt;img src="/images/20191023-luggage/header.jpg" width="100%" /&gt; --&gt;
+
+&lt;figure class="img-toggle" data-orig="/images/20191023-luggage/header.jpg" data-dither="/images/20191023-luggage/header-dither.png"&gt;
+  &lt;img src="/images/20191023-luggage/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I've been meaning to write a review of this luggage setup for years now. But there are enough reviews of both the Muji 35L and the Aer Commuter bag, that I'll just summarize from my perspective.&lt;/p&gt;
+&lt;p&gt;I purchased the Muji on a whim during a trip to Tokyo in 2017. While on this trip, I grew a bit tired of carrying around a 30L shoulder bag. Despite the inability of rolling luggage to easily navigate bad and uneven sidewalks, I figured I'd give a rolling suitcase a try (especially since it was about half the price in Japan).&lt;/p&gt;
+&lt;p&gt;It turns out that rolling luggage is really, really nice. Not having to carry any weight on your shoulders is really freeing! And since it's about the same size (aside from lost space to wheels) as the shoulder bag that it replaced. I haven't encountered any sidewalk that doesn't work with it; the bag can go from 4-wheel to 2-wheel mode in order to glide over the worst sidewalks.&lt;/p&gt;
+&lt;p&gt;For the type of travel that I do these days, it's perfect.&lt;/p&gt;
+&lt;p&gt;I picked up the Aer on a trip to SF before I lived here. I had previously been using a similar but lower quality bag that I purchased while living in Korea in 2010. The main benefit (aside from build quality) of the Aer was the luggage-compatible strap, which allows it to attach nicely and sit atop rolling luggage. &lt;/p&gt;
+&lt;p&gt;It also has a nice exterior fabric that is water resistant and blocks rain from entering the front part of the bag. Of course, in a downpour the zippers and top material would bypass this and let in water, but it's nice to have the entire front of the bag be waterproof.&lt;/p&gt;
+&lt;p&gt;The combo of the Muji luggage + the Aer sitting atop is fantastic for travel!&lt;/p&gt;</content><category term="Travel"/></entry><entry><title>Story Pointing and Breaking Down Work</title><link href="https://jonpurdy.com/2019/06/story-pointing-and-breaking-down-work/" rel="alternate"/><published>2019-06-06T00:00:00-04:00</published><updated>2019-06-06T00:00:00-04:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2019-06-06:/2019/06/story-pointing-and-breaking-down-work/</id><summary type="html">&lt;p&gt;&lt;img src="/images/20190606-story-points/header.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;We recently wrapped up the initial MVP of &lt;a href="https://getenzyme.dev"&gt;Enzyme&lt;/a&gt;, our Polkadot wallet, and I wanted to share some insights about the development process from the perspective of a Project Manager. My first anniversary at BlockX Labs is coming up in a couple of weeks and it's been amazing to see …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="/images/20190606-story-points/header.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;We recently wrapped up the initial MVP of &lt;a href="https://getenzyme.dev"&gt;Enzyme&lt;/a&gt;, our Polkadot wallet, and I wanted to share some insights about the development process from the perspective of a Project Manager. My first anniversary at BlockX Labs is coming up in a couple of weeks and it's been amazing to see the progress the team has made. I've managed three major projects during the past year and Enzyme has been the smoothest. This is partially due to us just being more efficient and better at our jobs, but there was one thing we did during sprint Planning that really made a big difference: breaking stories down.&lt;/p&gt;
+&lt;p&gt;&lt;img style="padding-left: 30px; padding-bottom: 30px" src="/images/20190606-story-points/20190606-enzyme.png" width="300" align="right"/&gt;&lt;/p&gt;
+&lt;p&gt;For those who aren't yet familiar, Agile is a software development methodology that is about building working software quickly and iterating from there, rather than architecting the entire software first and building it at the end. Scrum is a framework within the Agile methodology based on sprints (time-boxed units, usually two weeks) that contain User Stories (user-centric end-to-end descriptions of a feature). The number of user stories in a sprint is based on the sum of the difficulty value (points) of all the stories in the sprint relative to the number of points completed in the previous sprints (or estimated for sprint 1). So if the development team had completed 20 points worth of user stories the previous sprint, they'd accept around the same number of points for this upcoming sprint.&lt;/p&gt;
+&lt;p&gt;Before the start of the project and before each sprint, User Stories are written by the Product Owner and based on customer and/or user requirements. During sprint planning before a sprint starts, it's up to the development team to ask questions, get additional details, and clarify what the user story is about so that they can implement it without ambiguity. If a User Story is ambiguous, estimating it's difficulty is much more difficult and makes sprint planning less accurate. If each story ends up being 1/2 as difficult or twice as difficult as expected, the development team can be anywhere running out of work half way through the sprint to only completing half the accepted user stories. If this inaccuracy occurs regularly, projects can end up taking significantly longer than expected.&lt;/p&gt;
+&lt;p&gt;So we've established that it's incredibly important to get small estimates as accurate as possible in order to keep major milestones accurate. The way that we became adept at story point estimation during Enzyme was done two ways:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Split user stories into multiple stories&lt;/li&gt;
+&lt;li&gt;If a user story can't be broken down further, create sub-tasks for the individual components of the user story&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Split user stories into multiple stories&lt;/h1&gt;
+&lt;p&gt;Much like the Ma Bell monopoly needing to be split up in the US in the 1980's, user stories can be split up as well. Reducing the scope of user stories makes them more focused, easier to estimate, and faster to implement.&lt;/p&gt;
+&lt;p&gt;One can split them based on a few different patterns, such as the steps in a workflow, variations on input data, going from simple to complex, and more. &lt;/p&gt;
+&lt;h3&gt;Example: Workflow Steps&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;As a content manager, I can publish a news story to the corporate website.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This can be split into:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;…I can publish a news story directly to the corporate website.&lt;/li&gt;
+&lt;li&gt;…I can publish a news story with editor review.&lt;/li&gt;
+&lt;li&gt;…I can publish a news story from the staging site to production.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I got this example from Richard Lawrence's agileforall.com. Have a look at the rest at &lt;a href="https://agileforall.com/patterns-for-splitting-user-stories/?highlight=user%20stories"&gt;agileforall.com&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;Create sub-tasks for individual components&lt;/h1&gt;
+&lt;p&gt;&lt;img src="/images/20190606-story-points/20190606-breakitdown.jpg" width="200" align="right"/&gt;&lt;/p&gt;
+&lt;p&gt;If a story can't be further split, break it down into sub-tasks for the individual components of the story.&lt;/p&gt;
+&lt;p&gt;The benefit of this is twofold: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Developers can help plan out the work involved and self-assign parts of the story.&lt;/li&gt;
+&lt;li&gt;As a result of understanding what's involved, their estimates are more accurate. This was the main benefit for us at BlockX.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Example: As a user, I can authenticate with a username and password&lt;/h3&gt;
+&lt;p&gt;Sub-tasks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Front-end: what should it look like?&lt;/li&gt;
+&lt;li&gt;Backend: how should it present itself to the frontend, and how should it interact with the database layer?&lt;/li&gt;
+&lt;li&gt;Database: do tables need to be created? What are the required columns and data types?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For all of these sub-tasks, what dependencies need to be available before even starting them? (In Jira, they can be linked to other issues using the "blocked by" type.)&lt;/p&gt;
+&lt;p&gt;It's okay for developers to plan out how each sub-task will be executed, even if it ends up needing to be changed. The whole point of this is to get them thinking about implementation. &lt;/p&gt;
+&lt;h1&gt;&amp;lt;/end&amp;gt;&lt;/h1&gt;
+&lt;p&gt;Once the sub-tasks are discussed and thought about, doing relative estimation will be much more accurate because developers will have thought of both implementation and some edge cases during the discussion. The basic currency unit of Scrum (story points) is solidified, making every step in the hierarchy more accurate.&lt;/p&gt;
+&lt;p&gt;It may seem like an unnecessary step, but in my experience it's worked well!&lt;/p&gt;</content><category term="Agile"/></entry><entry><title>Spinning up a VPN server programmatically on-demand</title><link href="https://jonpurdy.com/2019/03/spinning-up-a-vpn-server-programmatically-on-demand/" rel="alternate"/><published>2019-03-27T00:00:00-04:00</published><updated>2019-03-27T00:00:00-04:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2019-03-27:/2019/03/spinning-up-a-vpn-server-programmatically-on-demand/</id><summary type="html">&lt;figure class="img-toggle" data-orig="/images/20190327-openvpn/header.jpg" data-dither="/images/20190327-openvpn/header-dither.png"&gt;
+  &lt;img src="/images/20190327-openvpn/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;(Photo from airplane window over Sydney 🇦🇺)&lt;/p&gt;
+&lt;p&gt;My Private Internet Access subscription had expired and prices had jumped up from the last time I paid for a year. I don't need a VPN 24 hours per day, just an hour or two if I decide to work from a cafe, need …&lt;/p&gt;</summary><content type="html">&lt;figure class="img-toggle" data-orig="/images/20190327-openvpn/header.jpg" data-dither="/images/20190327-openvpn/header-dither.png"&gt;
+  &lt;img src="/images/20190327-openvpn/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;(Photo from airplane window over Sydney 🇦🇺)&lt;/p&gt;
+&lt;p&gt;My Private Internet Access subscription had expired and prices had jumped up from the last time I paid for a year. I don't need a VPN 24 hours per day, just an hour or two if I decide to work from a cafe, need airport wifi, or other scenarios where I'm out and about. Digital Ocean does hourly billing for its droplets (less than a cent per hour for it's $5/mo low-end droplet). I've set up OpenVPN servers in past jobs.  I figured that I could just roll my own solution for this problem.&lt;/p&gt;
+&lt;p&gt;This post does not focus on installing and configuring OpenVPN. It focuses on how to spin up an on-demand OpenVPN VPS programmatically via the DigitalOcean API, CloudFlare API, and Python.&lt;/p&gt;
+&lt;h1&gt;Prerequisites&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;DigitalOcean account&lt;/li&gt;
+&lt;li&gt;DigitalOcean droplet with OpenVPN server installed, tested, and client config downloaded (I recommend &lt;a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04"&gt;this&lt;/a&gt; tutorial, will use vpn-test as the droplet name in this tutorial)&lt;/li&gt;
+&lt;li&gt;CloudFlare account and domain/sub-domain you want to use for this (will use vpntest.yourdomain.com in this tutorial)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/digitalocean/doctl"&gt;doctl&lt;/a&gt;, the command line interface to Digital Ocean (optional, for getting the snapshot ID)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Summary&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Get DO API token&lt;/li&gt;
+&lt;li&gt;Get CloudFlare API token&lt;/li&gt;
+&lt;li&gt;Snapshot your OpenVPN VPS&lt;/li&gt;
+&lt;li&gt;Add initial DNS entry in CloudFlare&lt;/li&gt;
+&lt;li&gt;Add your tokens and names to Python script, then spin up a VPS from your snapshot&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;1. Get your Digital Ocean API token&lt;/h1&gt;
+&lt;p&gt;Head over to &lt;a href="https://cloud.digitalocean.com/account/api/tokens/new"&gt;https://cloud.digitalocean.com/account/api/tokens/new&lt;/a&gt; to generate your token.
+&lt;img src="/images/20190327-openvpn/do-token.png" width="100%" /&gt;&lt;/p&gt;
+&lt;h1&gt;2. Get your CloudFlare API token&lt;/h1&gt;
+&lt;p&gt;Head over to your &lt;a href="https://dash.cloudflare.com/"&gt;CloudFlare dashboard&lt;/a&gt;. Click your profile, then API Tokens. Click Create Token. 
+&lt;img src="/images/20190327-openvpn/cf-token.png" width="100%" /&gt;&lt;/p&gt;
+&lt;h1&gt;3. Create a snapshot of your VPS&lt;/h1&gt;
+&lt;p&gt;Get a list of your droplets. Get the ID of your VPN droplet (in this case, 123456789).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; doctl compute droplet list
+ID           Name        Public IPv4     
+123456789    vpn-test    142.93.155.87
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Create a snapshot of your vpn-test droplet.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; doctl compute droplet-action snapshot 123916924 --snapshot-name=&amp;quot;vpn-snapshot&amp;quot;
+ID           Status         Type        Started At                  
+53964180    in-progress    snapshot    2019-03-26 15:32:51 +0000 UTC
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Wait for the snapshot to be created. You can check the progress by listing your snapshots. If it shows up, it's ready to be used.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; doctl compute snapshot list
+ID          Name                   Created at              Regions
+53964180    vpn-test               2019-03-26T15:36:12Z    [tor1] 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that you've got the snapshot ID, you can delete the VPS; it's not needed anymore. Either do this in the GUI, or use doctl since you've already got it installed.&lt;/p&gt;
+&lt;p&gt;Delete the droplet (ID is 123456789 from when you first got the list of droplets).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; doctl compute droplet delete 123456789
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;4. Add the DNS entry you want in Cloudflare&lt;/h1&gt;
+&lt;p&gt;With OpenVPN, you can choose to use either an IP address or a DNS name for the server. In our case, we're going to use a DNS name so that the server can be deployed programmatically without changing the client config files.&lt;/p&gt;
+&lt;p&gt;I recommend vpn.yourdomain.com to start, but you may way to obfuscate it since some cafes, airports, and other free wifi services try to block access to VPN.&lt;/p&gt;
+&lt;p&gt;In Cloudflare, add an A record for the domain you want to use. This must be done the first time, then our script will update it each time after this. You can use the IP of your existing VPS, or a fake IP address, since these will be updated.
+&lt;img src="/images/20190327-openvpn/3.png" width=100% /&gt;&lt;/p&gt;
+&lt;h1&gt;5. Using Python, spin up a droplet and update the DNS&lt;/h1&gt;
+&lt;p&gt;Now that we've got a snapshot (ID: 53964180) and a DNS entry (vpntest.yourdomain.com), we can create an instance. Once the instance is created, we retrieve the IP address and update vpntest.yourdomain.com to point to it.&lt;/p&gt;
+&lt;p&gt;I've embedded my Python script at the bottom of this post using repl.it. I recommend copy/pasting the contents into a local text editor since you'll be entering your credentials, and repl.it repos are public by default.&lt;/p&gt;
+&lt;p&gt;Let's look at the interesting sections of the code.&lt;/p&gt;
+&lt;h2&gt;5.1 Spinning up the droplet from the snapshot&lt;/h2&gt;
+&lt;p&gt;After we run the droplet.create(), we check once per second to see if it's been spun up yet. If the action status is anything other than in-progress (completed, or there's an error) we write that. If it's in-progress, we just print a period (&lt;code&gt;.&lt;/code&gt;).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Fill these out&lt;/span&gt;
+&lt;span class="n"&gt;actions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;droplet&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_actions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;completed&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;in-progress&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once the droplet is spun up, we get the droplet's IP.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;droplet&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ip_address&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;droplet&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ip_address&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;5.2 Updating vpntest.yourdomain.com to point to the new droplet IP&lt;/h2&gt;
+&lt;p&gt;The CloudFlare API (like most) work off of IDs rather than names, so we need both the zone_id (for yourdomain.com) and dns_record ID that matches vpntest.yourdomain.com in order to update it.&lt;/p&gt;
+&lt;p&gt;We first need to get the zone_id of the domain (yourdomain.com). &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CloudFlare&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CloudFlare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CF_EMAIL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;token&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CF_TOKEN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;zones&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zones&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;zone&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;zones&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;zone&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;CF_ZONE_NAME&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;zone_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;zone&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;zone_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;zone&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;zone_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;zone_name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that, we get the subdomains (dns_records) of that domain (we're looking for vpntest.yourdomain.com).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;params&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;CF_DNS_NAME&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;match&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;all&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;type&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;ip_address_type&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;dns_records&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zones&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dns_records&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;zone_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, we &lt;code&gt;PUT&lt;/code&gt; the droplet's IP address in the existing record.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Update the record with the new IP address&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;dns_record&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;dns_records&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;old_ip_address&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dns_record&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;content&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;old_ip_address_type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dns_record&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;type&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="n"&gt;dns_record_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dns_record&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;dns_record&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;CF_DNS_NAME&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;type&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;ip_address_type&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;content&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;ip_address&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;dns_record&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zones&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dns_records&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;zone_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dns_record_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;dns_record&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;&amp;lt;/end&amp;gt;&lt;/h1&gt;
+&lt;p&gt;Of course, this is a pretty basic implementation that simply spins up a droplet and updates a DNS record. One could easily extend this to accept command line arguments and allow you to select which snapshot to create a VPS from. I use this to choose between an OpenVPN server running on UDP/1194, or another on TCP/443 to evade firewall blocking.&lt;/p&gt;
+&lt;p&gt;One could also write an argument to delete the droplet once you're done with it by passing the droplet ID back in and running a &lt;code&gt;DELETE&lt;/code&gt;.&lt;/p&gt;
+&lt;h1&gt;Python script on repl.it&lt;/h1&gt;
+&lt;iframe height="400px" width="100%" src="https://repl.it/@jonpurdycom/do-cf-vpn?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;</content><category term="Development"/></entry><entry><title>Why and How to build Metamask for your own Blockchain</title><link href="https://jonpurdy.com/2019/02/why-and-how-to-build-metamask-for-your-own-blockchain/" rel="alternate"/><published>2019-02-05T00:00:00-05:00</published><updated>2019-02-05T00:00:00-05:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2019-02-05:/2019/02/why-and-how-to-build-metamask-for-your-own-blockchain/</id><summary type="html">&lt;figure class="img-toggle" data-orig="/images/20190205-metamask-your-blockchain/header.jpg" data-dither="/images/20190205-metamask-your-blockchain/header-dither.png"&gt;
+  &lt;img src="/images/20190205-metamask-your-blockchain/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;(Photo from Blockchain Futurist Conference 2018, Toronto.)&lt;/p&gt;
+&lt;p&gt;If you built your own blockchain or forked an existing one, one of your top priorities should be to make it easy for users and developers to interact with. MetaMask enabled Ethereum users and developers to easily use ETH and ERC-20 tokens, and …&lt;/p&gt;</summary><content type="html">&lt;figure class="img-toggle" data-orig="/images/20190205-metamask-your-blockchain/header.jpg" data-dither="/images/20190205-metamask-your-blockchain/header-dither.png"&gt;
+  &lt;img src="/images/20190205-metamask-your-blockchain/header-dither.png" width=100%&gt;
+  &lt;button class="toggle-img"&gt;+&lt;/button&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;(Photo from Blockchain Futurist Conference 2018, Toronto.)&lt;/p&gt;
+&lt;p&gt;If you built your own blockchain or forked an existing one, one of your top priorities should be to make it easy for users and developers to interact with. MetaMask enabled Ethereum users and developers to easily use ETH and ERC-20 tokens, and use DApps without needing to use command-line tools or run their own node (thanks to Infura).&lt;/p&gt;
+&lt;p&gt;&lt;img style="padding-left: 30px" src="/images/20190205-metamask-your-blockchain/20190205-aiwa.png" width="300" align="right"/&gt;&lt;/p&gt;
+&lt;p&gt;Aion realized this early on, which is why they had BlockX Labs build AIWA, a wallet and DApp interaction tool for Aion, for them. As Project Manager for AIWA, I’d like to go over the process that we undertook when building “MetaMask for Aion”; specifically, both the inspiration as well as the differentiation. I’ve written this for product people and executives so I’ve kept the jargon quite light.&lt;/p&gt;
+&lt;h1&gt;Why do you need a wallet?&lt;/h1&gt;
+&lt;p&gt;Firstly, you need to justify why your blockchain needs its version of MetaMask. As mentioned above, you want developers and users to interact with it. They need to read and write data and possibly send and receive cryptocurrency, If your blockchain is like Ethereum and Aion, you’ve got a distributed app ecosystem that needs to interact with it.&lt;/p&gt;
+&lt;p&gt;Without a wallet, it’s a lot more difficult for both developers and users to use your blockchain, so reduce the friction and provide them with tool(s) to make it easier.&lt;/p&gt;
+&lt;h1&gt;What do you love about MetaMask?&lt;/h1&gt;
+&lt;p&gt;Since you’ve got a reason to build a MetaMask-like tool, think about what you love about MetaMask and decide whether you want or need those features. At BlockX Labs, we like that MetaMask is honest with how it maps Ethereum’s features to its UI. MetaMask doesn’t hide or abstract away complexity but exposes it to the user. For example, it shows the raw gas price (in GWei) rather than abstracting it away by converting it to USD.&lt;/p&gt;
+&lt;p&gt;It also differentiates between seed-generated and imported wallets, so that the user can know which wallets are recoverable from the seed phrase. We also love that MetaMask doesn’t keep the user inside MetaMask; it provides links to Etherscan for viewing more transaction details and embeds the ability to use Coinbase and ShapeShift for acquiring Ether. It supports third-party services and doesn’t try to hold the user captive by doing everything itself.&lt;/p&gt;
+&lt;h1&gt;Forget about MetaMask!&lt;/h1&gt;
+&lt;p&gt;Once you’ve found the features that you love about MetaMask, it’s time to forget about it. Here at BlockX Labs, we use Agile with Scrum. I recommend writing user stories to figure out what user and developers will do with your tool and build your UI around that.&lt;/p&gt;
+&lt;p&gt;In our case, some of the basic features like the receive screen and how the DApp popped up ended up working pretty similarly to MetaMask. But by focusing on our user stories and not trying to clone MetaMask, we came up with a unique hierarchical interface that is modeled around the Token &amp;lt; Wallet &amp;lt; Vault metaphor.&lt;/p&gt;
+&lt;p&gt;As a result, we came up with the idea of a Vault to contain both seed-generated wallets and imported wallets in a single exported file. This makes it super easy for users to backup all of their wallets regardless of whether they’re seed-generated or imported from private keys. Of course, we also built the option to export individually using the standard wallet format as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20190205-metamask-your-blockchain/20190205-vault.png" width=100% /&gt;&lt;/p&gt;
+&lt;h1&gt;&amp;lt;/end&amp;gt;&lt;/h1&gt;
+&lt;p&gt;Although it’s heavily influenced from my experience building AIWA, hopefully this article has given a decent overview of building something like MetaMask for your own blockchain. I didn’t mention some things that aren’t part of the core product but help make it easier to use (like Infura, and NodeSmith in our case). But perhaps a follow-up article could address the ecosystem partners that would be useful.&lt;/p&gt;</content><category term="Blockchain"/></entry><entry><title>Netcat</title><link href="https://jonpurdy.com/2016/06/netcat/" rel="alternate"/><published>2016-06-16T00:00:00-04:00</published><updated>2016-06-16T00:00:00-04:00</updated><author><name>Jon Purdy</name></author><id>tag:jonpurdy.com,2016-06-16:/2016/06/netcat/</id><summary type="html">&lt;p&gt;Netcat is a super simple but very versatile way to test basic network connectivity. The &lt;code&gt;nc&lt;/code&gt; man page says it best:&lt;/p&gt;
+&lt;p&gt;The nc (or netcat) utility is used for just about anything under the sun involving TCP or UDP.  It can open TCP connections, send UDP packets, listen on arbitrary …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Netcat is a super simple but very versatile way to test basic network connectivity. The &lt;code&gt;nc&lt;/code&gt; man page says it best:&lt;/p&gt;
+&lt;p&gt;The nc (or netcat) utility is used for just about anything under the sun involving TCP or UDP.  It can open TCP connections, send UDP packets, listen on arbitrary TCP and UDP ports, do port scanning, and deal with both IPv4 and IPv6.&lt;/p&gt;
+&lt;p&gt;I've written this post as a personal reference to go back to whenever I have a connectivity issue with machines being unable to access each other, or services being unavailable across networks.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/20160616-netcat/nc1.png" width="457" /&gt;&lt;/p&gt;
+&lt;h1&gt;Client/server connectivity examples&lt;/h1&gt;
+&lt;p&gt;Server IP: 10.0.0.2
+Client IP: 10.0.0.3&lt;/p&gt;
+&lt;h3&gt;TCP server/client on port 4242&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;On server&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nc -l 4242
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;On client&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nc 10.0.0.2 4242
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Type a line and hit enter in either the client or server window and it will be transmitted and displayed in the opposite window! If it is not displayed, there is a connection issue or an incorrect command.&lt;/p&gt;
+&lt;h3&gt;UDP server/client on port 50642420&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;On server&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nc -u -l 4242
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;On client&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nc -u 10.0.0.2 4242
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;TCP client has multiple IPs or interfaces&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;On server (no change)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nc -l 4242
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;On client&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nc 10.0.0.2 4242 -s 10.0.0.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;Other Examples&lt;/h1&gt;
+&lt;h3&gt;Scan ports&lt;/h3&gt;
+&lt;p&gt;Scan ports between 4242 and 8484 on example.com&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nc -z test.com 4242-8484
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Test a web server&lt;/h3&gt;
+&lt;p&gt;This just does a simple HTTP GET. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;echo -n &amp;quot;GET / HTTP/1.0\r\n\r\n&amp;quot; | nc example.com 80
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;&amp;lt;/end&amp;gt;&lt;/h1&gt;
+&lt;p&gt;That's all for now!&lt;/p&gt;</content><category term="Development"/></entry></feed>

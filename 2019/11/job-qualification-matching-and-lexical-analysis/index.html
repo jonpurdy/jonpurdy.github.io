@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Jon Purdy - Job Qualification Matching and Lexical Analysis</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- default is to use an if (only allows 1 stylesheet) -->
+<!--               <link rel="stylesheet" type="text/css" href="['/static/new-jon.css']" />
+ -->
+      <!-- I changed to a FOR to allow multiple -->
+      <link rel="stylesheet" href="/static/new-jon.css">
+      <!-- I changed to a FOR to allow multiple -->
+      
+        <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Full Atom Feed" />
+
+
+
+
+
+  </head>
+
+  <body>
+      <header>
+          <!-- jon logo -->
+          <hgroup><section style="text-align:center"><a href="/"><img class="logo" src="https://jonpurdy.com/images/logo.svg" alt="Jon Purdy"></a></section></hgroup>
+          <!-- original -->
+          <!-- <hgroup><h1><a href="https://jonpurdy.com/">Jon Purdy</a></h1></hgroup> --> 
+          <nav style="text-align:center; text-transform: uppercase;">
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/about/" >About</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/pm-framework/" >P*M Framework</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/work/" >Work</a>
+            <!-- moved menuitems below pages -->
+              <a href="/archives.html">Archive</a>
+          </nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>
+        <a href="https://jonpurdy.com/2019/11/job-qualification-matching-and-lexical-analysis/" rel="bookmark"
+           title="Permalink to Job Qualification Matching and Lexical Analysis">Job Qualification Matching and Lexical Analysis</a></h2>
+      
+      <section><time datetime="2019-11-28T00:00:00-05:00"> 2019-11-28</section>
+    </header>
+    <!-- <img src="/images/20191128-lexical/header.jpg" alt="This is the most Apple corporate-related image I have from when I visited in 2018." width="100%" /> -->
+
+<figure class="img-toggle" data-orig="/images/20191128-lexical/header.jpg" data-dither="/images/20191128-lexical/header-dither.png">
+  <img src="/images/20191128-lexical/header-dither.png" width=100%>
+  <button class="toggle-img">+</button>
+</figure>
+
+<h1>Goal</h1>
+<p>I read an article on <a href="news.ycombinator.com">HN</a> about FAANG companies. As some of the top places to work, I wondered if my qualifications matched up with roles there. Since I've been a Mac user since 1992 and an Apple ][ user since I was a baby, I figured I'd  grab a bunch of roles from Apple's career site and figure out which ones would be the best match for my skillset.</p>
+<h1>Prerequisites</h1>
+<ul>
+<li>Know a bit of Python  </li>
+<li>Sign up for Apple's career site  </li>
+<li>Favourite a bunch of roles you're interested in</li>
+</ul>
+<h1>Get the roles</h1>
+<p>Since the focus of this article is on lexical analysis, I'll just quickly go through how I got the role qualifications.</p>
+<ul>
+<li>The URL for getting your roles is <code>https://jobs.apple.com/app/api/v1/js/talent/YOUR_TALENT_ID/roles</code>. I grabbed this from the Chrome inspector when on the main job site.</li>
+<li>The URLs for each role isn't sent in the JSON, but we know the structure: <code>https://jobs.apple.com/en-us/details/POSITION_ID/POSTING_TITLE</code>.  Just need to change the spaces to dashes in the <code>postingTitle</code> with a simple <code>string.replace(" ", "-")</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://jobs.apple.com/app/api/v1/js/talent/YOUR_TALENT_ID/roles&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+
+<span class="c1"># where we store the URLs for each role we&#39;re interested in</span>
+<span class="n">role_urls</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">():</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://jobs.apple.com/en-us/details/</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;positionID&quot;</span><span class="p">],</span> <span class="n">i</span><span class="p">[</span><span class="s2">&quot;postingTitle&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">))</span>
+    <span class="n">role_urls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</code></pre></div>
+
+<ul>
+<li>Once we've got a list of role URLs, we iterate over each and get the detailed role and parse out the title (<code>jdPostingTitle</code>), summary (<code>jd-job-summary</code>), and qualifications (<code>jd-key-qualifications</code>). The nice thing about this detailed view is that Apple follows the <a href="https://schema.org/JobPosting">jobPosting</a> schema from <a href="https://schema.org">schema.org</a>.</li>
+<li>Qualifications come in as an HTML unordered list, which is easily converted to a Python list thanks to <a href="https://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>.</li>
+<li>I created a <code>Role</code> class that simply contains those three attributes, which I instantiate in the last line.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># First, get the page itself</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># print(r.text)</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BS</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+<span class="n">title</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;jdPostingTitle&quot;</span><span class="p">)</span>
+<span class="n">summary_raw</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;jd-job-summary&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">span</span> <span class="ow">in</span> <span class="n">summary_raw</span><span class="o">.</span><span class="n">contents</span><span class="p">:</span>
+    <span class="n">summary</span> <span class="o">=</span> <span class="n">span</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># no need for loop</span>
+
+<span class="c1"># more difficult</span>
+<span class="c1"># need to parse each item in the list and extract the text</span>
+<span class="c1"># then add to a qualifications list</span>
+<span class="n">qualifications_raw</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;jd-key-qualifications&quot;</span><span class="p">)</span>
+<span class="n">qualifications</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ul</span> <span class="ow">in</span> <span class="n">qualifications_raw</span><span class="o">.</span><span class="n">contents</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">li</span> <span class="ow">in</span> <span class="n">ul</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
+            <span class="c1">#print(text.contents[0])</span>
+            <span class="n">qualifications</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+
+<span class="n">role</span> <span class="o">=</span> <span class="n">Role</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">summary</span><span class="o">=</span><span class="n">summary</span><span class="p">,</span> <span class="n">qualifications</span><span class="o">=</span><span class="n">qualifications</span><span class="p">)</span>
+</code></pre></div>
+
+<ul>
+<li>To print these:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TITLE: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">role</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;QUALIFICATIONS:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">role</span><span class="o">.</span><span class="n">qualifications</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<ul>
+<li>Which would look like this (truncated for legibility):</li>
+</ul>
+<div class="highlight"><pre><span></span><code>TITLE: Program Manager
+
+QUALIFICATIONS:
+Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels.
+
+Strong background in system implementation project management using proven software development techniques.
+
+Excellent presentation, product demonstration, and writing skills.
+
+Ability to clearly communicate/position the specifics of the product vision to the market.
+
+Motivated, collaborative, dynamic, creative and results-oriented.
+</code></pre></div>
+
+<h1>Lexical Analysis</h1>
+<p><img src="/images/20191128-lexical/lexical.png" width="100%" /></p>
+<p>My plan was to take each qualification from each job posting and compare them to the qualifications of every other job posting I pulled. I wanted to see which qualifications were unique for each role and which were overlapping with other roles.</p>
+<p>Now I am a total newbie to lexical analysis and had no clue how to compare two sentences. I ran across a couple of algorithms for this: <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> and <a href="https://en.wikipedia.org/wiki/Jaccard_index">Jaccard Index</a>. They're both used to measure similarity of two strings or sets but completely differ in their respective algorithms. I wasn't sure which one to go with so I implemented both (using <a href="https://pypi.org/project/Distance/">Distance</a> library) out of curiousity. (<code>l</code> = Levenshtein, <code>j</code> = Jaccard.) (Thanks to <a href="https://python.gotrained.com/nltk-edit-distance-jaccard-distance/#Jaccard_Distance_Python_NLTK">this tutorial</a>.)</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">compare_two_sentences</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">):</span>
+
+    <span class="n">s1_filt</span> <span class="o">=</span> <span class="n">filter_stopwords</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+    <span class="n">s2_filt</span> <span class="o">=</span> <span class="n">filter_stopwords</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+
+    <span class="n">l</span> <span class="o">=</span> <span class="n">distance</span><span class="o">.</span><span class="n">levenshtein</span><span class="p">(</span><span class="n">s1_filt</span><span class="p">,</span> <span class="n">s2_filt</span><span class="p">)</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">jaccard_distance</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">s1_filt</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">s2_filt</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">l</span><span class="p">,</span> <span class="n">j</span>
+</code></pre></div>
+
+<p>For both Levenshtein and Jaccard, numbers closer to 0 mean the two sentences are more closely related. I also filtered out the most common words (stopwords) to increase the percentage of keywords in each comparison.</p>
+<p>The idea was to produce a result like this:</p>
+<div class="highlight"><pre><span></span><code>s1: Ability to participate in and facilitate requirements brainstorming sessions.
+s2: A keen ability to filter and distill substantial information for the right audience.
+
+levenshtein: 53
+jaccard: 0.20833333333333334
+</code></pre></div>
+
+<p>Finally, I iterated through each qualification in each role and compared them with all qualifications in every other role:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">role</span> <span class="ow">in</span> <span class="n">roles</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">comparison</span> <span class="ow">in</span> <span class="n">roles</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">role</span><span class="o">.</span><span class="n">title</span> <span class="o">==</span> <span class="n">comparison</span><span class="o">.</span><span class="n">title</span><span class="p">:</span>
+            <span class="k">pass</span> <span class="c1"># no point in matching if they&#39;re the exact same role</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">qx</span> <span class="ow">in</span> <span class="n">role</span><span class="o">.</span><span class="n">qualifications</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">qy</span> <span class="ow">in</span> <span class="n">comparison</span><span class="o">.</span><span class="n">qualifications</span><span class="p">:</span>
+                    <span class="n">l</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">compare_two_sentences</span><span class="p">(</span><span class="n">qx</span><span class="p">,</span> <span class="n">qy</span><span class="p">)</span>
+</code></pre></div>
+
+<h1>Results</h1>
+<p><strong>Sentence 1</strong>: <em>You have working understanding of project management tools and methodologies.</em><br>
+<strong>Sentence 2</strong>: <em>Solid experience in both product management and product marketing. Education apps experience helpful.</em> <br>
+<strong>Levenshtein</strong>: 64, <strong>Jaccard</strong>: 0.269    </p>
+<p><strong>Sentence 1</strong>: <em>A keen ability to filter and distill substantial information for the right audience.</em><br>
+<strong>Sentence 2</strong>: <em>Ability to participate in and facilitate requirements brainstorming sessions.</em><br>
+<strong>Levenshtein</strong>: 53, <strong>Jaccard</strong>: 0.208  </p>
+<p>Okay, I guess this is getting closer.</p>
+<p><strong>Sentence 1</strong>: <em>A keen ability to filter and distill substantial information for the right audience.</em><br>
+<strong>Sentence 2</strong>: <em>Ability to filter and distill meaningful information for the right audience</em><br>
+<strong>Levenshtein</strong>: 18, <strong>Jaccard</strong>: 0.0909 👍</p>
+<p>Here we go! Two qualifications from different job postings that are not exactly the same, but incredibly similar.</p>
+<p>Rather than looking through the entire 2500-line output, I set the comparisons to only print if the Levenshtein score was below 30 and Jaccard was below 0.15.</p>
+<p><strong>Sentence 1</strong>: <em>Ability to communicate thoughtfully, leveraging problem-solving skills and a learning mindset to build long-term relationships</em><br>
+<strong>Sentence 2</strong>: <em>Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels.</em><br>
+<strong>Levenshtein</strong>: 122, <strong>Jaccard</strong>: 0.142</p>
+<p><strong>Sentence 1</strong>: <em>Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels</em><br>
+<strong>Sentence 2</strong>: <em>Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels.</em><br>
+<strong>Levenshtein</strong>: 2, <strong>Jaccard</strong>: 0.037 👍</p>
+<p>So it appears that anything with a Levenshtein distance <strong>&lt; 20</strong> or a Jaccard distance <strong>&lt; 0.1</strong> is similar enough to be the same qualification. With that in mind, let's graph it.</p>
+<h1>Graphing</h1>
+<p>I figured this would be pretty simple to plug into library that can spit out a nice-looking network graph. However, it's not quite so simple.</p>
+<p>To create the graph, I used <a href="https://networkx.github.io">NetworkX</a>, a Python module specifically for creating graphs.  But NetworkX doesn't draw the graph, it only creates connections between nodes and edges and provides coordinates for everything. To draw it, I needed to use another library. I started off following the NetworkX docs and using <a href="https://matplotlib.org/">Matplotlib</a>, was simple and allowed me to generate simple graphs quickly.</p>
+<p>A simple graph with two nodes (A, B) connected by an edge (A-B) can be created like this:</p>
+<div class="highlight"><pre><span></span><code><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<p>So, I represented roles and qualifications by nodes, and the connection by edges. So a each role would have a few qualifications connected to it:
+<img src="/images/20191128-lexical/3.png" width="100%" /></p>
+<p>Now, if qualifications from <em>different</em> roles were exactly the same or similar (had a Jaccard distance &lt; 0.1), I'd want to link them together:
+<img src="/images/20191128-lexical/4.png" width="100%" /></p>
+<p>To do the actual comparison:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">qx</span> <span class="ow">in</span> <span class="n">role</span><span class="o">.</span><span class="n">qualifications</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">qy</span> <span class="ow">in</span> <span class="n">comparison</span><span class="o">.</span><span class="n">qualifications</span><span class="p">:</span>
+        <span class="n">l</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">compare_two_sentences</span><span class="p">(</span><span class="n">qx</span><span class="p">,</span> <span class="n">qy</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mf">0.15</span><span class="p">:</span>  
+            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">role</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">qy</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">qx</span><span class="p">)</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">role</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">qx</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Now, you may be wondering why I'm adding nodes as I did the comparison instead of generating all nodes (roles, qualifications) and edges (role𝑥←→qualification𝑦) first, then comparing and linking the similar qualification nodes. The issue was that if two or more qualifications from different nodes were <em>exactly</em> the same, <em>and</em> there were similar qualifications found, I'd only be able to add edges to the first one in the node list unless I also added unique IDs to the nodes. I implemented this the way I did out of laziness since I wanted to see results quickly:</p>
+<p><img src="/images/20191128-lexical/matplotlib.png" width="100%" /></p>
+<p>So, it's clear that some of the qualifications are similar between roles. But the graph was pretty ugly (especially since I had to truncate the qualifications to make them fit). I tried a bit more with Matplotlib but eventually implemented <a href="https://plot.ly/python/network-graphs/">Plot.ly</a>:</p>
+<p><img src="/images/20191128-lexical/5.png" width="100%" /></p>
+<p>As expected, similar qualifications are linked together and it's easy to see the overlap between roles. Here's a sample of a triangle of roles with overlapping qualifications. Mousing over each node reveals the full qualification:
+<img src="/images/20191128-lexical/6.png" width="100%" /></p>
+<p>Some roles have even more overlap of qualifications. This is a bit more difficult to read since I haven't figured out a way to group the nodes, or to prevent lines from crossing each other (using this type of graph):</p>
+<div class="full-width"><img src="/images/20191128-lexical/7.png" width="100%" /></div>
+
+<h1>Result</h1>
+<p>Of course, improving legibility and making it easier to understand connections can still be worked on. But it's easy to see that some roles have more overlap than others. At the same time, some qualifications say so much that they might as well be describing every role, like this: <em>"Goal oriented, highly motivated and able to work under minimal supervision in a cross-functional environment at detailed levels whilst taking account of interdependencies at higher levels"</em>.</p>
+<p>Still, it's useful to see if some roles more heavily overlap with others. One could apply to groups of similar roles without modifying their resume and/or cover letter, increasing application efficiency. </p>
+<p>Here's the full Plot.ly output if interested (select groups to zoom in and inspect, mouseover a node to view full role or description):</p>
+<div class="full-width"><iframe src="/static/20191128-lexical/plot.html" width="100%" height="800"></iframe></div>
+
+<h1>Next Steps</h1>
+<p>There are more important things one can do that improve their chances at landing a role. However, this was still an interesting learning experience.</p>
+<ul>
+<li>Add additional careers sites from different companies to see how qualifications differ between similar or exact match job descriptions </li>
+<li>Instead of using relatively simple Levenshtein and Jaccard distance, use TensorFlow Hub and use the <a href="https://tfhub.dev/google/universal-sentence-encoder-large/4">Universal Sentence Encoder</a></li>
+<li>Try different ways of displaying the data (3D layout, different graph types, etc.)</li>
+</ul>
+<!--     <footer>
+      <p>Published: <time datetime="2019-11-28T00:00:00-05:00">
+        2019-11-28
+      </time></p>
+        <address>
+          By             <a href="https://jonpurdy.com/author/jon-purdy.html">Jon Purdy</a>
+        </address>
+        <p>
+          Category: <a href="https://jonpurdy.com/category/development.html">Development</a>
+        </p>
+    </footer> -->
+  </article>
+      </main>
+<!--       <footer>
+          <address>
+            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+          </address>
+      </footer> -->
+
+      <!-- image toggling like low power mag -->
+      <script>
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.toggle-img');
+        if (!btn) return;
+        const fig = btn.closest('.img-toggle');
+        const img = fig.querySelector('img');
+        const orig = fig.dataset.orig;
+        const dither = fig.dataset.dither;
+        const showingOrig = img.src.includes(orig);
+        img.src = showingOrig ? dither : orig;
+        btn.textContent = showingOrig ? '+' : '-';
+      });
+      </script>
+      <!-- image toggling like low power mag -->
+
+</html>

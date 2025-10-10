@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Jon Purdy - How to improve your Zoom/Skype teleconferencing game</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- default is to use an if (only allows 1 stylesheet) -->
+<!--               <link rel="stylesheet" type="text/css" href="['/static/new-jon.css']" />
+ -->
+      <!-- I changed to a FOR to allow multiple -->
+      <link rel="stylesheet" href="/static/new-jon.css">
+      <!-- I changed to a FOR to allow multiple -->
+      
+        <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Full Atom Feed" />
+
+
+
+
+
+  </head>
+
+  <body>
+      <header>
+          <!-- jon logo -->
+          <hgroup><section style="text-align:center"><a href="/"><img class="logo" src="https://jonpurdy.com/images/logo.svg" alt="Jon Purdy"></a></section></hgroup>
+          <!-- original -->
+          <!-- <hgroup><h1><a href="https://jonpurdy.com/">Jon Purdy</a></h1></hgroup> --> 
+          <nav style="text-align:center; text-transform: uppercase;">
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/about/" >About</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/pm-framework/" >P*M Framework</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/work/" >Work</a>
+            <!-- moved menuitems below pages -->
+              <a href="/archives.html">Archive</a>
+          </nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>
+        <a href="https://jonpurdy.com/2020/03/how-to-improve-your-zoomskype-teleconferencing-game/" rel="bookmark"
+           title="Permalink to How to improve your Zoom/Skype teleconferencing game">How to improve your Zoom/Skype teleconferencing game</a></h2>
+      
+      <section><time datetime="2020-03-18T00:00:00-04:00"> 2020-03-18</section>
+    </header>
+    <!-- <img src="/images/20200318-videoconference/header.jpg" alt="Dog videoconferencing." width="100%" /> -->
+
+<figure class="img-toggle" data-orig="/images/20200318-videoconference/header.jpg" data-dither="/images/20200318-videoconference/header-dither.png">
+  <img src="/images/20200318-videoconference/header-dither.png" width=100%>
+  <button class="toggle-img">+</button>
+</figure>
+
+<p>Teleconferencing seems like an easy thing to get right, especially with webcams and good noise-canceling microphones being built into most laptops these days. If the environment is quiet and and lighting is good, it can be fine. But I've participated in a lot of meetings where I could hear myself out of the participant's speakers, the video was choppy, or the background noises made it difficult to hear participant's voices properly.</p>
+<p>I figured with all of society working remotely for the foreseeable future, I would publish my suggestions on how to videoconference more effectively.</p>
+<h1>How to avoid blurry/pixelated video and choppy audio</h1>
+<p>Your internet connection needs to be stable and relatively fast for this to work. </p>
+<p>There are two components to your connection:</p>
+<ol>
+<li>The path from your computer to your router (local)</li>
+<li>The path from your router to the destination server, either direct to the participant or to the Google/Zoom server (remote)</li>
+</ol>
+<p><em>Aside from the suggestions below, there are more technical ways of optimizing your connection, such as tunnelling through a VPN to avoid packet prioritization or forcibly route around known-bad routes. But these will be saved for another day.</em></p>
+<h3>1. Local setup</h3>
+<p><strong>Optimizations</strong>  </p>
+<ul>
+<li>Use a wired ethernet connection<br>
+OR  </li>
+<li>Use 802.11ac router or AP  </li>
+<li>Use 5GHz bands (as opposed to 2.4GHz) for less interference (since they don't go as far at equal power levels)  <ul>
+<li>If you can, use 80MHz channel width (as opposed to 40MHz or 20MHz) for the fastest speeds  </li>
+</ul>
+</li>
+<li>If on a someone else's network and there are multiple names (such as <em>Cafe</em> and <em>Cafe5</em>), use <em>Cafe5</em> since it's likely the 5GHz option  </li>
+</ul>
+<p>On Mac, if you Option-click the Airport icon in your menu bar, you can view the technical details about how you're connected to verify you're set up correctly.  </p>
+<p><img src="/images/20200318-videoconference/airport.png" alt="Airport menu" width="40%" /></p>
+<h3>2. Remote setup</h3>
+<p>The remote path goes from your router and ISP to the destination. There's not much you can do once your packets leave your ISP, but you can optimize your connection by choosing a good package from your ISP.</p>
+<p>Have you ever been in the situation where you could see and hear the other person clearly, but they complained about dropouts and blurred video on your side? Or vice-versa? This could be due to an asymmetry between your connections. One person could have a fast enough connection and another could have a slow connection. Complicating this is that many people don't have symmetric upload/download speeds.</p>
+<p><img src="/images/20200318-videoconference/updown.png" alt="Upload/download speed diagram" width="100%" /></p>
+<p>In the example on the left, both Alice and Bob have fast enough upload and download speeds, so they can both receive and transmit clear audio and video. But in the example on the right, Bob cheaped out and got an internet connection with a slow upload speed. As a result, he's able to see and hear Alice perfectly, but Alice receives choppy audio and video from Bob.</p>
+<p>And with Bob being Bob, he will probably blame Alice since he "can see her perfectly". </p>
+<p><strong>Optimizations</strong>  </p>
+<ul>
+<li>Get a connection with at least 20 Mbps download and upload speeds (to allow for other non-videoconference traffic to get through and not affect your call)  <ul>
+<li>Ideally, 100 Mbps symmetric (100 Mbps up/100 Mbps down) is a minimum bar in an urban area; with this you should have zero issues even when sharing the connection with others  </li>
+</ul>
+</li>
+<li>Get fibre-to-the-home (FTTH) if available, or fibre-to-the-node/neighbourhood (FTTN) as an alternative; avoid straight DSL or Cable</li>
+</ul>
+<h1>How to have crystal-clear, easy-to-understand audio</h1>
+<p>The easiest and simplest way to get vastly superior audio: <strong>use headphones, with a microphone near your mouth</strong>. With headphones, the the audio is playing directly in your ear, so the mic won't pick up the other person's voice playing out of speakers. The best noise cancellation in the world combined with the most expensive microphone is WORSE than just putting a microphone near your mouth!</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Inverse-square_law">inverse-square law</a> applies to sound: if you double the distance from a microphone or speaker, sound volume drops by around 75% since sound travels in 3D space:  </p>
+<p><img src="/images/20200318-videoconference/Inverse_square_law.png" alt="Inverse square law" width="60%" /></p>
+<p>If you can't use a headset with a mic, try to <strong>get as close to the microphone as you can</strong>. Use earbuds anyway even if they don't have a mic just to prevent the other person's voice from being played out of your speakers and picked up by your mic.</p>
+<p>If a mic is a metre away and an air conditioner is 10 metres away, but ten times louder than your voice, you'd get interference and noise cancelling would have to work very hard.</p>
+<p>To simulate the massive difference this makes, here's an example recording of my voice at each specified distance, plus white noise (to simulate an air conditioner or refrigerator) being generated two metres away:  </p>
+<p><img src="/images/20200318-videoconference/loudness-1.png" width="100%" /></p>
+<p>Of course, only the voice audio gets louder since my voice is moving closer to the mic, but the noise source is fixed.</p>
+<p>For each clip, let's <em>normalize</em> the volume levels on each clip. This brings the loudest sounds up to 100%, and the quieter sounds up a bit as well:  </p>
+<p><img src="/images/20200318-videoconference/loudness-normalized.png" width="100%" /></p>
+<p>Zoomed in, each clip shows the background noise on the left and the voice waveform on the right. As you can see, the background noise is much thicker. In order to bring the voice audio up to 100%, the background noise got louder as well:  </p>
+<p><img src="/images/20200318-videoconference/loudness-zoomed.png" width="100%" /></p>
+<p>Let's look at the signal-to-noise ratio. You want a high ratio between signal (in this case, my voice) and noise (in this case, the simulated air conditioner). The green line is the peak voice signal, and the red line is the peak noise signal. The pink rectangle represents a unit of noise, and the black rectangles show the number of times louder the voice is compared to the noise. </p>
+<p><img src="/images/20200318-videoconference/loudness-snr.png" width="100%" /></p>
+<p>For the 1 metre microphone distance distance, you get less than 3:1 ratio. From 50 cm, you get 7:1. And from 2 cm, you get 20:1; almost a three-fold improvement!</p>
+<p><strong>Optimizations</strong>  </p>
+<ul>
+<li>Use headphones with a built-in mic</li>
+<li>If that's not available, use your non-mic earbuds instead of speakers and try to get close to the mic</li>
+</ul>
+<h1>How to look better than everyone else</h1>
+<p>Audio is more important than video. Choppy and blurry video can be tolerated as long as the audio is clear, not laggy, and doesn't cut out. But once you've got your internet connection and audio setup sorted, spend some time and get your video quality right.</p>
+<p>There are already a lot of great tutorials on lighting, like <a href="https://www.diyphotography.net/look-good-webcam-vlog/">this</a>. So I'll keep my recommendations short:  </p>
+<ul>
+<li>Get an external webcam (I recommend the Logitech c920).  <ul>
+<li>You might be thinking that built-in webcams are pretty great these days since the iPhone's front-facing camera works so well. Unfortunately, MacBook webcams are pretty bad compared to that, especially in low light.  </li>
+<li>Notice the image noise as well as lack of detail in the shadows on Brinquitos' snout in the MacBook Pro image.  </li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/20200318-videoconference/webcams.jpg" alt="Webcam comparison" width="100%" /></p>
+<ul>
+<li>Mount the external webcam on a small desktop tripod. This allows you to move or type on your laptop while in a videoconference and not have the movements or vibrations transmitted to the webcam, causing subtle vibrations in your image.  </li>
+<li>Ensure your face is lighter than the background.  Either sit near a window, or use an auxiliary light. If you need to use a desk lamp, bounce it off of a white sheet of paper so that the light isn't harsh on your face.</li>
+</ul>
+<p><strong>Dec 2020 Update</strong>:  After this article was published, I found a tool that helped optimize the image from the C920. The main issue is that it has a blue cast (white balance too cool) by default.</p>
+<p>I found <a href="https://duckduckgo.com/?q=webcam+settings+mac+app+store&amp;t=osx">Webcam Settings</a> worked incredibly well to fix this. Some of the settings it can correct:</p>
+<ul>
+<li>white balance</li>
+<li>manual or autofocus</li>
+<li>zoom (digital)</li>
+<li>exposure</li>
+<li>image brightness/contrast (digital)</li>
+</ul>
+<p>In the example below, warm sunlight was streaming in and the camera made it much too blue. I corrected white balance to show what it actually looked like, as well as bumped the brightness slightly to show my face better.</p>
+<p><img src="/images/20200318-videoconference/webcam-2.jpg" alt="Webcam comparison" width="100%" /></p>
+<h1>&lt;/end&gt;</h1>
+<p>You need to optimize just a few things to make videoconferencing better! This makes you easier to see and hear so that you can get your point across faster and more easily.  </p>
+<h1>Addendum</h1>
+<p>Although I used both Zoom and Skype in the title of this article because they are the most popular tools, I don't actually recommend using them.</p>
+<p>Skype went from an excellent piece of software a decade ago and changed into a visual abomination that is vastly more difficult to use and far buggier than before. Zoom has had numerous issues with privacy: <a href="https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5">installing secret web servers on Macs</a>, <a href="https://news.ycombinator.com/item?id=22703000">embedding FaceBook tracking</a>, and now <a href="https://twitter.com/c1truz_/status/1244737672930824193">using the preflight script in a Mac package to install the entire app</a>.</p>
+<p><strike>I highly recommend the use of <a href="https://meet.jit.si">Jitsi Meet</a>. It runs in-browser or on an iOS or Android app, doesn't require an account, and the tech is based on WebRTC and is totally open source. It is funded by a videoconferencing company that makes money from enterprise-level features and support, and their customers are companies and users, not advertisers.</strike></p>
+<p><strong>Dec 2020 Update</strong>: Since I published in March, Zoom has fixed numerous privacy and security issues with their Mac app. Jitsi seems to have had more trouble scaling than Zoom and I find the call quality and reliability isn't as good as other options.</p>
+<!--     <footer>
+      <p>Published: <time datetime="2020-03-18T00:00:00-04:00">
+        2020-03-18
+      </time></p>
+        <address>
+          By             <a href="https://jonpurdy.com/author/jon-purdy.html">Jon Purdy</a>
+        </address>
+        <p>
+          Category: <a href="https://jonpurdy.com/category/development.html">Development</a>
+        </p>
+    </footer> -->
+  </article>
+      </main>
+<!--       <footer>
+          <address>
+            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+          </address>
+      </footer> -->
+
+      <!-- image toggling like low power mag -->
+      <script>
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.toggle-img');
+        if (!btn) return;
+        const fig = btn.closest('.img-toggle');
+        const img = fig.querySelector('img');
+        const orig = fig.dataset.orig;
+        const dither = fig.dataset.dither;
+        const showingOrig = img.src.includes(orig);
+        img.src = showingOrig ? dither : orig;
+        btn.textContent = showingOrig ? '+' : '-';
+      });
+      </script>
+      <!-- image toggling like low power mag -->
+
+</html>

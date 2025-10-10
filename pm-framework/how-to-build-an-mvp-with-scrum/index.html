@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Jon Purdy - How to build an MVP with Scrum (draft)</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- default is to use an if (only allows 1 stylesheet) -->
+<!--               <link rel="stylesheet" type="text/css" href="['/static/new-jon.css']" />
+ -->
+      <!-- I changed to a FOR to allow multiple -->
+      <link rel="stylesheet" href="/static/new-jon.css">
+      <!-- I changed to a FOR to allow multiple -->
+      
+        <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Full Atom Feed" />
+
+
+  </head>
+
+  <body>
+      <header>
+          <!-- jon logo -->
+          <hgroup><section style="text-align:center"><a href="/"><img class="logo" src="https://jonpurdy.com/images/logo.svg" alt="Jon Purdy"></a></section></hgroup>
+          <!-- original -->
+          <!-- <hgroup><h1><a href="https://jonpurdy.com/">Jon Purdy</a></h1></hgroup> --> 
+          <nav style="text-align:center; text-transform: uppercase;">
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/about/" >About</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/pm-framework/" >P*M Framework</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/work/" >Work</a>
+            <!-- moved menuitems below pages -->
+              <a href="/archives.html">Archive</a>
+          </nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>How to build an MVP with Scrum (draft)</h2>
+    </header>
+    
+
+    <p><img src="/images/pm/build-mvp-diagram-simplified.png" alt="Diagram" width="100%" /></p>
+<h2>Prerequisites</h2>
+<p><strong>Groomed Backlog of User Stories</strong></p>
+<p>Let's use the one from <a href="/pm-framework/how-to-quickly-plan-and-estimate-an-mvp">How to quickly plan and estimate an MVP</a>:  </p>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Rough Point Value</th>
+<th>Sprint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can add items to their cart</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view contents of their cart</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can initiate checkout process</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can enter their billing details</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can enter their shipping details</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can submit payment</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can view their order details</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Definition of Done</strong></p>
+<p>This is just a list of criteria that can be checked off to verify that a User Story is actually "Done".</p>
+<p>They should be short, single criteria, and testable.</p>
+<p>Examples:<br>
+- Doesn't crash<br>
+- Test case coverage<br>
+- No typos  </p>
+<h2>Before each sprint planning</h2>
+<p>Get developers to think about first few stories on their own. This enables more accurate estimates during Sprint Planning since they've already thought about implemenetation of the User Story.</p>
+<p>Some common questions to ask themselves:  </p>
+<ul>
+<li>Backend work required?  </li>
+<li>Database modifications?  </li>
+<li>Working with a new or unknown library?  </li>
+</ul>
+<h3>Acceptance Criteria</h3>
+<p>The Product Owner should also spend time specifying the Acceptance Criteria of each Story. They should know what they want built, so specifying this up front (to be confirmed later by developers) saves time.</p>
+<p>These are individual requirements that must be met for the Product Owner to accept the Story. Like the Definition of Done, they should be short, single criteria, and testable. But the DoD applies to all Stories, Acceptance Criteria apply to each individual Story.</p>
+<p>Examples for "User can create an account":  </p>
+<ul>
+<li>Username must be between 2-20 letters  </li>
+<li>User can set a nickname for the account  </li>
+<li>Should be all on one screen, not paginated  </li>
+</ul>
+<p>I've written in more detail previously about User Stories, how to break them down, and how to describe the work required in <a href="/2019/06/story-pointing-and-breaking-down-work/">Story Pointing and Breaking Down Work"</a>.</p>
+<h2>Sprint Planning</h2>
+<p>This happens at the beginning of every Sprint. First, add the top Stories from the Product Backlog to the Sprint. (These top stories are already in priority order thanks to 
+the Backlog Grooming.)</p>
+<p>For example, this team is assuming they can complete these three User Stories by the end of this first sprint. This becomes the Sprint Backlog.</p>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Rough Point Value</th>
+<th>Sprint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Rough Point Value is the estimated point value from when we initially scoped out the MVP. It will be adjusted or changed completely depending on how accurate the updated estimate will be from the development team.</p>
+<h3>Estimating Difficulty</h3>
+<p>This was demonstrated extensively in <a href="/pm-framework/how-to-quickly-plan-and-estimate-an-mvp">How to quickly plan and estimate an MVP</a>, but I'll reiterate it here.</p>
+<p><strong>How to estimate difficulty?</strong></p>
+<p>Relative estimation.</p>
+<p>Simple example: <strong>how big is A</strong>?  </p>
+<p><img src="/images/pm/abc_alpha.png" alt="ABC" width="50%" /></p>
+<p>Just by eyeballing it, you don't know exactly how big it is in cm or pixels, but you can figure out that it is <strong>smaller than B</strong> and <strong>bigger than C</strong>.</p>
+<p>If you have two User Stories, it doesn't matter "how long they will take". Is one of the stories more difficult than the other? If so, it will be rated more Story Points. </p>
+<p><strong>Do it</strong></p>
+<p>There are three stories in our Sprint Backlog:  </p>
+<ul>
+<li>User can create an account  </li>
+<li>User can view list of store items  </li>
+<li>User can view item details  </li>
+</ul>
+<p><strong>1)</strong> From our Sprint Backlog, let's look at "User can create an account". Ask the team to consider how difficult it is, then assign it 2 points.<br>
+<strong>2)</strong> Next, "User can view list of store items". Ask the team: is it easier or harder to build than the first story?  The team says it's easier, so assign it 1 point.<br>
+<strong>3)</strong> Finally, "User can view item details".  Team says it's harder than "view list of store details", and a bit harder than "create an account". So assign it 3 points.  </p>
+<p>The Sprint Backlog now looks like this:</p>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Point Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3>Acceptance Criteria</h3>
+<p>The Product Owner should have already written Acceptance Criteria for each of these Stories. It's now time for developers to verify and clarify each item.</p>
+<p>Examples for "User can create an account":  </p>
+<p>Username must be between 2-20 letters<br>
+<strong>Devs</strong>: <em>Are non-Roman characters (like 이것) allowed?</em>  </p>
+<p>User can set a nickname for the account<br>
+<strong>Devs</strong>: <em>is this mandatory or optional?</em></p>
+<h3>Assign the work</h3>
+<p>Now that all the User Stories have been estimated and clarified, the <em>dev team</em> can decide who works on what.</p>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Point Value</th>
+<th>Assignee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+<td>2</td>
+<td>Minjung</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+<td>1</td>
+<td>Minjung</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+<td>3</td>
+<td>Jacob</td>
+</tr>
+</tbody>
+</table>
+<h2>Doing the work</h2>
+<p>While the Sprint is happening, it's important for the dev team to focus on creating value (in the form of completed Stories). The whole point of doing Sprints is to create and release features iteratively so they can be demoed and used as quickly as possible.  </p>
+<p><strong>Block off contiguous time blocks</strong>: Developers need time to actually do the work. Context switching is a huge productivity and motivation killer.  </p>
+<p><strong>Support devs in any way possible</strong>: Provide developers with the tools, resources, and information that they need. If the build environment is too slow, make it faster. If their computers are too slow, get faster ones. If they have questions or required clarification, answer them as quickly as possible.  </p>
+<p><strong>Focus on fast coding, but slow testing</strong>: Quality should be built into any code that's written. To do this, developers should code quickly but test slowly. Invest once in unit and end-to-end tests and get ongoing returns whenever they catch bugs.  </p>
+<p><strong>Produce something of value</strong>: If the Sprint is nearing completion but all the Stories likely won't get released, focus on finishing some rather than half-finishing all of them.  </p>
+<h2>Sprint review</h2>
+<p>Meeting held at the end of the Sprint in order to inspect what has been produced during that Sprint.</p>
+<p>For each User Story that is Done, demo it and answer these questions:  </p>
+<ul>
+<li>Does the Story meet the Definition of Done?  </li>
+<li>Are all the Acceptance Criteria met?  </li>
+</ul>
+<p>If those questions are answered positively, the Story can be accepted by the Product Owner.</p>
+<p>If those questions are answered negatively, the Story goes back into the Product Backlog (and likely added to the next Sprint.</p>
+<h3>Recalculate velocity and project forecast</h3>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Point Value</th>
+<th>Accepted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+<td>2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+<td>1</td>
+<td>✕</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+<td>3</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p>Let's say that two Stories were accepted and one was rejected. Sum the point value of the accepted Stories to get the velocity = 5.</p>
+<p>Keep this in mind for the next sprint. Six points of effort were planned but five were completed. But teams should become more effective as time goes on, especially after just a single sprint. </p>
+<p>I'd suggest planning for 6 points for the upcoming sprint (but save this discussion for Sprint Planning).</p>
+<h2>Retrospective</h2>
+<p>This is an internal meeting for dev team members and any stakeholders who are directly involved with building the product.</p>
+<p>In it's most simple form, just two questions need to be discussed:
+* What went well during the past Sprint?
+* What could be improved for the next Sprint?</p>
+<p>There are numerous ways and methods of going about this which I will link to at a later time.</p>
+
+  </article>
+      </main>
+<!--       <footer>
+          <address>
+            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+          </address>
+      </footer> -->
+
+      <!-- image toggling like low power mag -->
+      <script>
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.toggle-img');
+        if (!btn) return;
+        const fig = btn.closest('.img-toggle');
+        const img = fig.querySelector('img');
+        const orig = fig.dataset.orig;
+        const dither = fig.dataset.dither;
+        const showingOrig = img.src.includes(orig);
+        img.src = showingOrig ? dither : orig;
+        btn.textContent = showingOrig ? '+' : '-';
+      });
+      </script>
+      <!-- image toggling like low power mag -->
+
+</html>

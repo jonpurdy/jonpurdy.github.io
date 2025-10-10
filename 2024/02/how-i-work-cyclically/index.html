@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Jon Purdy - How I Work Cyclically</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- default is to use an if (only allows 1 stylesheet) -->
+<!--               <link rel="stylesheet" type="text/css" href="['/static/new-jon.css']" />
+ -->
+      <!-- I changed to a FOR to allow multiple -->
+      <link rel="stylesheet" href="/static/new-jon.css">
+      <!-- I changed to a FOR to allow multiple -->
+      
+        <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Full Atom Feed" />
+
+
+
+
+
+  </head>
+
+  <body>
+      <header>
+          <!-- jon logo -->
+          <hgroup><section style="text-align:center"><a href="/"><img class="logo" src="https://jonpurdy.com/images/logo.svg" alt="Jon Purdy"></a></section></hgroup>
+          <!-- original -->
+          <!-- <hgroup><h1><a href="https://jonpurdy.com/">Jon Purdy</a></h1></hgroup> --> 
+          <nav style="text-align:center; text-transform: uppercase;">
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/about/" >About</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/pm-framework/" >P*M Framework</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/work/" >Work</a>
+            <!-- moved menuitems below pages -->
+              <a href="/archives.html">Archive</a>
+          </nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>
+        <a href="https://jonpurdy.com/2024/02/how-i-work-cyclically/" rel="bookmark"
+           title="Permalink to How I Work Cyclically">How I Work Cyclically</a></h2>
+      
+      <section><time datetime="2024-02-20T00:00:00-05:00"> 2024-02-20</section>
+    </header>
+    <!-- <img src="/images/20240220-how-i-work-cyclically/header.jpg" alt="SF Ocean Beach boardwalk" width="100%" /> -->
+
+<figure class="img-toggle" data-orig="/images/20240220-how-i-work-cyclically/header.jpg" data-dither="/images/20240220-how-i-work-cyclically/header-dither.png">
+  <img src="/images/20240220-how-i-work-cyclically/header-dither.png" width=100%>
+  <button class="toggle-img">+</button>
+</figure>
+
+<p>I want to use my brain for working on big picture and detailed work, not for planning on what to work on. The world operates on cycles: breathing every 3-10 seconds, work/play/sleep every 24 hours, quarterly/annual financials every 3 or 12 months.</p>
+<p><em>My strategy: use what's essentially a recurring to-do list.</em></p>
+<h3>For each cycle:</h3>
+<ul>
+<li>List the task(s) that need to get done</li>
+</ul>
+<h3>For each task:</h3>
+<ul>
+<li>Details about how to complete the task, including links to previous task output, where to gather details, etc.</li>
+<li>A checklist of subtasks or steps for completion</li>
+<li>Prerequisite tasks (ie. what tasks need to be done to feed input into the current task)</li>
+<li>The last date the task was done</li>
+</ul>
+<p><img src="/images/20240220-how-i-work-cyclically/inputs.png" alt="inputs" width="100%" /></p>
+<p>As an Infrastructure TPM at <a href="https://chainsafe.io">ChainSafe</a>, this is what my list generally looks like:</p>
+<h3>Daily</h3>
+<ul>
+<li>Check and follow up on email</li>
+<li>Check and follow up on Slack</li>
+<li>Check incidents channel to see if anything bad happened</li>
+</ul>
+<h3>Weekly</h3>
+<ul>
+<li>One-line status update on each program initiative on "initiatives tracker", and setting green/yellow/red status</li>
+<li>Looking for changes to infrastructure</li>
+<li>People allocations: verify team members worked on what they committed do, update this for the next week</li>
+</ul>
+<h3>Bi-weekly</h3>
+<ul>
+<li>Update program sponsors using inputs from initiative tracker, 2-3 bullet points on highlights/things to watch out for (and send the link to the full tracker)</li>
+<li>Verify transactions for all Infrastructure spending</li>
+<li>Do program retrospective and planning session</li>
+<li>Evaluate new ideas/opportunities using Evaluation Framework</li>
+</ul>
+<h3>Monthly</h3>
+<ul>
+<li>Pull stats (monthly revenue and expenses) via Python script </li>
+<li>Write Infrastructure Newsletter (targeting wide company audience) using inputs from Python script and biweekly updates</li>
+<li>Update exec audience with specific requested stats</li>
+</ul>
+<h3>Quarterly</h3>
+<ul>
+<li>Quarterly OKRs: review current, set new ones</li>
+</ul>
+<h3>Yearly</h3>
+<ul>
+<li>Annual program objectives: review current, set new ones</li>
+</ul>
+<p>At the start of a new period (weekly, for example), I know that I have 3 things to do that are due at the end of that week. So as long as I get them done at some point that week, I'm doing well and can relax. If it's Friday and I still need to accomplish tasks on my weekly list, I know I need to crunch to get them done (or at least catch up on them the next week).</p>
+<p>Sometimes, the end of periods collides (ie. the end of the month could also be the end of the week). This is generally not a problem since I am not working to 100% capacity<a href="#fn1">※</a>, so I can easily spread my work out over the course of each time period.</p>
+<p><fn id=fn1><i>※ - It's important to have some slack in one's schedule. From "This is Lean":<br />
+‣ <em>the closer we get to one hundred percent utilization, the longer the throughput time.</em><br />
+‣ <em>The paradox is that a greater focus on utilizing resources efficiently tends to increase the amount of work there is to do.</em></fn></p>
+<!--     <footer>
+      <p>Published: <time datetime="2024-02-20T00:00:00-05:00">
+        2024-02-20
+      </time></p>
+        <address>
+          By             <a href="https://jonpurdy.com/author/jon-purdy.html">Jon Purdy</a>
+        </address>
+        <p>
+          Category: <a href="https://jonpurdy.com/category/development.html">Development</a>
+        </p>
+    </footer> -->
+  </article>
+      </main>
+<!--       <footer>
+          <address>
+            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+          </address>
+      </footer> -->
+
+      <!-- image toggling like low power mag -->
+      <script>
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.toggle-img');
+        if (!btn) return;
+        const fig = btn.closest('.img-toggle');
+        const img = fig.querySelector('img');
+        const orig = fig.dataset.orig;
+        const dither = fig.dataset.dither;
+        const showingOrig = img.src.includes(orig);
+        img.src = showingOrig ? dither : orig;
+        btn.textContent = showingOrig ? '+' : '-';
+      });
+      </script>
+      <!-- image toggling like low power mag -->
+
+</html>

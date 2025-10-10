@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Jon Purdy - Using Homebridge to connect non-HomeKit devices to the Apple ecosystem</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- default is to use an if (only allows 1 stylesheet) -->
+<!--               <link rel="stylesheet" type="text/css" href="['/static/new-jon.css']" />
+ -->
+      <!-- I changed to a FOR to allow multiple -->
+      <link rel="stylesheet" href="/static/new-jon.css">
+      <!-- I changed to a FOR to allow multiple -->
+      
+        <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Full Atom Feed" />
+
+
+
+
+
+  </head>
+
+  <body>
+      <header>
+          <!-- jon logo -->
+          <hgroup><section style="text-align:center"><a href="/"><img class="logo" src="https://jonpurdy.com/images/logo.svg" alt="Jon Purdy"></a></section></hgroup>
+          <!-- original -->
+          <!-- <hgroup><h1><a href="https://jonpurdy.com/">Jon Purdy</a></h1></hgroup> --> 
+          <nav style="text-align:center; text-transform: uppercase;">
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/about/" >About</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/pm-framework/" >P*M Framework</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/work/" >Work</a>
+            <!-- moved menuitems below pages -->
+              <a href="/archives.html">Archive</a>
+          </nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>
+        <a href="https://jonpurdy.com/2020/01/using-homebridge-to-connect-non-homekit-devices-to-the-apple-ecosystem/" rel="bookmark"
+           title="Permalink to Using Homebridge to connect non-HomeKit devices to the Apple ecosystem">Using Homebridge to connect non-HomeKit devices to the Apple ecosystem</a></h2>
+      
+      <section><time datetime="2020-01-31T00:00:00-05:00"> 2020-01-31</section>
+    </header>
+    <!-- <img src="/images/20200131-homebridge/header.jpg" alt="Screenshot of neighbourhood from Google Maps." width="100%" /> -->
+
+<figure class="img-toggle" data-orig="/images/20200131-homebridge/header.jpg" data-dither="/images/20200131-homebridge/header-dither.png">
+  <img src="/images/20200131-homebridge/header-dither.png" width=100%>
+  <button class="toggle-img">+</button>
+</figure>
+
+<p>My wife and I are staying with my folks for a couple of weeks before we move to SF. My father mentioned that it'd be nice if he could get his non-HomeKit power outlet switches working with HomeKit somehow, despite not being supported.</p>
+<p>I figured there was a way to do this since both of them have local HTTP APIs that one can access programmatically. I didn't expect it'd be so easy. Within a few minutes, I had <a href="https://github.com/nfarina/homebridge">Homebridge</a> up and running on a Linux VM controlling a <a href="https://www.ui.com/mfi/mpower/">Ubiquiti mPower mini outlet</a>, confirming that it could be done.</p>
+<p>My father preferred to use a spare Raspberry Pi. Below are the steps to get his setup working (two mPower outlets, one <a href="https://www.kasasmart.com/us/products/smart-plugs/kasa-smart-wifi-plug-hs100">TP-LINK (Kasa) HS100</a>, and a <a href="https://www.chamberlain.com">Chamberlain</a> garage door) so that it can be easily repeated if necessary. Feel free to skip the steps for devices that you don't have.</p>
+<h1>Prerequisites</h1>
+<ul>
+<li>Raspberry Pi with raspbian-jessie installed</li>
+<li>Ubiquiti mPower mini and/or TP-LINK HS100 (for exact instructions)</li>
+</ul>
+<h1>Initial Setup</h1>
+<p>I generally followed the instructions on the <a href="https://github.com/nfarina/homebridge">Homebridge GitHub repo</a>. Supplemented with <a href="https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi">how to install Homebridge on a Pi</a>.</p>
+<h3>1. Install NodeJS</h3>
+<p>First, install NodeJS. The easiest way to install it on more modern Pis is <a href="https://github.com/nodesource/distributions/blob/master/README.md#debinstall">here</a>. Unfortunately, the spare Pi I used was an old Pi 1, which means I needed to get an older version of node (v11 was the latest I could find) that works with ARMv6 chips.</p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://nodejs.org/dist/latest-v11.x/node-v11.15.0-linux-armv6l.tar.xz
+tar<span class="w"> </span>xJvf<span class="w"> </span>node-v11.15.0-linux-armv6l.tar.xz
+mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/node
+mv<span class="w"> </span>node-v11.15.0-linux-armv6l/*<span class="w"> </span>/opt/node/
+update-alternatives<span class="w"> </span>--install<span class="w"> </span><span class="s2">&quot;/usr/bin/node&quot;</span><span class="w"> </span><span class="s2">&quot;node&quot;</span><span class="w"> </span><span class="s2">&quot;/opt/node/bin/node&quot;</span><span class="w"> </span><span class="m">1</span>
+update-alternatives<span class="w"> </span>--install<span class="w"> </span><span class="s2">&quot;/usr/bin/npm&quot;</span><span class="w"> </span><span class="s2">&quot;npm&quot;</span><span class="w"> </span><span class="s2">&quot;/opt/node/bin/npm&quot;</span><span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+
+<h3>2. Install Avahi</h3>
+<p>Next, install the packages so that Avahi/Bonjour work (required by HAP-NodeJS):</p>
+<div class="highlight"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>libavahi-compat-libdnssd-dev
+</code></pre></div>
+
+<h3>3. Install Homebridge</h3>
+<p>Finally, install Homebridge and create a blank config file:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>homebridge
+touch<span class="w"> </span>~/.homebridge/config.json
+</code></pre></div>
+
+<h3>4. Set up Homebridge config file</h3>
+<p>Pretty simple. Just copy and paste this into <code>~/.homebridge/config.json</code>.</p>
+<p>I recommend changing the name, username (looks like a MAC address, but it's not), and pin fields. But leave the rest default.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;bridge&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HomePi&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01:23:45:67:89:AB&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">51826</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;pin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;987-65-432&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Simple config file.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;ports&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">52100</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">52150</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This section is used to control the range of ports that separate accessory (like camera or television) should be bind to.&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3>5. Run it</h3>
+<p>To verify that it works, run it and ensure you see the QR code and setup PIN (debug logging turned on:</p>
+<div class="highlight"><pre><span></span><code>DEBUG=* /opt/node/bin/homebridge
+</code></pre></div>
+
+<p><img style="padding-left: 30px" src="/images/20200131-homebridge/qr.png" width="250" align="right"/></p>
+<h3>6. Add to Home</h3>
+<p>Homebridge now needs to be added to the Home app on iOS. Go to Add Accessory, then scan the QR code that shows up on the Pi's screen.</p>
+<p>Once this is done, any devices that are configured through Homebridge will show up automatically under the Home app.</p>
+<h1>Ubiquiti mPower mini outlet</h1>
+<p>I used the <a href="https://github.com/wr/homebridge-mpower">Homebridge mPower</a> plugin.</p>
+<p>Install the plugin:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>homebridge-mpower
+</code></pre></div>
+
+<p>Add the mPower platform and outlets to the Homebridge configuration (<code>~/.homebridge/config.json</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mPower&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mPower&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;outlets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MFi 8b1038&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubnt&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubnt&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.1.101&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MFi 885B5F&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubnt&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubnt&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.1.102&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+</code></pre></div>
+
+<p>If it fails, verify that your config validates with <a href="https://jsonlint.com">JSONLint</a>.</p>
+<p>Note that the id for both outlets is <code>1</code>; mPower mini must always be set to <code>1</code>. See the <a href="https://github.com/wr/homebridge-mpower">repo</a> for more info.</p>
+<p>You should see your mPower outlets appear in the Home app automatically:
+<img src="/images/20200131-homebridge/1-mpower.png" alt="mPower" width="50%" /></p>
+<h1>TP-LINK SmartHome</h1>
+<p>I used the <a href="https://github.com/plasticrake/homebridge-tplink-smarthome">Homebridge TP-LINK Smarthome plugin</a>.</p>
+<p>Install the Homebridge plugin:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>homebridge-tplink-smarthome
+</code></pre></div>
+
+<p>Add the platform to the Homebridge configuration (<code>~/.homebridge/config.json</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TplinkSmarthome&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TplinkSmarthome&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
+<p>Once you restart Homebridge, the HS-100 should show up in the Home app shortly after that.</p>
+<p><img src="/images/20200131-homebridge/2-tplink.png" alt="TP-LINK" width="50%" /></p>
+<h1>Chamberlain Garage Door</h1>
+<p>I used the <a href="https://github.com/caseywebdev/homebridge-chamberlain/">Homebridge Chamberlain plugin</a>.</p>
+<p>Install the Homebridge plugin:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>homebridge-chamberlain
+</code></pre></div>
+
+<p>The setup and config for this is a bit different. Rather than adding it in the <code>platforms</code>, it's added in the <code>accessories</code> section, which needs to be created.</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&quot;accessories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;accessory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Chamberlain&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Garage Door&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your_chamberlain_cloud_email@whatever.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your_password&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;deviceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your_device_id&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+</code></pre></div>
+
+<p>Restart homebridge. If restarts without any issue, you should be good to go.</p>
+<p><img src="/images/20200131-homebridge/3-garage.png" alt="Garage" width="50%" /></p>
+<p>If you see:</p>
+<div class="highlight"><pre><span></span><code>Error: Multiple controllable devices found: CG0800000111, CG06A1000111, GW0100000111
+</code></pre></div>
+
+<p>Try setting the device ID in the config to each of the devices in the list and seeing which one actually opens the garage door in the Home app, or just fails with an error. For me, the first device ID (CG0800000111) worked but the other two didn't.</p>
+<h1>Persistency</h1>
+<p>To make Homebridge persistent (start up on startup/reboot) using pm2:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>pm2
+/opt/node/bin/pm2<span class="w"> </span>startup
+/opt/node/bin/pm2<span class="w"> </span>start<span class="w"> </span>/opt/node/bin/homebridge
+/opt/node/bin/pm2<span class="w"> </span>save
+</code></pre></div>
+
+<p>To verify that it's running:</p>
+<div class="highlight"><pre><span></span><code>/opt/node/bin/pm2<span class="w"> </span>status
+</code></pre></div>
+
+<p>You should see something like this:
+<img src="/images/20200131-homebridge/pm2-status.png" alt="pm2 status" width="100%" /></p>
+<h1>Addendum</h1>
+<h3>Command Reference</h3>
+<p>Run homebridge in terminal:<br>
+<code>/opt/node/bin/homebridge</code></p>
+<p>Run homebridge in terminal with debug-level logging:<br>
+<code>DEBUG=* /opt/node/bin/homebridge</code></p>
+<p>Start homebridge daemon:<br>
+<code>/opt/node/bin/pm2 start /opt/node/bin/homebridge</code></p>
+<p>Stop homebridge daemon:<br>
+<code>/opt/node/bin/pm2 stop /opt/node/bin/homebridge</code></p>
+<h3>config.json</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;bridge&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HomePi&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01:23:45:67:89:AB&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">51826</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;pin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;987-65-432&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Simple config file.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;ports&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">52100</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">52150</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This section is used to control the range of ports that separate accessory (like camera or television) should be bind to.&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;accessories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;accessory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Chamberlain&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Garage Door&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your_chamberlain_cloud_email@whatever.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your_password&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;deviceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your_device_id&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mPower&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mPower&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;outlets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MFi 8b1038&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubnt&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubnt&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.1.101&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MFi 885B5F&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubnt&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubnt&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.1.102&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TplinkSmarthome&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TplinkSmarthome&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<!--     <footer>
+      <p>Published: <time datetime="2020-01-31T00:00:00-05:00">
+        2020-01-31
+      </time></p>
+        <address>
+          By             <a href="https://jonpurdy.com/author/jon-purdy.html">Jon Purdy</a>
+        </address>
+        <p>
+          Category: <a href="https://jonpurdy.com/category/development.html">Development</a>
+        </p>
+    </footer> -->
+  </article>
+      </main>
+<!--       <footer>
+          <address>
+            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+          </address>
+      </footer> -->
+
+      <!-- image toggling like low power mag -->
+      <script>
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.toggle-img');
+        if (!btn) return;
+        const fig = btn.closest('.img-toggle');
+        const img = fig.querySelector('img');
+        const orig = fig.dataset.orig;
+        const dither = fig.dataset.dither;
+        const showingOrig = img.src.includes(orig);
+        img.src = showingOrig ? dither : orig;
+        btn.textContent = showingOrig ? '+' : '-';
+      });
+      </script>
+      <!-- image toggling like low power mag -->
+
+</html>

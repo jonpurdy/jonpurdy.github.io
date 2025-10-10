@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Jon Purdy - Spinning up a VPN server programmatically on-demand</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- default is to use an if (only allows 1 stylesheet) -->
+<!--               <link rel="stylesheet" type="text/css" href="['/static/new-jon.css']" />
+ -->
+      <!-- I changed to a FOR to allow multiple -->
+      <link rel="stylesheet" href="/static/new-jon.css">
+      <!-- I changed to a FOR to allow multiple -->
+      
+        <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Full Atom Feed" />
+
+
+
+
+
+  </head>
+
+  <body>
+      <header>
+          <!-- jon logo -->
+          <hgroup><section style="text-align:center"><a href="/"><img class="logo" src="https://jonpurdy.com/images/logo.svg" alt="Jon Purdy"></a></section></hgroup>
+          <!-- original -->
+          <!-- <hgroup><h1><a href="https://jonpurdy.com/">Jon Purdy</a></h1></hgroup> --> 
+          <nav style="text-align:center; text-transform: uppercase;">
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/about/" >About</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/pm-framework/" >P*M Framework</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/work/" >Work</a>
+            <!-- moved menuitems below pages -->
+              <a href="/archives.html">Archive</a>
+          </nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>
+        <a href="https://jonpurdy.com/2019/03/spinning-up-a-vpn-server-programmatically-on-demand/" rel="bookmark"
+           title="Permalink to Spinning up a VPN server programmatically on-demand">Spinning up a VPN server programmatically on-demand</a></h2>
+      
+      <section><time datetime="2019-03-27T00:00:00-04:00"> 2019-03-27</section>
+    </header>
+    <figure class="img-toggle" data-orig="/images/20190327-openvpn/header.jpg" data-dither="/images/20190327-openvpn/header-dither.png">
+  <img src="/images/20190327-openvpn/header-dither.png" width=100%>
+  <button class="toggle-img">+</button>
+</figure>
+
+<p>(Photo from airplane window over Sydney 🇦🇺)</p>
+<p>My Private Internet Access subscription had expired and prices had jumped up from the last time I paid for a year. I don't need a VPN 24 hours per day, just an hour or two if I decide to work from a cafe, need airport wifi, or other scenarios where I'm out and about. Digital Ocean does hourly billing for its droplets (less than a cent per hour for it's $5/mo low-end droplet). I've set up OpenVPN servers in past jobs.  I figured that I could just roll my own solution for this problem.</p>
+<p>This post does not focus on installing and configuring OpenVPN. It focuses on how to spin up an on-demand OpenVPN VPS programmatically via the DigitalOcean API, CloudFlare API, and Python.</p>
+<h1>Prerequisites</h1>
+<ul>
+<li>DigitalOcean account</li>
+<li>DigitalOcean droplet with OpenVPN server installed, tested, and client config downloaded (I recommend <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04">this</a> tutorial, will use vpn-test as the droplet name in this tutorial)</li>
+<li>CloudFlare account and domain/sub-domain you want to use for this (will use vpntest.yourdomain.com in this tutorial)</li>
+<li><a href="https://github.com/digitalocean/doctl">doctl</a>, the command line interface to Digital Ocean (optional, for getting the snapshot ID)</li>
+</ul>
+<h1>Summary</h1>
+<ol>
+<li>Get DO API token</li>
+<li>Get CloudFlare API token</li>
+<li>Snapshot your OpenVPN VPS</li>
+<li>Add initial DNS entry in CloudFlare</li>
+<li>Add your tokens and names to Python script, then spin up a VPS from your snapshot</li>
+</ol>
+<h1>1. Get your Digital Ocean API token</h1>
+<p>Head over to <a href="https://cloud.digitalocean.com/account/api/tokens/new">https://cloud.digitalocean.com/account/api/tokens/new</a> to generate your token.
+<img src="/images/20190327-openvpn/do-token.png" width="100%" /></p>
+<h1>2. Get your CloudFlare API token</h1>
+<p>Head over to your <a href="https://dash.cloudflare.com/">CloudFlare dashboard</a>. Click your profile, then API Tokens. Click Create Token. 
+<img src="/images/20190327-openvpn/cf-token.png" width="100%" /></p>
+<h1>3. Create a snapshot of your VPS</h1>
+<p>Get a list of your droplets. Get the ID of your VPN droplet (in this case, 123456789).</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; doctl compute droplet list
+ID           Name        Public IPv4     
+123456789    vpn-test    142.93.155.87
+</code></pre></div>
+
+<p>Create a snapshot of your vpn-test droplet.</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; doctl compute droplet-action snapshot 123916924 --snapshot-name=&quot;vpn-snapshot&quot;
+ID           Status         Type        Started At                  
+53964180    in-progress    snapshot    2019-03-26 15:32:51 +0000 UTC
+</code></pre></div>
+
+<p>Wait for the snapshot to be created. You can check the progress by listing your snapshots. If it shows up, it's ready to be used.</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; doctl compute snapshot list
+ID          Name                   Created at              Regions
+53964180    vpn-test               2019-03-26T15:36:12Z    [tor1] 
+</code></pre></div>
+
+<p>Now that you've got the snapshot ID, you can delete the VPS; it's not needed anymore. Either do this in the GUI, or use doctl since you've already got it installed.</p>
+<p>Delete the droplet (ID is 123456789 from when you first got the list of droplets).</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; doctl compute droplet delete 123456789
+</code></pre></div>
+
+<h1>4. Add the DNS entry you want in Cloudflare</h1>
+<p>With OpenVPN, you can choose to use either an IP address or a DNS name for the server. In our case, we're going to use a DNS name so that the server can be deployed programmatically without changing the client config files.</p>
+<p>I recommend vpn.yourdomain.com to start, but you may way to obfuscate it since some cafes, airports, and other free wifi services try to block access to VPN.</p>
+<p>In Cloudflare, add an A record for the domain you want to use. This must be done the first time, then our script will update it each time after this. You can use the IP of your existing VPS, or a fake IP address, since these will be updated.
+<img src="/images/20190327-openvpn/3.png" width=100% /></p>
+<h1>5. Using Python, spin up a droplet and update the DNS</h1>
+<p>Now that we've got a snapshot (ID: 53964180) and a DNS entry (vpntest.yourdomain.com), we can create an instance. Once the instance is created, we retrieve the IP address and update vpntest.yourdomain.com to point to it.</p>
+<p>I've embedded my Python script at the bottom of this post using repl.it. I recommend copy/pasting the contents into a local text editor since you'll be entering your credentials, and repl.it repos are public by default.</p>
+<p>Let's look at the interesting sections of the code.</p>
+<h2>5.1 Spinning up the droplet from the snapshot</h2>
+<p>After we run the droplet.create(), we check once per second to see if it's been spun up yet. If the action status is anything other than in-progress (completed, or there's an error) we write that. If it's in-progress, we just print a period (<code>.</code>).</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Fill these out</span>
+<span class="n">actions</span> <span class="o">=</span> <span class="n">droplet</span><span class="o">.</span><span class="n">get_actions</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">actions</span><span class="p">:</span>
+    <span class="k">while</span> <span class="n">action</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="s2">&quot;completed&quot;</span><span class="p">:</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">action</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;in-progress&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">action</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Once the droplet is spun up, we get the droplet's IP.</p>
+<div class="highlight"><pre><span></span><code><span class="n">droplet</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="n">ip_address</span> <span class="o">=</span> <span class="n">droplet</span><span class="o">.</span><span class="n">ip_address</span>
+</code></pre></div>
+
+<h2>5.2 Updating vpntest.yourdomain.com to point to the new droplet IP</h2>
+<p>The CloudFlare API (like most) work off of IDs rather than names, so we need both the zone_id (for yourdomain.com) and dns_record ID that matches vpntest.yourdomain.com in order to update it.</p>
+<p>We first need to get the zone_id of the domain (yourdomain.com). </p>
+<div class="highlight"><pre><span></span><code><span class="n">cf</span> <span class="o">=</span> <span class="n">CloudFlare</span><span class="o">.</span><span class="n">CloudFlare</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">CF_EMAIL</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="n">CF_TOKEN</span><span class="p">)</span>
+<span class="n">zones</span> <span class="o">=</span> <span class="n">cf</span><span class="o">.</span><span class="n">zones</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">zone</span> <span class="ow">in</span> <span class="n">zones</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">zone</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">CF_ZONE_NAME</span><span class="p">:</span>
+        <span class="n">zone_id</span> <span class="o">=</span> <span class="n">zone</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+        <span class="n">zone_name</span> <span class="o">=</span> <span class="n">zone</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">zone_id</span><span class="p">,</span> <span class="n">zone_name</span><span class="p">)</span>
+</code></pre></div>
+
+<p>After that, we get the subdomains (dns_records) of that domain (we're looking for vpntest.yourdomain.com).</p>
+<div class="highlight"><pre><span></span><code><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="n">CF_DNS_NAME</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">:</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="n">ip_address_type</span><span class="p">}</span>
+<span class="n">dns_records</span> <span class="o">=</span> <span class="n">cf</span><span class="o">.</span><span class="n">zones</span><span class="o">.</span><span class="n">dns_records</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">zone_id</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Finally, we <code>PUT</code> the droplet's IP address in the existing record.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Update the record with the new IP address</span>
+<span class="k">for</span> <span class="n">dns_record</span> <span class="ow">in</span> <span class="n">dns_records</span><span class="p">:</span>
+    <span class="n">old_ip_address</span> <span class="o">=</span> <span class="n">dns_record</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span>
+    <span class="n">old_ip_address_type</span> <span class="o">=</span> <span class="n">dns_record</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>
+
+    <span class="n">dns_record_id</span> <span class="o">=</span> <span class="n">dns_record</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+    <span class="n">dns_record</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="n">CF_DNS_NAME</span><span class="p">,</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="n">ip_address_type</span><span class="p">,</span>
+        <span class="s1">&#39;content&#39;</span><span class="p">:</span><span class="n">ip_address</span>
+    <span class="p">}</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">dns_record</span> <span class="o">=</span> <span class="n">cf</span><span class="o">.</span><span class="n">zones</span><span class="o">.</span><span class="n">dns_records</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">zone_id</span><span class="p">,</span> <span class="n">dns_record_id</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">dns_record</span><span class="p">)</span>
+</code></pre></div>
+
+<h1>&lt;/end&gt;</h1>
+<p>Of course, this is a pretty basic implementation that simply spins up a droplet and updates a DNS record. One could easily extend this to accept command line arguments and allow you to select which snapshot to create a VPS from. I use this to choose between an OpenVPN server running on UDP/1194, or another on TCP/443 to evade firewall blocking.</p>
+<p>One could also write an argument to delete the droplet once you're done with it by passing the droplet ID back in and running a <code>DELETE</code>.</p>
+<h1>Python script on repl.it</h1>
+<iframe height="400px" width="100%" src="https://repl.it/@jonpurdycom/do-cf-vpn?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<!--     <footer>
+      <p>Published: <time datetime="2019-03-27T00:00:00-04:00">
+        2019-03-27
+      </time></p>
+        <address>
+          By             <a href="https://jonpurdy.com/author/jon-purdy.html">Jon Purdy</a>
+        </address>
+        <p>
+          Category: <a href="https://jonpurdy.com/category/development.html">Development</a>
+        </p>
+    </footer> -->
+  </article>
+      </main>
+<!--       <footer>
+          <address>
+            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+          </address>
+      </footer> -->
+
+      <!-- image toggling like low power mag -->
+      <script>
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.toggle-img');
+        if (!btn) return;
+        const fig = btn.closest('.img-toggle');
+        const img = fig.querySelector('img');
+        const orig = fig.dataset.orig;
+        const dither = fig.dataset.dither;
+        const showingOrig = img.src.includes(orig);
+        img.src = showingOrig ? dither : orig;
+        btn.textContent = showingOrig ? '+' : '-';
+      });
+      </script>
+      <!-- image toggling like low power mag -->
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Jon Purdy - Why and How to build Metamask for your own Blockchain</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- default is to use an if (only allows 1 stylesheet) -->
+<!--               <link rel="stylesheet" type="text/css" href="['/static/new-jon.css']" />
+ -->
+      <!-- I changed to a FOR to allow multiple -->
+      <link rel="stylesheet" href="/static/new-jon.css">
+      <!-- I changed to a FOR to allow multiple -->
+      
+        <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Full Atom Feed" />
+
+
+
+
+
+  </head>
+
+  <body>
+      <header>
+          <!-- jon logo -->
+          <hgroup><section style="text-align:center"><a href="/"><img class="logo" src="https://jonpurdy.com/images/logo.svg" alt="Jon Purdy"></a></section></hgroup>
+          <!-- original -->
+          <!-- <hgroup><h1><a href="https://jonpurdy.com/">Jon Purdy</a></h1></hgroup> --> 
+          <nav style="text-align:center; text-transform: uppercase;">
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/about/" >About</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/pm-framework/" >P*M Framework</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/work/" >Work</a>
+            <!-- moved menuitems below pages -->
+              <a href="/archives.html">Archive</a>
+          </nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>
+        <a href="https://jonpurdy.com/2019/02/why-and-how-to-build-metamask-for-your-own-blockchain/" rel="bookmark"
+           title="Permalink to Why and How to build Metamask for your own Blockchain">Why and How to build Metamask for your own Blockchain</a></h2>
+      
+      <section><time datetime="2019-02-05T00:00:00-05:00"> 2019-02-05</section>
+    </header>
+    <figure class="img-toggle" data-orig="/images/20190205-metamask-your-blockchain/header.jpg" data-dither="/images/20190205-metamask-your-blockchain/header-dither.png">
+  <img src="/images/20190205-metamask-your-blockchain/header-dither.png" width=100%>
+  <button class="toggle-img">+</button>
+</figure>
+
+<p>(Photo from Blockchain Futurist Conference 2018, Toronto.)</p>
+<p>If you built your own blockchain or forked an existing one, one of your top priorities should be to make it easy for users and developers to interact with. MetaMask enabled Ethereum users and developers to easily use ETH and ERC-20 tokens, and use DApps without needing to use command-line tools or run their own node (thanks to Infura).</p>
+<p><img style="padding-left: 30px" src="/images/20190205-metamask-your-blockchain/20190205-aiwa.png" width="300" align="right"/></p>
+<p>Aion realized this early on, which is why they had BlockX Labs build AIWA, a wallet and DApp interaction tool for Aion, for them. As Project Manager for AIWA, I’d like to go over the process that we undertook when building “MetaMask for Aion”; specifically, both the inspiration as well as the differentiation. I’ve written this for product people and executives so I’ve kept the jargon quite light.</p>
+<h1>Why do you need a wallet?</h1>
+<p>Firstly, you need to justify why your blockchain needs its version of MetaMask. As mentioned above, you want developers and users to interact with it. They need to read and write data and possibly send and receive cryptocurrency, If your blockchain is like Ethereum and Aion, you’ve got a distributed app ecosystem that needs to interact with it.</p>
+<p>Without a wallet, it’s a lot more difficult for both developers and users to use your blockchain, so reduce the friction and provide them with tool(s) to make it easier.</p>
+<h1>What do you love about MetaMask?</h1>
+<p>Since you’ve got a reason to build a MetaMask-like tool, think about what you love about MetaMask and decide whether you want or need those features. At BlockX Labs, we like that MetaMask is honest with how it maps Ethereum’s features to its UI. MetaMask doesn’t hide or abstract away complexity but exposes it to the user. For example, it shows the raw gas price (in GWei) rather than abstracting it away by converting it to USD.</p>
+<p>It also differentiates between seed-generated and imported wallets, so that the user can know which wallets are recoverable from the seed phrase. We also love that MetaMask doesn’t keep the user inside MetaMask; it provides links to Etherscan for viewing more transaction details and embeds the ability to use Coinbase and ShapeShift for acquiring Ether. It supports third-party services and doesn’t try to hold the user captive by doing everything itself.</p>
+<h1>Forget about MetaMask!</h1>
+<p>Once you’ve found the features that you love about MetaMask, it’s time to forget about it. Here at BlockX Labs, we use Agile with Scrum. I recommend writing user stories to figure out what user and developers will do with your tool and build your UI around that.</p>
+<p>In our case, some of the basic features like the receive screen and how the DApp popped up ended up working pretty similarly to MetaMask. But by focusing on our user stories and not trying to clone MetaMask, we came up with a unique hierarchical interface that is modeled around the Token &lt; Wallet &lt; Vault metaphor.</p>
+<p>As a result, we came up with the idea of a Vault to contain both seed-generated wallets and imported wallets in a single exported file. This makes it super easy for users to backup all of their wallets regardless of whether they’re seed-generated or imported from private keys. Of course, we also built the option to export individually using the standard wallet format as well.</p>
+<p><img src="/images/20190205-metamask-your-blockchain/20190205-vault.png" width=100% /></p>
+<h1>&lt;/end&gt;</h1>
+<p>Although it’s heavily influenced from my experience building AIWA, hopefully this article has given a decent overview of building something like MetaMask for your own blockchain. I didn’t mention some things that aren’t part of the core product but help make it easier to use (like Infura, and NodeSmith in our case). But perhaps a follow-up article could address the ecosystem partners that would be useful.</p>
+<!--     <footer>
+      <p>Published: <time datetime="2019-02-05T00:00:00-05:00">
+        2019-02-05
+      </time></p>
+        <address>
+          By             <a href="https://jonpurdy.com/author/jon-purdy.html">Jon Purdy</a>
+        </address>
+        <p>
+          Category: <a href="https://jonpurdy.com/category/blockchain.html">Blockchain</a>
+        </p>
+    </footer> -->
+  </article>
+      </main>
+<!--       <footer>
+          <address>
+            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+          </address>
+      </footer> -->
+
+      <!-- image toggling like low power mag -->
+      <script>
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.toggle-img');
+        if (!btn) return;
+        const fig = btn.closest('.img-toggle');
+        const img = fig.querySelector('img');
+        const orig = fig.dataset.orig;
+        const dither = fig.dataset.dither;
+        const showingOrig = img.src.includes(orig);
+        img.src = showingOrig ? dither : orig;
+        btn.textContent = showingOrig ? '+' : '-';
+      });
+      </script>
+      <!-- image toggling like low power mag -->
+
+</html>

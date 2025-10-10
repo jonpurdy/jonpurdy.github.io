@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Jon Purdy - How to quickly plan and estimate an MVP</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- default is to use an if (only allows 1 stylesheet) -->
+<!--               <link rel="stylesheet" type="text/css" href="['/static/new-jon.css']" />
+ -->
+      <!-- I changed to a FOR to allow multiple -->
+      <link rel="stylesheet" href="/static/new-jon.css">
+      <!-- I changed to a FOR to allow multiple -->
+      
+        <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Full Atom Feed" />
+
+
+  </head>
+
+  <body>
+      <header>
+          <!-- jon logo -->
+          <hgroup><section style="text-align:center"><a href="/"><img class="logo" src="https://jonpurdy.com/images/logo.svg" alt="Jon Purdy"></a></section></hgroup>
+          <!-- original -->
+          <!-- <hgroup><h1><a href="https://jonpurdy.com/">Jon Purdy</a></h1></hgroup> --> 
+          <nav style="text-align:center; text-transform: uppercase;">
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/about/" >About</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/pm-framework/" >P*M Framework</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/work/" >Work</a>
+            <!-- moved menuitems below pages -->
+              <a href="/archives.html">Archive</a>
+          </nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>How to quickly plan and estimate an MVP</h2>
+    </header>
+    
+
+    <p><img src="/images/pm/diagram_alpha.png" alt="Diagram" width="100%" /></p>
+<h2>Initial questions</h2>
+<p>What do you want to build?<br>
+What does it look like?<br>
+Who are the people who will use it?  </p>
+<h2>Break down the work</h2>
+<p>With these questions asked, break down the work (into Epics and User Stories).</p>
+<p>Start off in a text file or spreadsheet, easier to edit. Don't do this in Jira.</p>
+<p><strong>User Stories</strong>: an action that a user wants to do and why<br>
+<strong>Epic</strong>: grouping of related user stories</p>
+<p>CRUD stories are a good baseline<br>
+- Create, Read, Update, Delete<br>
+- Ex. for a product-related site: Create product, View (read) product description, Update product (description), Delete product</p>
+<h3>Examples</h3>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>User can view their account details</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>User can update the details of their account</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>User can delete their account</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can add items to their cart</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view contents of their cart</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can initiate checkout and pay</td>
+</tr>
+</tbody>
+</table>
+<h2>Estimate</h2>
+<p>When starting fresh, it's impossible to accurately predict how long it will take to build.</p>
+<p>Things that affect estimation accuracy:<br>
+- new team<br>
+- new project<br>
+- adding or removing a team member<br>
+- number of hours per week working on this project<br>
+- variable number of interruptions/distractions affecting productivity  </p>
+<p>Time-based estimation will fail. Difficulty-based estimation is mostly independent of that list. This is why we use <em>Story Points</em> instead of <em>hours/days</em>.</p>
+<h3>How to estimate difficulty?</h3>
+<p>Relative estimation.</p>
+<p>Simple example: <strong>how big is A</strong>?  </p>
+<p><img src="/images/pm/abc_alpha.png" alt="ABC" width="50%" /></p>
+<p>Just by eyeballing it, you don't know exactly how big it is in cm or pixels, but you can figure out that it is <strong>smaller than B</strong> and <strong>bigger than C</strong>.</p>
+<p>If you have two User Stories, it doesn't matter "how long they will take". Is one of the stories more difficult than the other? If so, it will be rated more Story Points. </p>
+<h3>Do it</h3>
+<p><strong>1)</strong> Choose an "easy" story, ask the team to consider how difficult it is, then assign it 2 points<br>
+<strong>2)</strong> Choose another story. Ask the team: is it easier or harder to build than the first story?<br>
+<strong>2a)</strong> If easier, assign it 1 point.<br>
+<strong>2b)</strong> If harder, how much harder? Assign it 3 or more points.  </p>
+<p>Use this scale: 1, 2, 3, 5, 8, 13, 20, 40, 100<br>
+<em>(Reason for this: It's obvious that a 5-point story is more difficult than a 3 point story, but what's the actual difference betwen a 13 and 14 point story? Bigger numbers are more spaced apart to prevent wasting time on estimation that is overly granular.)</em></p>
+<p><strong>3)</strong> Do this for each story, and verify throughout that each additional estimated story is relative to other stories; you may need to go back and change the values as you do this. </p>
+<p>Example: story-A is 2 points, story-B is 3 points. story-C comes along and is estimated to be harder than story-A but easier than story-B:<br>
+B (3) &gt; C (<strong>?</strong>) &gt; A(2)  </p>
+<p>In that case, assign story-C 3 points and change story-B to 4 points:<br>
+B (<strong>4</strong>) &gt; C (<strong>3</strong>) &gt; A(2)</p>
+<p><strong>Example table updated with "point value" column</strong></p>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Point Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>User can view their account details</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>User can update the details of their account</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>User can delete their account</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can add items to their cart</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view contents of their cart</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can initiate checkout and pay</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>If a story ends up being unusually large compared to others, try to break it down into smaller stories.</p>
+<p>In the example, "User can initiate checkout and pay" can break down into:  </p>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Point Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><del>Purchase<del></td>
+<td><del>User can initiate checkout and pay<del></td>
+<td><del>8<del></td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can initiate checkout process</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can enter their billing details</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can enter their shipping details</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can submit payment</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can view their order details</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4)</strong> Once all stories have an estimate, put the stories in priority order. What needs to be built first? What stories do others depend on? Which stories provide the most business value?</p>
+<p><strong>Example table re-sorted by priority</strong></p>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Point Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can add items to their cart</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view contents of their cart</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can initiate checkout process</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can enter their billing details</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can enter their shipping details</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can submit payment</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can view their order details</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Account</td>
+<td><em>User can view their account details</em></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Account</td>
+<td><em>User can update the details of their account</em></td>
+<td>2</td>
+</tr>
+<tr>
+<td>Account</td>
+<td><em>User can delete their account</em></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><em>I moved the italicized stories to the bottom. In this case, I think it's more important that the user can use the stores and purchase items than to update or delete their account.</em></p>
+<h2>Create a rough plan</h2>
+<p><em>This deviates a bit from Agile/Scrum best practices. It doesn't make any guarantees,  but people like to have some sort of estimate when things will be completed (even if the estimate is known to have a large margin of error. But it's good enough to provide a rough guide to plan future development, marketing releases, how high to charge a customer to make sure you don't lose money on a new project, etc.</em></p>
+<p>With the existing team, think hard about how many stories the team could finish in a sprint (I like 1-week sprints). As an example, let's say they think they can complete the first three stories, which adds up to 5 points. This is the <em>estimated velocity</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Point Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td>TOTAL</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Compare it to the total number of points for the whole project (in this example, 20 points).</p>
+<p>20 points total / 5 points for this sprint = <strong>4 sprints to finish</strong></p>
+<p><strong>Example with sprint added</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Epic/Group</th>
+<th>User Story</th>
+<th>Point Value</th>
+<th>Sprint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>User can create an account</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view list of store items</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view item details</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can add items to their cart</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>User can view contents of their cart</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can initiate checkout process</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can enter their billing details</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can enter their shipping details</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can submit payment</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>User can view their order details</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Account</td>
+<td><em>User can view their account details</em></td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Account</td>
+<td><em>User can update the details of their account</em></td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Account</td>
+<td><em>User can delete their account</em></td>
+<td>1</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h2>Stuff to elaborate on later</h2>
+<p>The accuracy of this prediction will need to be modified once you start going through sprints. Your <em>velocity</em> will likely be variable at the beginning of a project and will smooth out as the team goes through more sprints.</p>
+<p>How inaccurate could this prediction be?  Maybe there's going to be a lot of variability with this team, so estimates should be +/- 50% margin of error (that's actually pretty good).</p>
+<p><em>For more content like this, follow me on <a href="https://twitter.com/jonpurdy/">Twitter</a> or add this blog to your RSS feed.</em></p>
+
+  </article>
+      </main>
+<!--       <footer>
+          <address>
+            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+          </address>
+      </footer> -->
+
+      <!-- image toggling like low power mag -->
+      <script>
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.toggle-img');
+        if (!btn) return;
+        const fig = btn.closest('.img-toggle');
+        const img = fig.querySelector('img');
+        const orig = fig.dataset.orig;
+        const dither = fig.dataset.dither;
+        const showingOrig = img.src.includes(orig);
+        img.src = showingOrig ? dither : orig;
+        btn.textContent = showingOrig ? '+' : '-';
+      });
+      </script>
+      <!-- image toggling like low power mag -->
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Jon Purdy - Agile and Scrum FAQ</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- default is to use an if (only allows 1 stylesheet) -->
+<!--               <link rel="stylesheet" type="text/css" href="['/static/new-jon.css']" />
+ -->
+      <!-- I changed to a FOR to allow multiple -->
+      <link rel="stylesheet" href="/static/new-jon.css">
+      <!-- I changed to a FOR to allow multiple -->
+      
+        <link href="https://jonpurdy.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jon Purdy Full Atom Feed" />
+
+
+
+
+
+  </head>
+
+  <body>
+      <header>
+          <!-- jon logo -->
+          <hgroup><section style="text-align:center"><a href="/"><img class="logo" src="https://jonpurdy.com/images/logo.svg" alt="Jon Purdy"></a></section></hgroup>
+          <!-- original -->
+          <!-- <hgroup><h1><a href="https://jonpurdy.com/">Jon Purdy</a></h1></hgroup> --> 
+          <nav style="text-align:center; text-transform: uppercase;">
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/about/" >About</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/pm-framework/" >P*M Framework</a>
+                <a style="margin-right: 15px;" href="https://jonpurdy.com/work/" >Work</a>
+            <!-- moved menuitems below pages -->
+              <a href="/archives.html">Archive</a>
+          </nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>
+        <a href="https://jonpurdy.com/2021/02/agile-and-scrum-faq/" rel="bookmark"
+           title="Permalink to Agile and Scrum FAQ">Agile and Scrum FAQ</a></h2>
+      
+      <section><time datetime="2021-02-01T00:00:00-05:00"> 2021-02-01</section>
+    </header>
+    <!-- <img src="/images/20210201-agile-faq/header.jpg" alt="Joshua Tree overlook" width="100%" /> -->
+
+<figure class="img-toggle" data-orig="/images/20210201-agile-faq/header.jpg" data-dither="/images/20210201-agile-faq/header-dither.png">
+  <img src="/images/20210201-agile-faq/header-dither.png" width=100%>
+  <button class="toggle-img">+</button>
+</figure>
+
+<p><b>What's the difference between using hours versus using story points to estimate?</b></p>
+<p>Time estimates are used to estimate how long it will take to complete a task or project. They are typically expressed in hours or days and are used to help plan and manage the project timeline.</p>
+<p>Story points are used to estimate the relative complexity of tasks or stories. They are  expressed in a numerical scale and are used to prioritize tasks and help allocate resources. </p>
+<p><i>"How many hours is a point?"</i></p>
+<p>There isn't a formula to calculate this as it is overprecise and misleading. Instead, calculating team velocity can be used to provide stakeholders with an understanding of how long a 3-point backlog item will take. </p>
+<p><b>What's the difference between "Definition of Done" and "Acceptance Criteria"?</b></p>
+<p><i>Both</i>:<br>
+- A set of criteria that must be met before a product, feature, or user story is considered complete.<br>
+- The criteria should be measurable and verifiable.<br>
+- The criteria should be agreed upon by the development team, the product owner, and other stakeholders.  </p>
+<p><i>Definition of Done</i>: applies generally to all work items (all User Stories)<br>
+Examples:<br>
+- Verified by QA<br>
+- Unit Tests written and passing<br>
+- All iteration bugs are fixed before closing  </p>
+<p><i>Acceptance Criteria</i>: applies to each specific work item (each User Story)<br>
+Examples:<br>
+- User can do a particular action</p>
+<p><b>Differences between Scrum and Kanban?</b></p>
+<p>Two main differences:<br>
+- Scrum is iterative, while Kanban is continuous.<br>
+- Scrum focuses on sprints and time-boxed iterations, while Kanban focuses on visualizing workflows and limiting work in progress.  </p>
+<p>From what I've seen typically, Scrum is used for software projects where features are being built and delivered in increments, whereas Kanban is used for ongoing maintenance, less-defined projects, and infrastructure※. </p>
+<p>※ - Infrascrum can also be used for infrastructure projects, which is like a hybrid between the two.</p>
+<!--     <footer>
+      <p>Published: <time datetime="2021-02-01T00:00:00-05:00">
+        2021-02-01
+      </time></p>
+        <address>
+          By             <a href="https://jonpurdy.com/author/jon-purdy.html">Jon Purdy</a>
+        </address>
+        <p>
+          Category: <a href="https://jonpurdy.com/category/development.html">Development</a>
+        </p>
+    </footer> -->
+  </article>
+      </main>
+<!--       <footer>
+          <address>
+            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+          </address>
+      </footer> -->
+
+      <!-- image toggling like low power mag -->
+      <script>
+      document.addEventListener('click', e => {
+        const btn = e.target.closest('.toggle-img');
+        if (!btn) return;
+        const fig = btn.closest('.img-toggle');
+        const img = fig.querySelector('img');
+        const orig = fig.dataset.orig;
+        const dither = fig.dataset.dither;
+        const showingOrig = img.src.includes(orig);
+        img.src = showingOrig ? dither : orig;
+        btn.textContent = showingOrig ? '+' : '-';
+      });
+      </script>
+      <!-- image toggling like low power mag -->
+
+</html>
